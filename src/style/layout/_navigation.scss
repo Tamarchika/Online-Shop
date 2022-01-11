@@ -1,0 +1,18 @@
+
+
+ul {
+    &.navbar_ul {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+nav {
+ &.navbar {
+     .navbar_ul {
+         .navbar_ul_li {
+             list-style-type: none;
+         }
+     }
+ }
+}
