@@ -1,0 +1,32 @@
+@import "../abstracts/colors";
+@import "../base/fonts";
+@import "../base/typography";
+
+form {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.search_input {
+  display: flex;
+  flex: 3;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  border-radius: 20px;
+  height: 45px;
+  align-items: center;
+}
+
+.input_placeholder {
+  border: none;
+  color: $grey;
+  font-family: $AppFontFamily;
+  font-weight: $AppFontWeight;
+  font-size: $inputFontSize;
+  &:focus {
+    outline: none;
+  }
+}
+.search_icon {
+  color: rgba(0, 0, 0, 0.753);
+}

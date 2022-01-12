@@ -1,0 +1,16 @@
+@import "../abstracts/variables";
+@import "../abstracts/colors";
+
+.website_mail {
+  margin-left: $mailMargin;
+}
+.mail {
+  svg {
+    color: $black;
+  }
+}
+.phone_num {
+  svg {
+    color: $black;
+  }
+}

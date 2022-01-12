@@ -1,0 +1,14 @@
+.account {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  margin-left: 15px;
+}
+
+.favorite,
+.shopping-cart,
+.user {
+  svg {
+    cursor: pointer;
+  }
+}

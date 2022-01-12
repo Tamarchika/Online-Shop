@@ -1,41 +1,62 @@
+@import "../abstracts/colors";
+@import "../base/typography";
+@import "../base/fonts";
+@import "../abstracts/variables";
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
 nav {
-    &.navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  &.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $paddingTopHeader;
+  }
 }
 
 ul {
-    &.navbar_ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex: 6;
-    }
+  &.navbar_ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 6;
+  }
+}
+
+a {
+  &:hover {
+    color: $black;
+  }
 }
 
 nav {
- &.navbar {
-     .navbar_ul {
-         .navbar_ul_li {
-             list-style-type: none;
-         }
-     }
- }
+  &.navbar {
+    .navbar_ul {
+      .navbar_ul_li {
+        list-style-type: none;
+      }
+    }
+  }
+}
+a {
+  color: $grey;
+  text-decoration: none;
 }
 
-.search_input {
-    display: flex;
-    flex: 4;
-}
 .account {
-    flex: 2;
+  flex: 2;
+}
+
+h2 {
+  &.navbar_brand {
+    a {
+      color: $navBrandColor;
+      font-weight: $navBrandFontWeight;
+      font-family: $navBrandFontFamily;
+    }
+  }
 }

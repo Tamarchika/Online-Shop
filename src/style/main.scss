@@ -1,27 +1,30 @@
-@import './abstracts/mixins';
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "./base/typography";
 
 * {
   @include all();
 }
 
-html, body {
+html,
+body {
   height: 100vh;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: $AppFontFamily;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: $AppFontWeight;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .container {
- padding: 0 8%;
+  padding: 0 8%;
+  height: 100vh;
 }

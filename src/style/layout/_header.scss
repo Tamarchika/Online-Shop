@@ -1,21 +1,26 @@
-@import '../abstracts/mixins';
+@import "../abstracts/mixins";
+@import "../abstracts/colors";
+@import "../abstracts/variables";
 
 * {
-    @include all();
+  @include all();
 }
 
 .header_top {
+  display: flex;
+  justify-content: space-around;
+  color: $grey;
+  padding-top: $paddingTopHeader;
+  .language_currency {
     display: flex;
-    justify-content: space-around;
-    .language_currency {
-        display: flex;
-        justify-content: space-evenly;
-        flex: 1;
-    }
-    .contact {
-        flex: 1;
-        display: flex;
-        justify-content: start;
-        gap: 20px;
-    }
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+  }
+  .contact {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+  }
 }
