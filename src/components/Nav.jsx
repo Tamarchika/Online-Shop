@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom"
-import ROUTERS from "../../constants/router_constants"
-import '../../style/layout/_navigation.scss';
+import ROUTERS from "../constants/router_constants"
+import '../style/layout/_navigation.scss';
+import Account from "./header/Account";
+import SearchInput from "./header/Search";
 
 
 const Nav = () => {
     return (
         <nav className="navbar">
             <ul className="navbar_ul">
+                <h2 className="navbar_brand">
+                    <Link to={ROUTERS.HOME} >ONLINE-SHOP</Link></h2>
                 <li className="navbar_ul_li">
                     <Link to={ROUTERS.HOME} className="nav_link">
                         Home
@@ -38,6 +42,8 @@ const Nav = () => {
                     </Link>
                 </li>
             </ul>
+            <SearchInput />
+            <Account />
         </nav>
     )
 }

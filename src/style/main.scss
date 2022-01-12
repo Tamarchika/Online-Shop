@@ -1,3 +1,9 @@
+@import './abstracts/mixins';
+
+* {
+  @include all();
+}
+
 html, body {
   height: 100vh;
 }
@@ -14,4 +20,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+ padding: 0 8%;
 }

@@ -1,19 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import ROUTERS from "../../constants/router_constants";
+import ROUTERS from "../constants/router_constants";
 import Nav from "./Nav";
-import Home from "../../pages/Home/Components/Home";
-import Men from "../../pages/Men/Components/Men";
-import Women from "../../pages/Women/Components/Women";
-import Shop from "../../pages/Shop/Components/Shop";
-import Category from "../../pages/Category/Components/Category";
-import Sales from "../../pages/Sales/Components/Sales";
+import Home from "../pages/Home/Components/Home";
+import Men from "../pages/Men/Components/Men";
+import Women from "../pages/Women/Components/Women";
+import Shop from "../pages/Shop/Components/Shop";
+import Category from "../pages/Category/Components/Category";
+import Sales from "../pages/Sales/Components/Sales";
+import HeaderTop from "./header/Header_Top";
+import AccountPage from "../pages/Account/Components/AccountPage";
 
 const history = createBrowserHistory();
 
 const App = () => {
   return (
-    <Router history={history}>
+    <div className="container">
+       <header>
+      <HeaderTop />
+        <Router history={history}>
       <Nav />
       <Routes>
         <Route path={ROUTERS.HOME} exact element={<Home />} />
@@ -22,8 +27,15 @@ const App = () => {
         <Route path={ROUTERS.SHOP} exact element={<Shop />} />
         <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
         <Route path={ROUTERS.SALES} exact element={<Sales />} />
+        <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
       </Routes>
     </Router>
+    </header>
+    </div>
+
+
+   
+  
   )
 }
 

@@ -4,7 +4,8 @@ const ROUTERS = {
     WOMEN: "women",
     SHOP: "shop",
     CATEGORY: "category",
-    SALES: "sales"
+    SALES: "sales",
+    ACCOUNT: "account"
 }
 
 export default ROUTERS;
