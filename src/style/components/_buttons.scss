@@ -1,19 +1,18 @@
-@import '../abstracts/colors';
-@import '../abstracts/variables';
-@import '../base/typography';
-
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+@import "../base/typography";
 
 .btn_primary {
-    background-color: $btn_primary;
-    padding: 18px 45px;
-    border-radius: 0.25rem;
-    line-height: 1;
-    font-weight: $btnPrimaryFontWeight;
-    text-transform: uppercase;
-    font-size: $btnPrimaryFontSize;
-    color: white;
-    cursor: pointer;
+  background-color: $btn_primary;
+  padding: 18px 45px;
+  border-radius: 0.25rem;
+  line-height: 1;
+  font-weight: $btnPrimaryFontWeight;
+  text-transform: uppercase;
+  font-size: $btnPrimaryFontSize;
+  color: white;
+  cursor: pointer;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

@@ -1,13 +1,20 @@
-import '../../../style/pages/_home.scss';
 import Banner from './Banner';
 import Brands from './Brands';
+import Features from './Features';
+import '../../../style/pages/_home.scss';
+import '../../../style/layout/_grid.scss';
+
 
 const Home = () => {
     return (
-        <main className="home_page_content">
+        <div className='main_container'>
+            <main className="home_page_content">
            <Banner />
            <Brands />
-        </main>
+           <Features />
+            </main>
+        </div>
+        
     )
 }
 

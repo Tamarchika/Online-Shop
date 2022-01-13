@@ -1,14 +1,12 @@
-
-
 .brand_area_image {
-    cursor: pointer;
-    opacity: .2;
-    filter: grayscale(100%);
-    margin: auto;
-    transition: 0.3s all linear;
+  cursor: pointer;
+  opacity: 0.2;
+  filter: grayscale(100%);
+  margin: auto;
+  transition: 0.3s all linear;
 }
 .brand_area_image {
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
