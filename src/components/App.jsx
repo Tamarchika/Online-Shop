@@ -9,26 +9,27 @@ import Shop from "../pages/Shop/Components/Shop";
 import Category from "../pages/Category/Components/Category";
 import HeaderTop from "./header/Header_Top";
 import AccountPage from "../pages/Account/Components/AccountPage";
+import '../style/main.scss';
 
 const history = createBrowserHistory();
 
 const App = () => {
   return (
     <div className="container">
-      <header>
-        <HeaderTop />
-        <Router history={history}>
+      <Router history={history}>
+        <header>
+          <HeaderTop />
           <Nav />
-          <Routes>
-            <Route path={ROUTERS.HOME} exact element={<Home />} />
-            <Route path={ROUTERS.MEN} exact element={<Men />} />
-            <Route path={ROUTERS.WOMEN} exact element={<Women />} />
-            <Route path={ROUTERS.SHOP} exact element={<Shop />} />
-            <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
-            <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
-          </Routes>
-        </Router>
-      </header>
+        </header>
+        <Routes>
+          <Route path={ROUTERS.HOME} exact element={<Home />} />
+          <Route path={ROUTERS.MEN} exact element={<Men />} />
+          <Route path={ROUTERS.WOMEN} exact element={<Women />} />
+          <Route path={ROUTERS.SHOP} exact element={<Shop />} />
+          <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
+          <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 };
