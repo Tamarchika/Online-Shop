@@ -1,0 +1,196 @@
+@import "../../style/abstracts/mixins";
+@import "../../style/abstracts/_colors.scss";
+@import "../abstracts/variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $footer_bg;
+  width: 100vw;
+  padding: 0 8%;
+  color: $footer_text;
+
+  .subscribe {
+    padding: 80px 20px;
+    border-bottom: 1.5px solid $footer_text;
+  }
+
+  .footer_nav {
+    padding: 90px 20px;
+    border-bottom: 1.5px solid $footer_text;
+  }
+
+  .avtor_social_links {
+    padding: 15px 10px;
+  }
+}
+
+.sub_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+
+  .sub_comment {
+    flex: 2;
+    .slogan {
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      width: 90%;
+    }
+
+    .lorem_text {
+      @include footer_lorem_text();
+    }
+  }
+
+  .sub_input {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+
+    .sub_mail {
+      display: flex;
+      width: 100%;
+      border-radius: 40px;
+      padding: 12px 10px 12px 12px;
+      border: 0.5px solid $footer_text;
+
+      input {
+        font-size: 1rem;
+        font-weight: 300;
+        width: 80%;
+        padding: 8px 15px;
+        border: none;
+        outline: none;
+        background-color: $footer_bg;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 10px 25px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+
+        &:hover {
+          background-color: $footer_btn_hover;
+          color: $footer_text;
+          transition: $footer_transition;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.footer_nav_container {
+  display: flex;
+  gap: 80px;
+  .footer_logo {
+    flex: 2;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+
+    p {
+      @include footer_lorem_text();
+    }
+  }
+
+  .footer_navbar {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+
+    .company_container {
+      @include footer_nav_components();
+
+      h3 {
+        @include footer_nav_h3();
+      }
+      ul {
+        li {
+          @include footer_nav_li();
+        }
+        li:hover {
+          @include footer_nav_li_hover();
+        }
+      }
+    }
+  }
+
+  .quick_container {
+    @include footer_nav_components();
+
+    h3 {
+      @include footer_nav_h3();
+    }
+    ul {
+      li {
+        @include footer_nav_li();
+      }
+      li:hover {
+        @include footer_nav_li_hover();
+      }
+    }
+  }
+
+  .account_container {
+    @include footer_nav_components();
+
+    h3 {
+      @include footer_nav_h3();
+    }
+    ul {
+      li {
+        @include footer_nav_li();
+      }
+      li:hover {
+        @include footer_nav_li_hover();
+      }
+    }
+  }
+}
+
+.avtor_social_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .copy_right {
+    flex: 1;
+    #copy {
+      opacity: $footer_opacity;
+      font-weight: 300;
+    }
+    #avtor {
+      font-weight: bold;
+      opacity: 1;
+      &:hover {
+        opacity: $footer_opacity;
+        transition: $footer_transition;
+        cursor: pointer;
+      }
+    }
+  }
+  .social_links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    div:hover {
+      opacity: $footer_opacity;
+      cursor: pointer;
+      transition: $footer_transition;
+    }
+  }
+}

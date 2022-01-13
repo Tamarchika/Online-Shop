@@ -1,5 +1,40 @@
 @mixin all {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//Footer mixins
+@mixin footer_nav_components {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@mixin footer_nav_h3 {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+@mixin footer_nav_li {
+  font-weight: 400;
+  line-height: 30px;
+  opacity: 0.7;
+  cursor: pointer;
+  list-style: none;
+}
+
+@mixin footer_nav_li_hover {
+  opacity: 1;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+@mixin footer_lorem_text {
+  width: 80%;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 30px;
+  opacity: 0.7;
 }
