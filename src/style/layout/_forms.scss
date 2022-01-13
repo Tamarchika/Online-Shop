@@ -1,0 +1,104 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+.signin {
+  @include login_register_flex_style();
+
+  .signin_heading {
+    h5 {
+      @include signInHeading();
+    }
+  }
+
+  .form {
+    @include account_form();
+
+    .txt_field {
+      @include text_filed();
+      input {
+        @include input_form();
+        &:focus ~ label {
+          @include input_label_animation();
+        }
+        &:valid ~ label {
+          @include input_label_animation();
+        }
+      }
+
+      label {
+        @include labels_style();
+      }
+    }
+    .pass_show_forget {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .show_pass {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        label {
+          @include show_password_label();
+        }
+      }
+
+      .forg_pass {
+        color: $darkTxtColor;
+        font-size: 14px;
+      }
+    }
+
+    .submit_option {
+      width: 100%;
+      input {
+        @include account_btn();
+        &:hover {
+          @include account_btn_hover();
+        }
+      }
+    }
+  }
+
+  .signin_options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    .or {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: $lightTxtColor;
+    }
+
+    .social_link_options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+      .soc_link_option {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        align-items: center;
+        border: 1px solid $lightTxtColor;
+        padding: 12px 18px;
+        border-radius: 3px;
+        color: $darkTxtColor;
+      }
+      span {
+        line-height: 1.5;
+        color: $lightTxtColor;
+      }
+    }
+  }
+}

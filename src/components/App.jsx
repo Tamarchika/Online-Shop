@@ -18,20 +18,20 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <header>
-          <HeaderTop />
-          <Router history={history}>
+        <Router history={history}>
+          <header>
+            <HeaderTop />
             <Nav />
-            <Routes>
-              <Route path={ROUTERS.HOME} exact element={<Home />} />
-              <Route path={ROUTERS.MEN} exact element={<Men />} />
-              <Route path={ROUTERS.WOMEN} exact element={<Women />} />
-              <Route path={ROUTERS.SHOP} exact element={<Shop />} />
-              <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
-              <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
-            </Routes>
-          </Router>
-        </header>
+          </header>
+          <Routes>
+            <Route path={ROUTERS.HOME} exact element={<Home />} />
+            <Route path={ROUTERS.MEN} exact element={<Men />} />
+            <Route path={ROUTERS.WOMEN} exact element={<Women />} />
+            <Route path={ROUTERS.SHOP} exact element={<Shop />} />
+            <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
+            <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
+          </Routes>
+        </Router>
       </div>
       <Footer />
     </>

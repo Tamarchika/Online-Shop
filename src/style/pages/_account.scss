@@ -1,0 +1,27 @@
+@import "../abstracts/colors";
+
+.account_form_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 8%;
+  background-color: $accountBg;
+  overflow: hidden;
+
+  .signin_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: $loginRegisterBg;
+  }
+
+  .signup_container {
+    flex: 1;
+    background-color: $loginRegisterBg;
+  }
+}
