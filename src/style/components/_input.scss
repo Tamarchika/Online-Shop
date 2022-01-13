@@ -29,4 +29,10 @@ form {
 }
 .search_icon {
   color: rgba(0, 0, 0, 0.753);
+  cursor: pointer;
+}
+input[type="search" i] {
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
 }
