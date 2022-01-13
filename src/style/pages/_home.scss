@@ -2,6 +2,16 @@
 @import "../abstracts/variables";
 @import "../base/typography";
 
-.home_page {
-  padding-top: $paddingTopHomeContent;
+.home_page_content {
+  padding-top: $headingMargin;
+}
+
+.row {
+    display: flex;
+}
+.col-sm-12 {
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
 }
