@@ -14,8 +14,10 @@
 .main_container {
   padding: 0 10%;
 }
-.flex {
-  display: flex !important;
+
+.align_items_center {
+  -webkit-box-align: center !important;
+  align-items: center !important;
   flex-direction: row;
-  justify-content: space-around;
+  display: flex;
 }

@@ -3,6 +3,7 @@ import "../../../style/components/_carousel.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../../style/layout/_grid.scss";
+import Card from "../../../components/reusable_components/Card";
 
 const Carousel = () => {
   const settings = {
@@ -19,35 +20,20 @@ const Carousel = () => {
   return (
     <div className="carousel">
       <Slider {...settings}>
-        <div className="flex">
-          <img
-            src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg"
-            alt=""
-          />
+        <div className="slider_item">
+          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
         </div>
-        <div className="flex">
-          <img
-            src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg"
-            alt=""
-          />
+        <div className="slider_item">
+          <Card src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/03.jpg" />
         </div>
-        <div className="flex">
-          <img
-            src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg"
-            alt=""
-          />
+        <div className="slider_item">
+          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
         </div>
-        <div className="flex">
-          <img
-            src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg"
-            alt=""
-          />
+        <div className="slider_item">
+          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
         </div>
-        <div className="flex">
-          <img
-            src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg"
-            alt=""
-          />
+        <div className="slider_item">
+          <Card src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/03.jpg" />
         </div>
       </Slider>
     </div>
