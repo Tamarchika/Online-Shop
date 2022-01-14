@@ -20,14 +20,14 @@ button {
 button {
   &.slick-arrow {
     &.slick-prev {
-      left: -10%;
+      left: -5%;
       &::before {
         content: "<";
         font-size: 30px;
       }
     }
     &.slick-next {
-      right: -10%;
+      right: -5%;
       &::before {
         content: ">";
         font-size: 30px;
