@@ -1,11 +1,5 @@
-
-
 const Men = () => {
-    return (
-        <div>
-            This is Men page;
-        </div>
-    )
-}
+  return <div style={{ border: "1px solid black" }}>This is Men page;</div>;
+};
 
 export default Men;

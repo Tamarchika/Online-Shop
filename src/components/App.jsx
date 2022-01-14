@@ -10,12 +10,14 @@ import Category from "../pages/Category/Components/Category";
 import HeaderTop from "./header/Header_Top";
 import AccountPage from "../pages/Account/Components/AccountPage";
 import "../style/main.scss";
+import Footer from "../components/footer/Footer";
+import ForgetPasswordPage from "../pages/Account/Components/ForgetPasswordPage";
 
 const history = createBrowserHistory();
 
 const App = () => {
   return (
-    <div className="container">
+    <>
       <Router history={history}>
         <header>
           <HeaderTop />
@@ -29,10 +31,16 @@ const App = () => {
             <Route path={ROUTERS.SHOP} exact element={<Shop />} />
             <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
             <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
+            <Route
+              path={ROUTERS.FORGETPASS}
+              exact
+              element={<ForgetPasswordPage />}
+            />
           </Routes>
         </main>
       </Router>
-    </div>
+      <Footer />
+    </>
   );
 };
 
