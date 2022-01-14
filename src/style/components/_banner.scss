@@ -1,0 +1,39 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../base/typography";
+
+.home_page_banner_area {
+  display: flex;
+  align-items: center;
+}
+.home_page_banner_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+.home_page_banner_img {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 107px 0 87px 0;
+  img {
+    border-radius: 60px 8px 8px 8px;
+  }
+}
+.home_page_banner_heading {
+  h1 {
+    margin-bottom: $headingMargin;
+    font-size: $bannerHeadingFontSize;
+    font-weight: $AppFontWeight;
+    line-height: 66px;
+    color: $headingColor;
+  }
+  p {
+    margin-bottom: $paragraphMargin;
+    font-weight: normal;
+    color: $paragraphColor;
+    line-height: 1.2;
+  }
+}

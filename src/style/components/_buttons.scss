@@ -1,0 +1,40 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+@import "../base/typography";
+@import "../abstracts/mixins";
+
+.btn_primary {
+  background-color: $btn_primary;
+  padding: 18px 45px;
+  line-height: 1;
+  font-weight: $btnPrimaryFontWeight;
+  font-size: $btnPrimaryFontSize;
+  color: $btnPrimaryText;
+  border: 2px solid $btn_primary;
+  @include btn();
+  &:hover {
+    @include btnHover();
+  }
+}
+a {
+  text-decoration: none;
+}
+
+.btn_glass {
+  @include btn();
+  text-align: center !important;
+  font-weight: $btnPrimaryFontWeight;
+  font-size: 14px;
+  line-height: 1.3;
+  padding: 15px 30px;
+  background-color: rgba(51, 90, 255, 0.04);
+  color: $features_moreBtn;
+  &:hover {
+    background-color: $features_moreBtn;
+    color: $btnPrimaryText;
+  }
+}
+
+.features_more_btn {
+  margin-top: 65px;
+}

@@ -1,6 +1,6 @@
-import { FaRegHeart } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
+import { FaRegHeart, FaUser, FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import ROUTERS from "../../constants/router_constants";
 import "../../style/components/_account.scss";
 
 const Account = () => {
@@ -13,7 +13,9 @@ const Account = () => {
         <FaShoppingCart />
       </div>
       <div className="user">
-        <FaUser />
+        <Link to={ROUTERS.ACCOUNT}>
+          <FaUser />
+        </Link>
       </div>
     </div>
   );
