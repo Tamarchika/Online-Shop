@@ -1,7 +1,8 @@
 @import "../abstracts/colors";
 @import "../abstracts/mixins";
 
-.account_form_container {
+.account_form_container,
+.forget_pass_form_container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -13,11 +14,16 @@
   background-color: $accountBg;
   overflow: hidden;
 
-  .signin_container {
+  .signin_container,
+  .forget_pass_container {
     @include loginRegisterContainer();
   }
 
   .signup_container {
     @include loginRegisterContainer();
   }
+}
+
+.forget_pass_form_container {
+  padding: 8% 30%;
 }

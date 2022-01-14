@@ -11,6 +11,7 @@ import Sales from "../pages/Sales/Components/Sales";
 import HeaderTop from "./header/Header_Top";
 import AccountPage from "../pages/Account/Components/AccountPage";
 import Footer from "../components/footer/Footer";
+import ForgetPasswordPage from "../pages/Account/Components/ForgetPasswordPage";
 
 const history = createBrowserHistory();
 
@@ -30,6 +31,11 @@ const App = () => {
             <Route path={ROUTERS.SHOP} exact element={<Shop />} />
             <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
             <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
+            <Route
+              path={ROUTERS.FORGETPASS}
+              exact
+              element={<ForgetPasswordPage />}
+            />
           </Routes>
         </Router>
       </div>

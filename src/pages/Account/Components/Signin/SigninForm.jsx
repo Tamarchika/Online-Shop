@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ROUTERS from "../../../../constants/router_constants";
 import "../../../../style/layout/_forms.scss";
 
 const SigninForm = () => {
@@ -22,7 +23,7 @@ const SigninForm = () => {
             <label for="show_password">Show Password</label>
           </div>
           <div className="forg_pass">
-            <Link to={"*"}>Forget Password</Link>
+            <Link to={ROUTERS.FORGETPASS}>Forget Password</Link>
           </div>
         </div>
         <div className="submit_option">
