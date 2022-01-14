@@ -7,7 +7,22 @@
   box-sizing: border-box;
 }
 
-//Footer mixins
+@mixin btn {
+    transition:  0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+    user-select: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@mixin btnHover {
+    background-color: $btnPrimaryText;
+    color: $btn_primary;
+}
+
+// Footer mixins
 @mixin footer_nav_components {
   display: flex;
   flex-direction: column;

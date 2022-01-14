@@ -9,6 +9,7 @@ import Shop from "../pages/Shop/Components/Shop";
 import Category from "../pages/Category/Components/Category";
 import HeaderTop from "./header/Header_Top";
 import AccountPage from "../pages/Account/Components/AccountPage";
+import "../style/main.scss";
 import Footer from "../components/footer/Footer";
 import ForgetPasswordPage from "../pages/Account/Components/ForgetPasswordPage";
 
@@ -17,12 +18,12 @@ const history = createBrowserHistory();
 const App = () => {
   return (
     <>
-      <div className="container">
-        <Router history={history}>
-          <header>
-            <HeaderTop />
-            <Nav />
-          </header>
+      <Router history={history}>
+        <header>
+          <HeaderTop />
+          <Nav />
+        </header>
+        <main>
           <Routes>
             <Route path={ROUTERS.HOME} exact element={<Home />} />
             <Route path={ROUTERS.MEN} exact element={<Men />} />
@@ -36,8 +37,8 @@ const App = () => {
               element={<ForgetPasswordPage />}
             />
           </Routes>
-        </Router>
-      </div>
+        </main>
+      </Router>
       <Footer />
     </>
   );

@@ -1,0 +1,42 @@
+@import "../abstracts/colors";
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+button {
+  &.slick-arrow::before {
+    color: $headingColor;
+  }
+}
+
+.carousel {
+  text-align: center;
+}
+img {
+  padding: 0 15px;
+  width: 100%;
+}
+
+button {
+  &.slick-arrow {
+    &.slick-prev {
+      left: -10%;
+      &::before {
+        content: "<";
+        font-size: 30px;
+      }
+    }
+    &.slick-next {
+      right: -10%;
+      &::before {
+        content: ">";
+        font-size: 30px;
+      }
+    }
+  }
+}
