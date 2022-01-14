@@ -15,3 +15,9 @@
   padding: 0 10%;
 }
 
+.align_items_center {
+  -webkit-box-align: center !important;
+  align-items: center !important;
+  flex-direction: row;
+  display: flex;
+}
