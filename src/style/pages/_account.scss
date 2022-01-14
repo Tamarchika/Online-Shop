@@ -1,0 +1,29 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.account_form_container,
+.forget_pass_form_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 8%;
+  background-color: $accountBg;
+  overflow: hidden;
+
+  .signin_container,
+  .forget_pass_container {
+    @include loginRegisterContainer();
+  }
+
+  .signup_container {
+    @include loginRegisterContainer();
+  }
+}
+
+.forget_pass_form_container {
+  padding: 8% 30%;
+}
