@@ -15,7 +15,13 @@ const Features = () => {
         <div className="features_wrapper">
           <Carousel />
         </div>
-        <div className="row"></div>
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="features_more_btn">
+              <a className="btn_glass" href="/">View All Products</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
