@@ -7,7 +7,6 @@ import Men from "../pages/Men/Components/Men";
 import Women from "../pages/Women/Components/Women";
 import Shop from "../pages/Shop/Components/Shop";
 import Category from "../pages/Category/Components/Category";
-import Sales from "../pages/Sales/Components/Sales";
 import HeaderTop from "./header/Header_Top";
 import AccountPage from "../pages/Account/Components/AccountPage";
 
