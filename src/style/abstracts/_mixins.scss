@@ -43,6 +43,14 @@
 }
 
 // Account
+@mixin loginRegisterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: $loginRegisterBg;
+}
+
 @mixin login_register_flex_style {
   display: flex;
   flex-direction: column;

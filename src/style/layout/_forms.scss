@@ -1,7 +1,8 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-.signin {
+.signin,
+.signup {
   @include login_register_flex_style();
 
   .signin_heading {

@@ -1,4 +1,5 @@
 @import "../abstracts/colors";
+@import "../abstracts/mixins";
 
 .account_form_container {
   display: flex;
@@ -13,15 +14,10 @@
   overflow: hidden;
 
   .signin_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    background-color: $loginRegisterBg;
+    @include loginRegisterContainer();
   }
 
   .signup_container {
-    flex: 1;
-    background-color: $loginRegisterBg;
+    @include loginRegisterContainer();
   }
 }
