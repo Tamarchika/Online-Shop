@@ -1,5 +1,6 @@
 import "../../../style/components/_banner.scss";
 import "../../../style/components/_buttons.scss";
+import Brands from "./Brands";
 
 const Banner = () => {
   return (
@@ -20,6 +21,7 @@ const Banner = () => {
             />
           </div>
         </div>
+        <Brands />
       </div>
     </section>
   );
