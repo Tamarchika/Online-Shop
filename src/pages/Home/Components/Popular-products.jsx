@@ -1,6 +1,7 @@
-import React from "react";
+
 import Card from "../../../components/reusable_components/Card";
 import "../../../style/components/_popular-products.scss";
+import "../../../style/components/_features.scss";
 
 const PopularProducts = () => {
   return (

@@ -26,6 +26,15 @@
   flex-direction: column;
 }
 
+// grid mixin
+
+@mixin grid {
+  position: relative;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 // Footer mixins
 @mixin footer_nav_components {
   display: flex;
