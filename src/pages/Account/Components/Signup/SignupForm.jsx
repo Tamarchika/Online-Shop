@@ -4,7 +4,7 @@ const SignupForm = () => {
   return (
     <>
       <div className="signin_heading">
-        <h5>Sign in</h5>
+        <h5>Sign up</h5>
       </div>
       <form className="form">
         <div className="txt_field">
@@ -42,7 +42,7 @@ const SignupForm = () => {
           </div>
         </div>
         <div className="submit_option">
-          <input type="submit" value="Sign in" />
+          <input type="submit" value="Sign up" />
         </div>
       </form>
     </>

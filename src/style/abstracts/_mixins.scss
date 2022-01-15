@@ -8,18 +8,17 @@
 }
 
 @mixin btn {
-    transition:  0.15s ease-in-out, background-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out,
-    -webkit-box-shadow 0.15s ease-in-out;
-    user-select: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    text-transform: uppercase;
+  transition: 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  user-select: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 @mixin btnHover {
-    background-color: $btnPrimaryText;
-    color: $btn_primary;
+  background-color: $btnPrimaryText;
+  color: $btn_primary;
 }
 
 // Footer mixins
@@ -46,7 +45,7 @@
 @mixin footer_nav_li_hover {
   opacity: 1;
   color: white;
-  transition: all 0.5s ease;
+  transition: $mainTransition;
 }
 
 @mixin footer_lorem_text {
@@ -62,7 +61,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   flex: 1;
+  border-radius: $borderRadius;
   background-color: $loginRegisterBg;
 }
 
@@ -102,7 +103,7 @@
   font-size: 14px;
   border: 1px solid rgba(152, 155, 167, 0.5) !important;
   outline: none;
-  border-radius: 4px;
+  border-radius: $borderRadius;
   padding: 20px;
   width: 100%;
 }
@@ -133,7 +134,7 @@
 @mixin account_btn {
   width: 100%;
   background-color: $loginRegisterBtn;
-  border-radius: 4px;
+  border-radius: $borderRadius;
   padding: 18px 45px;
   font-size: 16px;
   line-height: 1;
@@ -149,5 +150,5 @@
   background-color: $loginRegisterBg;
   outline: 2px solid $loginRegisterBtn;
   color: $loginRegisterBtn;
-  transition: all 0.3s ease;
+  transition: $mainTransition;
 }
