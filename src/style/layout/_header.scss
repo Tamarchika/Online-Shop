@@ -10,7 +10,9 @@
   display: flex;
   justify-content: space-around;
   color: $grey;
-  padding: $paddingTopHeader;
+  padding: 5px 0;
+  background-color: $headerTopBg;
+  transition: all 0.3s ease;
   .language_currency {
     display: flex;
     justify-content: space-evenly;
@@ -23,4 +25,12 @@
     justify-content: start;
     gap: 20px;
   }
+}
+.header_top_wrapper {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
 }

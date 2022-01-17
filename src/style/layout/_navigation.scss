@@ -9,8 +9,11 @@
   box-sizing: border-box;
 }
 
+.navbar {
+  transition: all 0.3s ease;
+  padding: 15px 0;
+}
 nav {
-  padding: $paddingTopHeader;
   &.navbar {
     display: flex;
     justify-content: space-between;
