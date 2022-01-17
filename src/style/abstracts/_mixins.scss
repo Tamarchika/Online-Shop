@@ -19,6 +19,30 @@
 @mixin btnHover {
   background-color: $btnPrimaryText;
   color: $btn_primary;
+
+}
+@mixin card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+// grid mixin
+
+@mixin grid {
+  position: relative;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// Section_title mixin
+@mixin title {
+  color: $featuredProducts;
+  font-size: $featuredProductsTitle;
+  line-height: 1.1;
+  text-align: center;
+
 }
 
 // Footer mixins

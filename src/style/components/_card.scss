@@ -1,0 +1,28 @@
+@import "../abstracts/mixins";
+@import "../abstracts/colors";
+
+.product_item_image {
+  position: relative;
+  margin-bottom: 22px;
+  img {
+    border-radius: 12px;
+    width: 100%;
+  }
+}
+.product_item_info {
+  @include card();
+  align-items: baseline;
+  padding-left: 15px;
+  del {
+    color: $paragraphColor;
+  }
+  span {
+    color: $featuredProducts;
+  }
+  a {
+    color: $featuredProducts;
+  }
+}
+.card {
+  padding: 0 15px;
+}

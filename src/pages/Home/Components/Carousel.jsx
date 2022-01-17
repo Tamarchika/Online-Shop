@@ -24,7 +24,7 @@ const Carousel = () => {
           <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
         </div>
         <div className="slider_item">
-          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
+          <Card src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/03.jpg" />
         </div>
         <div className="slider_item">
           <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
@@ -33,7 +33,7 @@ const Carousel = () => {
           <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
         </div>
         <div className="slider_item">
-          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
+          <Card src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/03.jpg" />
         </div>
       </Slider>
     </div>

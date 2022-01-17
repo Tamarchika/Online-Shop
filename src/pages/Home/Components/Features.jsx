@@ -18,7 +18,9 @@ const Features = () => {
         <div className="row">
           <div className="col-sm-12">
             <div className="features_more_btn">
-              <a className="btn_glass" href="/">View All Products</a>
+              <a className="btn_glass" href="/">
+                View All Products
+              </a>
             </div>
           </div>
         </div>
