@@ -5,6 +5,7 @@ import "../../../style/pages/_home.scss";
 import "../../../style/layout/_grid.scss";
 import PopularProducts from "./Popular-products";
 import Categories from "./Categories";
+import CustomersReview from "./Customers-review";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <About />
       <PopularProducts />
       <Categories />
+      <CustomersReview />
     </main>
   );
 };

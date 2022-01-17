@@ -35,6 +35,14 @@
   padding-right: 15px;
 }
 
+// Section_title mixin
+@mixin title {
+  color: $featuredProducts;
+  font-size: $featuredProductsTitle;
+  line-height: 1.1;
+  text-align: center;
+}
+
 // Footer mixins
 @mixin footer_nav_components {
   display: flex;
