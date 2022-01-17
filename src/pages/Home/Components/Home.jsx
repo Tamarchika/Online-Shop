@@ -1,8 +1,8 @@
 import Banner from "./Banner";
-import Features from "./Features";
-import About from "./About";
 import "../../../style/pages/_home.scss";
 import "../../../style/layout/_grid.scss";
+import Features from "./Features";
+import About from "./About";
 import PopularProducts from "./Popular-products";
 import Categories from "./Categories";
 import CustomersReview from "./Customers-review";
