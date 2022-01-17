@@ -3,7 +3,10 @@
 @import "../abstracts/variables";
 .signin,
 .signup,
-.forget_pass {
+.forget_pass,
+.account_settings,
+.change_password,
+.billing_container {
   @include login_register_flex_style();
 
   .signin_heading {
@@ -128,4 +131,22 @@
       color: $lightTxtColor;
     }
   }
+}
+
+.account_settings,
+.change_password {
+  border: 1px solid #efefef;
+}
+
+// billing component
+.combined_txt_field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dropdown {
+  border: 1px solid rgba(152, 155, 167, 0.5) !important;
+  border-radius: $borderRadius;
 }

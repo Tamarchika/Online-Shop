@@ -8,10 +8,14 @@ import Women from "../pages/Women/Components/Women";
 import Shop from "../pages/Shop/Components/Shop";
 import Category from "../pages/Category/Components/Category";
 import HeaderTop from "./header/Header_Top";
-import AccountPage from "../pages/Account/Components/AccountPage";
-import "../style/main.scss";
+import AccountPage from "../pages/Account/AccountPage";
+import ForgetPasswordPage from "../pages/Account/ForgetPasswordPage";
+import UserPage from "../pages/Account/UserPage";
+import ErrorPage from "../pages/Error/ErrorPage";
+
 import Footer from "../components/footer/Footer";
-import ForgetPasswordPage from "../pages/Account/Components/ForgetPasswordPage";
+
+import "../style/main.scss";
 
 const history = createBrowserHistory();
 
@@ -36,6 +40,12 @@ const App = () => {
               exact
               element={<ForgetPasswordPage />}
             />
+            <Route
+              path={`${ROUTERS.USER}/:option`}
+              exact
+              element={<UserPage />}
+            />
+            <Route path={ROUTERS.ERROR} exact element={<ErrorPage />} />
           </Routes>
         </main>
       </Router>

@@ -7,10 +7,14 @@ const Account = () => {
   return (
     <div className="account">
       <div className="favorite">
-        <FaRegHeart />
+        <Link to={`${ROUTERS.USER}/${ROUTERS.WISHLIST}`}>
+          <FaRegHeart />
+        </Link>
       </div>
       <div className="shopping-cart">
-        <FaShoppingCart />
+        <Link to={`${ROUTERS.USER}/${ROUTERS.CART}`}>
+          <FaShoppingCart />
+        </Link>
       </div>
       <div className="user">
         <Link to={ROUTERS.ACCOUNT}>

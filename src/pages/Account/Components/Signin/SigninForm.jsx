@@ -27,7 +27,9 @@ const SigninForm = () => {
           </div>
         </div>
         <div className="submit_option">
-          <input type="submit" value="Sign in" />
+          <Link to={`${ROUTERS.USER}/${ROUTERS.USERDASHBOARD}`}>
+            <input type="submit" value="Sign in" />
+          </Link>
         </div>
       </form>
     </>
