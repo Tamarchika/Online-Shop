@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../style/layout/_grid.scss";
 import "../../style/components/_card.scss";
+
 import { FaShoppingCart } from "react-icons/fa";
+
 
 const Card = (props) => {
   return (
@@ -12,9 +14,11 @@ const Card = (props) => {
       <div className="card">
         <div className="product_item_image">
           <img src={props.src} alt="products" />
+
           <span className="shopping_cart">
             <FaShoppingCart />
           </span>
+
         </div>
         <div className="product_item_info">
           <a
