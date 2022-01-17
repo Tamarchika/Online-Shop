@@ -23,6 +23,8 @@ nav {
 }
 
 ul {
+  margin: 0px;
+  padding: 0px;
   &.navbar_ul {
     display: flex;
     justify-content: space-between;
@@ -40,6 +42,7 @@ a {
 nav {
   &.navbar {
     .navbar_ul {
+      padding-left: 50px;
       .navbar_ul_li {
         list-style-type: none;
       }

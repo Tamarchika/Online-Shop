@@ -22,10 +22,10 @@ const Nav = () => {
       <div className="main_container">
         <div className="d-none d-lg-block">
           <nav className="navbar align-items-center d-flex">
-            <ul className="navbar_ul">
-              <h2 className="navbar_brand">
-                <Link to={ROUTERS.HOME}>ONLINE-SHOP</Link>
-              </h2>
+            <h2 className="navbar_brand">
+              <Link to={ROUTERS.HOME}>ONLINE-SHOP</Link>
+            </h2>
+            <ul className="navbar_ul align-items-center d-flex">
               <li className="navbar_ul_li">
                 <Link to={ROUTERS.HOME} className="nav_link">
                   Home
