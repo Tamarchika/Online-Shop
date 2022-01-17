@@ -1,0 +1,32 @@
+@import "../abstracts/mixins";
+.error_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 8%;
+  gap: 100px;
+  color: $darkTxtColor;
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $lightTxtColor;
+  }
+  .error_btn {
+    @include account_btn();
+    width: 300px;
+    a {
+      color: white;
+    }
+    &:hover {
+      @include account_btn_hover();
+      a {
+        color: $btn_primary;
+      }
+    }
+  }
+}

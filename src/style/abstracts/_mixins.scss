@@ -7,6 +7,24 @@
   box-sizing: border-box;
 }
 
+@mixin flexSpaceBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 @mixin btn {
   transition: 0.15s ease-in-out, background-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -19,11 +37,13 @@
 @mixin btnHover {
   background-color: $btnPrimaryText;
   color: $btn_primary;
+
 }
 @mixin card {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
 }
 
 // grid mixin
@@ -41,6 +61,7 @@
   font-size: $featuredProductsTitle;
   line-height: 1.1;
   text-align: center;
+
 }
 
 // Footer mixins
@@ -67,7 +88,7 @@
 @mixin footer_nav_li_hover {
   opacity: 1;
   color: white;
-  transition: all 0.5s ease;
+  transition: $mainTransition;
 }
 
 @mixin footer_lorem_text {
@@ -84,6 +105,7 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+  border-radius: $borderRadius;
   background-color: $loginRegisterBg;
 }
 
@@ -123,7 +145,7 @@
   font-size: 14px;
   border: 1px solid rgba(152, 155, 167, 0.5) !important;
   outline: none;
-  border-radius: 4px;
+  border-radius: $borderRadius;
   padding: 20px;
   width: 100%;
 }
@@ -154,7 +176,7 @@
 @mixin account_btn {
   width: 100%;
   background-color: $loginRegisterBtn;
-  border-radius: 4px;
+  border-radius: $borderRadius;
   padding: 18px 45px;
   font-size: 16px;
   line-height: 1;
@@ -170,5 +192,15 @@
   background-color: $loginRegisterBg;
   outline: 2px solid $loginRegisterBtn;
   color: $loginRegisterBtn;
-  transition: all 0.3s ease;
+  transition: $mainTransition;
+}
+
+// User
+@mixin sizeColorBox {
+  @include flexCenter();
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
 }

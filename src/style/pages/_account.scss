@@ -1,11 +1,15 @@
 @import "../abstracts/colors";
 @import "../abstracts/mixins";
+@import "./_user.scss";
 
 .account_form_container,
-.forget_pass_form_container {
+.forget_pass_form_container,
+.dashboard_container,
+.billing_information {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 50px;
   left: 0;
   height: 100%;
@@ -24,6 +28,11 @@
   }
 }
 
+// forget-password page
 .forget_pass_form_container {
   padding: 8% 30%;
 }
+
+// user page
+
+// User page Cart items

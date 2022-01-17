@@ -4,7 +4,6 @@ $grey: rgb(153, 153, 153);
 $navBrandColor: rgb(41, 41, 245);
 
 // button colors
-
 $btn_primary: #335aff;
 
 // Home page banner colors
@@ -14,9 +13,12 @@ $paragraphColor: #989ba7;
 $btnPrimaryText: white;
 
 // Home page Features colors
-
 $featuredProducts: #1a2224;
 $features_moreBtn: blue;
+
+// Product Card colors
+$cartHover: rgba(236, 232, 232, 0.822);
+
 
 //Home page About colors
 
@@ -33,13 +35,18 @@ $cardBorder: #efefef;
 
 $footer_bg: #072227;
 $footer_text: #f5f5f5;
-$footer_btn_hover: #1c6dd0;
+$footer_btn_hover: #335aff;
 
 //Account colors
 
 $accountBg: #efefef;
 $loginRegisterBg: #ffff;
-
-$loginRegisterBtn: #335aff;
+// User Page
+$mainWhite: #ffff;
+$lightGrey: #efefee;
 $lightTxtColor: #989ba7;
+$userPageGrey: #6c757d;
 $darkTxtColor: #1a2224;
+$activeClr: #50bfb3;
+$ratingStarClr: #ffa023;
+$loginRegisterBtn: #335aff;

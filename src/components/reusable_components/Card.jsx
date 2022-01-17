@@ -9,6 +9,9 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchData } from "../../redux/actions";
 
+import { FaShoppingCart } from "react-icons/fa";
+
+
 const Card = (props) => {
  
   const dataState = useSelector((store) => {
@@ -19,6 +22,11 @@ const Card = (props) => {
       <div className="card">
         <div className="product_item_image">
           <img src={props.src} alt="products" />
+
+          <span className="shopping_cart">
+            <FaShoppingCart />
+          </span>
+
         </div>
         <div className="product_item_info">
           <a
