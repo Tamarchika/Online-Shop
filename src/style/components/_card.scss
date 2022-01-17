@@ -1,0 +1,47 @@
+@import "../abstracts/mixins";
+@import "../abstracts/colors";
+
+.product_item_image {
+  position: relative;
+  margin-bottom: 22px;
+  img {
+    border-radius: 12px;
+    width: 100%;
+    position: relative;
+  }
+}
+.product_item_info {
+  @include card();
+  align-items: baseline;
+  padding-left: 15px;
+  del {
+    color: $paragraphColor;
+  }
+  span {
+    color: $featuredProducts;
+  }
+  a {
+    color: $featuredProducts;
+  }
+}
+.card {
+  padding: 0 15px;
+}
+
+.shopping_cart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: $btnPrimaryText;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: $cartHover;
+  }
+  svg {
+    font-size: 1.3rem;
+    color: $headingColor;
+  }
+}
+

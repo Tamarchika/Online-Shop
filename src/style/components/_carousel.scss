@@ -17,22 +17,18 @@ button {
 .carousel {
   text-align: center;
 }
-img {
-  padding: 0 15px;
-  width: 100%;
-}
 
 button {
   &.slick-arrow {
     &.slick-prev {
-      left: -10%;
+      left: -5%;
       &::before {
         content: "<";
         font-size: 30px;
       }
     }
     &.slick-next {
-      right: -10%;
+      right: -5%;
       &::before {
         content: ">";
         font-size: 30px;

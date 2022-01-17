@@ -1,6 +1,7 @@
-import "../../../style/pages/_account.scss";
-import Signin from "./Signin/Signin";
-import Signup from "./Signup/Signup";
+import Signin from "./Components/Signin/Signin";
+import Signup from "./Components/Signup/Signup";
+
+import "../../style/pages/_account.scss";
 
 const AccountPage = () => {
   return (

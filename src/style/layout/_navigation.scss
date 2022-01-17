@@ -54,6 +54,9 @@ a {
 
 .account {
   flex: 2;
+  a {
+    color: $darkTxtColor;
+  }
 }
 
 h2 {
