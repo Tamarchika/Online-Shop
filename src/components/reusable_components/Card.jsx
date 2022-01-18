@@ -4,10 +4,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../style/layout/_grid.scss";
 import "../../style/components/_card.scss";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchData } from "../../redux/actions";
 
 import { FaShoppingCart } from "react-icons/fa";
 
 const Card = (props) => {
+ 
+  const dataState = useSelector((store) => {
+    console.log(store)
+  })
   return (
     <>
       <div className="card">
