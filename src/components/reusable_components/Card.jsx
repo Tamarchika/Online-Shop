@@ -7,7 +7,6 @@ import "../../style/components/_card.scss";
 
 import { FaShoppingCart } from "react-icons/fa";
 
-
 const Card = (props) => {
   return (
     <>
