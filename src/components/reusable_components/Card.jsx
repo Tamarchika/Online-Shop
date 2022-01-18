@@ -12,9 +12,9 @@ const Card = (props) => {
       <div className="card">
         <div className="product_item_image">
           <img src={props.src} alt="products" />
-          <span className="shopping_cart">
+          <div className="shopping_cart">
             <FaShoppingCart />
-          </span>
+          </div>
         </div>
         <div className="product_item_info">
           <a
