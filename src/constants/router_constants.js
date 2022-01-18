@@ -3,7 +3,7 @@ const ROUTERS = {
   MEN: "men",
   WOMEN: "women",
   SHOP: "shop",
-  CATEGORY: "/category/:id",
+  CATEGORY: "/category",
   ACCOUNT: "/account",
   FORGETPASS: "/forget-password",
   USER: "/user",

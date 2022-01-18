@@ -13,9 +13,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Card = (props) => {
  
-  const dataState = useSelector((store) => {
-    console.log(store)
-  })
+
   return (
     <>
       <div className="card">
