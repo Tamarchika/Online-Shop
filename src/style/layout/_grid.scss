@@ -1,8 +1,7 @@
 @import "../abstracts/mixins";
 
 .col-sm-12 {
-  display: flex;
-  justify-content: space-evenly;
+  position: relative;
   width: 100%;
   padding: 0 15px;
   flex: 0 0 100%;
@@ -13,6 +12,7 @@
 }
 .main_container {
   padding: 0 5%;
+  width: 100%;
 }
 
 .align_items_center {
@@ -47,4 +47,9 @@
     max-width: 25%;
   }
 }
-
+.d-flex {
+  display: flex !important;
+}
+.d-lg-block {
+  display: block !important;
+}
