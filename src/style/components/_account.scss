@@ -1,4 +1,8 @@
+
+@import '../abstracts/colors';
 @import '../abstracts/variables';
+
+
 
 .account {
   display: flex;
@@ -13,7 +17,6 @@
 .user {
   svg {
     cursor: pointer;
-    font-size: 1.3rem;
-    
+    color: rgba(0, 0, 0, 0.76);
   }
 }

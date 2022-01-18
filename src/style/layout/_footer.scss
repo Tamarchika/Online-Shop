@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   background-color: $footer_bg;
-  width: 100vw;
+  width: 100%;
   padding: 0 8%;
   color: $footer_text;
 
@@ -80,7 +80,7 @@
         &:hover {
           background-color: $footer_btn_hover;
           color: $footer_text;
-          transition: $footer_transition;
+          transition: $mainTransition;
           cursor: pointer;
         }
       }
@@ -175,7 +175,7 @@
       opacity: 1;
       &:hover {
         opacity: $footer_opacity;
-        transition: $footer_transition;
+        transition: $mainTransition;
         cursor: pointer;
       }
     }
@@ -191,7 +191,7 @@
       &:hover {
         opacity: $footer_opacity;
         cursor: pointer;
-        transition: $footer_transition;
+        transition: $mainTransition;
       }
     }
   }
