@@ -9,6 +9,7 @@
   h2 {
     @include title();
     font-weight: $AppFontWeight;
+    margin-top: 5%;
   }
 }
 .customers_review_wrapper {
