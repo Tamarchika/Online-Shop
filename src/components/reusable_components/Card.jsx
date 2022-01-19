@@ -11,7 +11,7 @@ const Card = (props) => {
   return (
     <>
       <div className="card">
-        <div className="product_item_image" style={{backgroundImage: `${props.image}`}}>
+        <div className="product_item_image" style={{backgroundImage: `url(${props.image})`}}>
           <div className="shopping_cart">
             <FaShoppingCart />
           </div>
@@ -23,8 +23,8 @@ const Card = (props) => {
           >
             {props.title}
           </a>
-          <span>{props.price}</span>
-          <del>{parseFloat(props.price + 39).toFixed(2)}</del>
+          <span>${props.price}</span>
+          <del>${parseFloat(props.price + 39).toFixed(2)}</del>
         </div>
       </div>
     </>
