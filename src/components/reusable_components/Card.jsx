@@ -11,8 +11,7 @@ const Card = (props) => {
   return (
     <>
       <div className="card">
-        <div className="product_item_image">
-          <img src={props.src} alt="products" />
+        <div className="product_item_image" style={{backgroundImage: `${props.image}`}}>
           <div className="shopping_cart">
             <FaShoppingCart />
           </div>

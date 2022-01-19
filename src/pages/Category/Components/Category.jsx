@@ -28,10 +28,10 @@ const Category = () => {
           <>
             {categoryState.map((category) => {
               return (
-                <div className="col-md-4 col-sm-6">
+                <div className="col-md-4 col-sm-6" key={category.id}>
                   <div className="product_item">
                     <Card
-                      src={category.image}
+                      image={category.image}
                       price={category.price}
                       title={category.title}
                     />
