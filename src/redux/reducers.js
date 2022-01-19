@@ -13,7 +13,6 @@ const categoriesState = {
   error: null,
 };
 
-
 export const productsReducer = (state = productsState, action) => {
   switch (action.type) {
     case actions.DATA_FETCHING:
@@ -42,8 +41,6 @@ export const productsReducer = (state = productsState, action) => {
     }
   }
 };
-<<<<<<< HEAD
-=======
 
 export const categoryReducer = (state = categoriesState, action) => {
   switch (action.type) {
@@ -78,4 +75,3 @@ export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
 });
->>>>>>> 1aca51e336bc0eb22414ee294b6d79b89cdd7003
