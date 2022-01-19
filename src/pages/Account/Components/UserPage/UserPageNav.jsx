@@ -10,23 +10,35 @@ const UserPageNav = () => {
     <div>
       <div className="dashboard_navbar">
         <nav>
-          <li className={isPathMatchRoute("/user/user-dashboard") && "active"}>
+          <li
+            className={
+              isPathMatchRoute("/user/user-dashboard") ? "active" : undefined
+            }
+          >
             <Link to={`${ROUTERS.USER}/${ROUTERS.USERDASHBOARD}`}>
               Account Settings
             </Link>
           </li>
-          <li className={isPathMatchRoute("/user/billing") && "active"}>
+          <li
+            className={isPathMatchRoute("/user/billing") ? "active" : undefined}
+          >
             <Link to={`${ROUTERS.USER}/${ROUTERS.BILLING}`}>
               Billing information
             </Link>
           </li>
-          <li className={isPathMatchRoute("/user/wishlist") && "active"}>
+          <li
+            className={
+              isPathMatchRoute("/user/wishlist") ? "active" : undefined
+            }
+          >
             <Link to={`${ROUTERS.USER}/${ROUTERS.WISHLIST}`}>MY wishlist</Link>
           </li>
-          <li className={isPathMatchRoute("/user/cart") && "active"}>
+          <li className={isPathMatchRoute("/user/cart") ? "active" : undefined}>
             <Link to={`${ROUTERS.USER}/${ROUTERS.CART}`}>MY cart</Link>
           </li>
-          <li className={isPathMatchRoute("/user/order") && "active"}>
+          <li
+            className={isPathMatchRoute("/user/order") ? "active" : undefined}
+          >
             <Link to={`${ROUTERS.USER}/${ROUTERS.ORDER}`}>Order</Link>
           </li>
           <li>
