@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchData } from "../../../redux/actions";
-
 import Banner from "./Banner";
 import Features from "./Features";
 import About from "./About";
@@ -12,10 +8,6 @@ import "../../../style/pages/_home.scss";
 import "../../../style/layout/_grid.scss";
 
 const Home = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(fetchData())
-  })
   return (
     <main className="home_page_content">
       <Banner />

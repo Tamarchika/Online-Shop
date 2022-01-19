@@ -2,6 +2,9 @@
 @import "../abstracts/variables";
 @import "../base/typography";
 
-.categories {
-  padding: 100px 0;
+.section_title {
+  h2 {
+    padding: 50px 0 50px 0;
+    background-color: $cartHover;
+  }
 }
