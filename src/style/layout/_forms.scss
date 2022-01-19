@@ -138,6 +138,12 @@
   border: 1px solid #efefef;
 }
 
+// error message in form filed
+.required_error {
+  font-size: 14px;
+  color: $formErrorMsg;
+}
+
 // billing component
 .combined_txt_field {
   display: flex;

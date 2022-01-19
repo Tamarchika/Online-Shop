@@ -10,8 +10,8 @@ const SigninForm = () => {
       </div>
       <form className="form">
         <div className="txt_field">
-          <input type="email" required placeholder="" />
-          <label>Email</label>
+          <input type="text" required placeholder="" />
+          <label>Username</label>
         </div>
         <div className="txt_field">
           <input type="password" required placeholder="" />

@@ -1,5 +1,5 @@
 @import "./colors";
-@import "./variables";
+@import "./_variables.scss";
 
 @mixin all {
   padding: 0;
@@ -37,13 +37,11 @@
 @mixin btnHover {
   background-color: $btnPrimaryText;
   color: $btn_primary;
-
 }
 @mixin card {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
 }
 
 // grid mixin
@@ -61,7 +59,6 @@
   font-size: $featuredProductsTitle;
   line-height: 1.1;
   text-align: center;
-
 }
 
 // Footer mixins
