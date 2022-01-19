@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ROUTERS from "../constants/router_constants";
 import Account from "./header/Account";
 import SearchInput from "./header/Search";
@@ -17,6 +17,7 @@ const options = [
 const defaultOption = "Category";
 
 const Nav = () => {
+  const navigate = useNavigate();
   return (
     <div className="header_bottom">
       <div className="main_container">
@@ -47,13 +48,16 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="navbar_ul_li">
-                <Link to={ROUTERS.CATEGORY} className="nav_link">
-                  <Dropdown
-                    options={options}
-                    value={defaultOption}
-                    placeholder="Category"
-                  />
-                </Link>
+                <Dropdown
+                  options={options}
+                  value={defaultOption}
+                  placeholder="Category"
+                  onChange={(e) => {
+                    navigate(`/category/${e.value.toLowerCase()}`, {
+                      replace: true,
+                    });
+                  }}
+                />
               </li>
             </ul>
             <SearchInput />
