@@ -51,12 +51,12 @@ const CartItem = ({ product }) => {
           <div className="quantity">
             <h6>Quantity</h6>
             <div className="counter">
-              <div className="decreaser">
-                <FaGreaterThan className="io" onClick={() => setQty(qty - 1)} />
+              <div className="decreaser" onClick={() => setQty(qty - 1)}>
+                <FaGreaterThan className="io" />
               </div>
               <input type="text" value={qty} min={1} />
-              <div className="increaser">
-                <FaGreaterThan onClick={() => setQty(qty + 1)} />
+              <div className="increaser" onClick={() => setQty(qty + 1)}>
+                <FaGreaterThan />
               </div>
             </div>
           </div>
