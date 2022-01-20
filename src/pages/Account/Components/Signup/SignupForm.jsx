@@ -46,7 +46,6 @@ const SignupForm = () => {
         "https://fakestoreapi.com/users",
         postData
       );
-      console.log(response.data);
       navigate("/user/user-dashboard");
     } catch (error) {
       console.log(error);

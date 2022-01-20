@@ -1,8 +1,12 @@
 import Card from "../../../components/reusable_components/Card";
 import "../../../style/components/_popular-products.scss";
 import "../../../style/components/_features.scss";
+import { useSelector } from "react-redux";
 
 const PopularProducts = () => {
+  const products = useSelector((store) => { console.log(store)
+    return store.data.products;
+  })
   return (
     <section className="popular_products">
       <div className="main_container">
@@ -14,51 +18,18 @@ const PopularProducts = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/06.jpg" />
+          {products.map(el => {
+            return (
+              <div className="col-md-4 col-sm-6">
+              <div className="product_item">
+              <Card image={el.image}
+              title={el.title}
+              price={el.price} />
             </div>
           </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/07.jpg" />
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/08.jpg" />
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/02.jpg" />
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/02.jpg" />
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/02.jpg" />
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="product_item">
-              <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
-            </div>
-          </div>
+            )
+          })}
+          
         </div>
       </div>
     </section>

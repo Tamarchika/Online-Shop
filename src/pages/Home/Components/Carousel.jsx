@@ -4,8 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../../style/layout/_grid.scss";
 import Card from "../../../components/reusable_components/Card";
+import { useSelector } from "react-redux";
 
 const Carousel = () => {
+  const featuredData = useSelector((store) => {
+    return store.data.products;
+  })
   const settings = {
     dots: true,
     infinite: true,
@@ -20,21 +24,15 @@ const Carousel = () => {
   return (
     <div className="carousel">
       <Slider {...settings}>
-        <div className="slider_item">
-          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
+        {featuredData.map(item => {
+           return (
+           <div className="slider_item">
+          <Card image={item.image}
+          title={item.title}
+          price={item.price} />
         </div>
-        <div className="slider_item">
-          <Card src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/03.jpg" />
-        </div>
-        <div className="slider_item">
-          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
-        </div>
-        <div className="slider_item">
-          <Card src="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/01.jpg" />
-        </div>
-        <div className="slider_item">
-          <Card src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/product/03.jpg" />
-        </div>
+           )
+        })}
       </Slider>
     </div>
   );
