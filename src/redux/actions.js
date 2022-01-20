@@ -14,7 +14,6 @@ export const fetchData = () => {
   };
 };
 
-
 export const getCategories = (category) => {
   return async function (dispatch) {
     dispatch({ type: actions.GET_CATEGORIES });
@@ -30,3 +29,9 @@ export const getCategories = (category) => {
   };
 };
 
+export const updateLoginStatus = (status) => {
+  return {
+    type: actions.UPDATE_LOGIN_STATUS,
+    payload: status,
+  };
+};

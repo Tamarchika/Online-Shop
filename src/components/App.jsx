@@ -8,6 +8,7 @@ import Women from "../pages/Women/Components/Women";
 import Shop from "../pages/Shop/Components/Shop";
 import Category from "../pages/Category/Components/Category";
 import HeaderTop from "./header/Header_Top";
+import PrivateRoute from "../pages/Account/Components/PrivateRoute/PrivateRoute";
 import AccountPage from "../pages/Account/AccountPage";
 import ForgetPasswordPage from "../pages/Account/ForgetPasswordPage";
 import UserPage from "../pages/Account/UserPage";
@@ -35,16 +36,20 @@ const App = () => {
             <Route path={ROUTERS.SHOP} exact element={<Shop />} />
             <Route path={ROUTERS.CATEGORY} exact element={<Category />} />
             <Route path={ROUTERS.ACCOUNT} exact element={<AccountPage />} />
+
             <Route
               path={ROUTERS.FORGETPASS}
               exact
               element={<ForgetPasswordPage />}
             />
-            <Route
-              path={`${ROUTERS.USER}/:option`}
-              exact
-              element={<UserPage />}
-            />
+            <Route path={`${ROUTERS.USER}/:option`} element={<PrivateRoute />}>
+              <Route
+                path={`${ROUTERS.USER}/:option`}
+                exact
+                element={<UserPage />}
+              />
+            </Route>
+
             <Route path={ROUTERS.ERROR} exact element={<ErrorPage />} />
           </Routes>
         </main>

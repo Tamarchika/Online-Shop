@@ -1,13 +1,19 @@
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import useGeolocation from "react-hook-geolocation";
+
 import axios from "axios";
 import { useState } from "react";
+import { updateLoginStatus } from "../../../../redux/actions";
 
 const SignupForm = () => {
-  const [isShowPassword, setIsShowPassword] = useState(false);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const geolocation = useGeolocation();
+
+  const [isShowPassword, setIsShowPassword] = useState(false);
+
   // Form Validator
   const {
     register,
@@ -46,6 +52,7 @@ const SignupForm = () => {
         "https://fakestoreapi.com/users",
         postData
       );
+      dispatch(updateLoginStatus(true));
       navigate("/user/user-dashboard");
     } catch (error) {
       console.log(error);

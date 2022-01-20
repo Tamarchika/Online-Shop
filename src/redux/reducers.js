@@ -13,6 +13,9 @@ const categoriesState = {
   error: null,
 };
 
+const userLogedIn = {
+  isLogedIn: false,
+};
 
 export const productsReducer = (state = productsState, action) => {
   switch (action.type) {
@@ -43,8 +46,6 @@ export const productsReducer = (state = productsState, action) => {
   }
 };
 
-
-
 export const categoryReducer = (state = categoriesState, action) => {
   switch (action.type) {
     case actions.GET_CATEGORIES:
@@ -74,8 +75,17 @@ export const categoryReducer = (state = categoriesState, action) => {
   }
 };
 
+export const logninStatusReducer = (state = userLogedIn, action) => {
+  switch (action.type) {
+    case actions.UPDATE_LOGIN_STATUS:
+      return { ...state, isLogedIn: action.payload };
+    default:
+      return state;
+  }
+};
+
 export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
+  userStatus: logninStatusReducer,
 });
-
