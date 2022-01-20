@@ -1,6 +1,23 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ROUTERS from "../../../../constants/router_constants";
+
 const UserPageHeader = ({ title }) => {
+  const [currentUser, setCurrentUser] = useState({});
+  const getCurrentUser = async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/users/1");
+      setCurrentUser(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getCurrentUser();
+  }, []);
+
   return (
     <div className="user_header_container">
       <nav className="user_header_nav">
@@ -15,6 +32,8 @@ const UserPageHeader = ({ title }) => {
         </li>
       </nav>
       <h5>{title}</h5>
+      <p>{currentUser.username}</p>
+      <p>{currentUser.email}</p>
     </div>
   );
 };
