@@ -9,17 +9,9 @@
 
 .popular_products {
   background-color: $popularProductsBg;
-  padding: 100px 0 20px 0;
+  padding: 50px 0 20px 0;
 }
-.product_category_img {
-  margin-bottom: 20px;
-  img {
-    border-radius: 50%;
-    outline: 0;
-    max-width: 100%;
-    border: 0;
-  }
-}
+
 .product_category_text {
   h6 {
     color: $headingColor;
