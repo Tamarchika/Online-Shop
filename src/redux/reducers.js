@@ -6,6 +6,7 @@ const productsState = {
   loading: false,
   error: null,
 };
+
 const categoriesState = {
   categories: [],
   loading: false,
