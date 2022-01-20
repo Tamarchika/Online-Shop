@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import ROUTERS from "../constants/router_constants";
 import Nav from "./Nav";
 import Home from "../pages/Home/Components/Home";
@@ -54,6 +56,7 @@ const App = () => {
           </Routes>
         </main>
       </Router>
+      <ToastContainer />
       <Footer />
     </>
   );

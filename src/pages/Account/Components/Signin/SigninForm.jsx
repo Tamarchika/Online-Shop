@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 import { Link, useNavigate } from "react-router-dom";
 import ROUTERS from "../../../../constants/router_constants";
@@ -32,6 +33,7 @@ const SigninForm = () => {
       dispatch(updateLoginStatus(true));
       navigate("/user/user-dashboard");
     } catch (error) {
+      toast.error("User does not exist");
       setUserExist(false);
     }
   };
