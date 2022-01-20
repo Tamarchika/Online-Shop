@@ -14,6 +14,7 @@ export const fetchData = () => {
   };
 };
 
+
 export const getCategories = (category) => {
   return async function (dispatch) {
     dispatch({ type: actions.GET_CATEGORIES });
@@ -28,3 +29,4 @@ export const getCategories = (category) => {
     }
   };
 };
+
