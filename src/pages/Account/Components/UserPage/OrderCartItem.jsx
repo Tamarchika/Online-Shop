@@ -1,4 +1,4 @@
-import { FaGreaterThan, FaRegHeart, FaStar } from "react-icons/fa";
+import { FaRegHeart, FaStar } from "react-icons/fa";
 
 const OrderCartItem = () => {
   return (

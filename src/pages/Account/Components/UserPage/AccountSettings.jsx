@@ -18,7 +18,7 @@ const AccountSettings = () => {
         </div>
 
         <div className="submit_option">
-          <Link to={ROUTERS.USERDASHBOARD}>
+          <Link to={`${ROUTERS.USER}/${ROUTERS.USERDASHBOARD}`}>
             <input type="submit" value="Save changes" />
           </Link>
         </div>

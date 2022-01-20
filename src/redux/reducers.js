@@ -6,11 +6,13 @@ const productsState = {
   loading: false,
   error: null,
 };
+
 const categoriesState = {
   categories: [],
   loading: false,
   error: null,
 };
+
 
 export const productsReducer = (state = productsState, action) => {
   switch (action.type) {
@@ -40,6 +42,8 @@ export const productsReducer = (state = productsState, action) => {
     }
   }
 };
+
+
 
 export const categoryReducer = (state = categoriesState, action) => {
   switch (action.type) {
@@ -74,3 +78,4 @@ export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
 });
+
