@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import useGeolocation from "react-hook-geolocation";
 
@@ -55,7 +56,7 @@ const SignupForm = () => {
       dispatch(updateLoginStatus(true));
       navigate("/user/user-dashboard");
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong with registartion");
     }
   };
 
