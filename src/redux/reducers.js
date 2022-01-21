@@ -13,8 +13,16 @@ const categoriesState = {
   error: null,
 };
 
+
 const userLogedIn = {
   isLogedIn: false,
+};
+
+
+const categoryNamesState = {
+  categoryNames: [],
+  loading: false,
+  error: null,
 };
 
 export const productsReducer = (state = productsState, action) => {
@@ -75,17 +83,49 @@ export const categoryReducer = (state = categoriesState, action) => {
   }
 };
 
+
 export const logninStatusReducer = (state = userLogedIn, action) => {
   switch (action.type) {
     case actions.UPDATE_LOGIN_STATUS:
       return { ...state, isLogedIn: action.payload };
     default:
       return state;
+
+const categoryNamesReducer = (state = categoryNamesState, action) => {
+  switch (action.type) {
+    case actions.GET_CATEGORY_NAME:
+      return {
+        ...state,
+        loading: true,
+      };
+    case actions.GET_CATEGORY_NAME_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        categoryNames: action.payload,
+        error: null,
+      };
+    case actions.GET_CATEGORY_NAME_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        categoryNames: [],
+        error: action.payload,
+      };
+    default:
+      return {
+        ...state,
+      };
+
   }
 };
 
 export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
+
   userStatus: logninStatusReducer,
+
+  categories: categoryNamesReducer
+
 });
