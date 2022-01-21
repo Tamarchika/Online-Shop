@@ -28,6 +28,12 @@ export const getCategories = (category) => {
   };
 };
 
+
+export const updateLoginStatus = (status) => {
+  return {
+    type: actions.UPDATE_LOGIN_STATUS,
+    payload: status,
+
 export const getCategoryNames = () => {
   return async function (dispatch) {
     dispatch({ type: actions.GET_CATEGORY_NAME });
@@ -42,5 +48,6 @@ export const getCategoryNames = () => {
         payload: err.message,
       });
     }
+
   };
 };
