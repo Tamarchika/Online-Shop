@@ -13,12 +13,23 @@ const categoriesState = {
   error: null,
 };
 
+
 const userLogedInState = {
   isLogedIn: false,
 };
 
 const userCartState = {
   cart: [],
+
+
+const userLogedIn = {
+  isLogedIn: false,
+};
+
+
+const categoryNamesState = {
+  categoryNames: [],
+
   loading: false,
   error: null,
 };
@@ -81,12 +92,44 @@ export const categoryReducer = (state = categoriesState, action) => {
   }
 };
 
+
 export const logninStatusReducer = (state = userLogedInState, action) => {
+
+
+export const logninStatusReducer = (state = userLogedIn, action) => {
+
   switch (action.type) {
     case actions.UPDATE_LOGIN_STATUS:
       return { ...state, isLogedIn: action.payload };
     default:
       return state;
+
+const categoryNamesReducer = (state = categoryNamesState, action) => {
+  switch (action.type) {
+    case actions.GET_CATEGORY_NAME:
+      return {
+        ...state,
+        loading: true,
+      };
+    case actions.GET_CATEGORY_NAME_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        categoryNames: action.payload,
+        error: null,
+      };
+    case actions.GET_CATEGORY_NAME_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        categoryNames: [],
+        error: action.payload,
+      };
+    default:
+      return {
+        ...state,
+      };
+
   }
 };
 
@@ -124,6 +167,13 @@ export const userCartReducer = (state = userCartState, action) => {
 export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
+
   userStatus: logninStatusReducer,
+
   userCart: userCartReducer,
+
+
+  categories: categoryNamesReducer
+
+
 });
