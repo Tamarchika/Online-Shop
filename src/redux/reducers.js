@@ -13,7 +13,11 @@ const categoriesState = {
   error: null,
 };
 
-
+const categoryNamesState = {
+  categoryNames: [],
+  loading: false,
+  error: null,
+};
 export const productsReducer = (state = productsState, action) => {
   switch (action.type) {
     case actions.DATA_FETCHING:
@@ -42,8 +46,6 @@ export const productsReducer = (state = productsState, action) => {
     }
   }
 };
-
-
 
 export const categoryReducer = (state = categoriesState, action) => {
   switch (action.type) {
@@ -74,8 +76,36 @@ export const categoryReducer = (state = categoriesState, action) => {
   }
 };
 
+const categoryNamesReducer = (state = categoryNamesState, action) => {
+  switch (action.type) {
+    case actions.GET_CATEGORY_NAME:
+      return {
+        ...state,
+        loading: true,
+      };
+    case actions.GET_CATEGORY_NAME_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        categoryNames: action.payload,
+        error: null,
+      };
+    case actions.GET_CATEGORY_NAME_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        categoryNames: [],
+        error: action.payload,
+      };
+    default:
+      return {
+        ...state,
+      };
+  }
+};
+
 export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
+  categories: categoryNamesReducer
 });
-

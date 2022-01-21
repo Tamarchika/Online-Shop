@@ -4,9 +4,9 @@ import "../../../style/components/_features.scss";
 import { useSelector } from "react-redux";
 
 const PopularProducts = () => {
-  const products = useSelector((store) => { console.log(store)
+  const products = useSelector((store) => {
     return store.data.products;
-  })
+  });
   return (
     <section className="popular_products">
       <div className="main_container">
@@ -18,18 +18,15 @@ const PopularProducts = () => {
           </div>
         </div>
         <div className="row">
-          {products.map(el => {
+          {products.map((el) => {
             return (
-              <div className="col-md-4 col-sm-6">
-              <div className="product_item">
-              <Card image={el.image}
-              title={el.title}
-              price={el.price} />
-            </div>
-          </div>
-            )
+              <div className="col-md-4 col-sm-6" key={el.id}>
+                <div className="product_item">
+                  <Card image={el.image} title={el.title} price={el.price} />
+                </div>
+              </div>
+            );
           })}
-          
         </div>
       </div>
     </section>

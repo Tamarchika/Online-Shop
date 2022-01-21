@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const Carousel = () => {
   const featuredData = useSelector((store) => {
     return store.data.products;
-  })
+  });
   const settings = {
     dots: true,
     infinite: true,
@@ -24,14 +24,12 @@ const Carousel = () => {
   return (
     <div className="carousel">
       <Slider {...settings}>
-        {featuredData.map(item => {
-           return (
-           <div className="slider_item">
-          <Card image={item.image}
-          title={item.title}
-          price={item.price} />
-        </div>
-           )
+        {featuredData.map((item) => {
+          return (
+            <div className="slider_item" key={item.id}>
+              <Card image={item.image} title={item.title} price={item.price} />
+            </div>
+          );
         })}
       </Slider>
     </div>
