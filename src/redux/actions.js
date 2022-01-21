@@ -28,19 +28,20 @@ export const getCategories = (category) => {
   };
 };
 
-
 export const updateLoginStatus = (status) => {
   return {
     type: actions.UPDATE_LOGIN_STATUS,
     payload: status,
-
+  };
+};
 export const getCategoryNames = () => {
   return async function (dispatch) {
     dispatch({ type: actions.GET_CATEGORY_NAME });
     try {
       const { data } = await axios.get(
         "https://fakestoreapi.com/products/categories"
-      ); console.log(data)
+      );
+      console.log(data);
       dispatch({ type: actions.GET_CATEGORY_NAME_SUCCESS, payload: data });
     } catch (err) {
       dispatch({
@@ -48,7 +49,6 @@ export const getCategoryNames = () => {
         payload: err.message,
       });
     }
-
   };
 };
 
