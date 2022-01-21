@@ -17,6 +17,12 @@ const userLogedIn = {
   isLogedIn: false,
 };
 
+const userCartState = {
+  cart: [],
+  loading: false,
+  error: null,
+};
+
 const categoryNamesState = {
   categoryNames: [],
   loading: false,
@@ -117,11 +123,45 @@ const categoryNamesReducer = (state = categoryNamesState, action) => {
   }
 };
 
+export const userCartReducer = (state = userCartState, action) => {
+  switch (action.type) {
+    case actions.GET_USER_CART:
+      return {
+        ...state,
+        loading: true,
+      };
+    case actions.GET_USER_CART_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        cart: action.payload,
+        error: null,
+      };
+    case actions.GET_USER_CART_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        cart: [],
+        error: action.payload,
+      };
+    case actions.ADD_PRODUCT_TO_CART:
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
+      };
+    default:
+      return state;
+  }
+};
+
 export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
 
   userStatus: logninStatusReducer,
+
+  categories: categoryNamesReducer,
+  userCart: userCartReducer,
 
   categories: categoryNamesReducer,
 });

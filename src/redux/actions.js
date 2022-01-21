@@ -51,3 +51,32 @@ export const getCategoryNames = () => {
     }
   };
 };
+
+export const getUserCart = () => {
+  return async (dispatch) => {
+    dispatch({ type: actions.GET_USER_CART });
+    try {
+      const { data } = await axios.get("https://fakestoreapi.com/carts/user/1");
+      const promises = data[0].products.map((item) =>
+        axios.get(`https://fakestoreapi.com/products/${item.productId}`)
+      );
+      const responses = await axios.all(promises);
+      const cart = responses.map((response, i) => {
+        return {
+          product: response.data,
+          qty: data[0].products[i].quantity,
+        };
+      });
+      dispatch({ type: actions.GET_USER_CART_SUCCESS, payload: cart });
+    } catch (error) {
+      dispatch({ type: actions.GET_USER_CART_FAILURE, payload: error.message });
+    }
+  };
+};
+
+export const addProductToCart = (product) => {
+  return {
+    type: actions.ADD_PRODUCT_TO_CART,
+    payload: product,
+  };
+};
