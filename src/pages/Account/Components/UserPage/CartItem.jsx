@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { FaGreaterThan, FaRegHeart, FaStar } from "react-icons/fa";
 
-const CartItem = ({ product }) => {
-  const [qty, setQty] = useState(product.qty);
+const CartItem = ({ data }) => {
+  const [qty, setQty] = useState(data.qty);
   return (
     <div className="body">
       <div className="item">
         <div className="image">
-          <img src={product.data.image} alt={product.data.title} />
+          <img src={data.product.image} alt={data.product.title} />
         </div>
         <div className="name">
-          <p> {product.data.title}</p>
+          <p> {data.product.title}</p>
           <div className="buttons">
             <div className="add_product">
               <button>Checkout Now</button>
@@ -24,13 +24,13 @@ const CartItem = ({ product }) => {
           </div>
         </div>
         <div className="price">
-          <span>{product.data.price}</span>
-          <del>{product.data.price + 25.01}</del>
+          <span>{data.product.price}</span>
+          <del>{data.product.price + 25.01}</del>
         </div>
         <div className="rating">
           <p>
             <FaStar />
-            {product.data.rating.rate}
+            {data.product.rating.rate}
           </p>
         </div>
         <div className="info">

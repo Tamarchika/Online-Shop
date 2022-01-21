@@ -15,10 +15,17 @@ import ROUTERS from "../../constants/router_constants";
 
 import "../../style/pages/_account.scss";
 import "../../style/pages/_user.scss";
+import { useDispatch } from "react-redux";
+import { getUserCart } from "../../redux/actions";
 
 const UserPage = () => {
   const [title, setTitle] = useState("");
   const { option } = useParams();
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUserCart());
+  }, []);
 
   const matches = ["user-dashboard", "billing", "order", "cart", "wishlist"];
 
@@ -34,6 +41,7 @@ const UserPage = () => {
           );
     }
   }, [option]);
+
   return (
     <main>
       <section className="user_page_header">
