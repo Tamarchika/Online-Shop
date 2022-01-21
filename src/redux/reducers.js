@@ -149,6 +149,11 @@ export const userCartReducer = (state = userCartState, action) => {
         ...state,
         cart: [...state.cart, action.payload],
       };
+    case actions.DELETE_PRODUCT_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.product.id !== action.payload),
+      };
     default:
       return state;
   }
