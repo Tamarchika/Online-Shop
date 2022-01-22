@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
 import actions from "../constants/action_constants";
 
+// states
+
 const productsState = {
   products: [],
   loading: false,
@@ -18,6 +20,15 @@ const categoryNamesState = {
   loading: false,
   error: null,
 };
+
+const productState = {
+  product: [],
+  loading: false,
+  error: null,
+};
+
+//Reducers
+
 export const productsReducer = (state = productsState, action) => {
   switch (action.type) {
     case actions.DATA_FETCHING:
@@ -104,8 +115,37 @@ const categoryNamesReducer = (state = categoryNamesState, action) => {
   }
 };
 
+const productReducer = (state = productState, action) => {
+  switch (action.type) {
+    case actions.GET_PRODUCT:
+      return {
+        ...state,
+        loading: true,
+      };
+    case actions.GET_PRODUCT_SUCCES:
+      return {
+        ...state,
+        loading: false,
+        product: action.payload,
+        error: null,
+      };
+    case actions.GET_PRODUCT_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        product: [],
+        error: action.payload,
+      };
+    default:
+      return {
+        ...state,
+      };
+  }
+};
+
 export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
-  categories: categoryNamesReducer
+  categories: categoryNamesReducer,
+  product: productReducer
 });

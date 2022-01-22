@@ -11,16 +11,16 @@ const Card = (props) => {
   return (
     <>
       <div className="card">
-        <div className="product_item_image" style={{backgroundImage: `url(${props.image})`}}>
+        <div
+          className="product_item_image"
+          style={{ backgroundImage: `url(${props.image})` }}
+        >
           <div className="shopping_cart">
             <FaShoppingCart />
           </div>
         </div>
         <div className="product_item_info">
-          <a
-            href="https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/product-details.html"
-            tabIndex="-1"
-          >
+          <a href={`/category/product/${props.id}`} tabIndex="-1">
             {props.title}
           </a>
           <span>${props.price}</span>

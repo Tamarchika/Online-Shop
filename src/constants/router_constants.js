@@ -1,9 +1,7 @@
 const ROUTERS = {
   HOME: "/",
-  MEN: "men",
-  WOMEN: "women",
-  SHOP: "shop",
   CATEGORY: "/category/:id",
+  PRODUCT: "/category/product/:id",
   ACCOUNT: "/account",
   FORGETPASS: "/forget-password",
   USER: "/user",

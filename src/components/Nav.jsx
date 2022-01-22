@@ -38,21 +38,6 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="navbar_ul_li">
-                <Link to={ROUTERS.MEN} className="nav_link">
-                  Men
-                </Link>
-              </li>
-              <li className="navbar_ul_li">
-                <Link to={ROUTERS.WOMEN} className="nav_link">
-                  Women
-                </Link>
-              </li>
-              <li className="navbar_ul_li">
-                <Link to={ROUTERS.SHOP} className="nav_link">
-                  Shop
-                </Link>
-              </li>
-              <li className="navbar_ul_li">
                 <Dropdown
                   options={
                     categoriesState.length &&

@@ -61,6 +61,25 @@
   text-align: center;
 }
 
+@mixin h6 {
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: $priceLineHeight;
+  color: $paragraphColor;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+@mixin flex {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+@mixin margins {
+  margin-right: 12px;
+  margin-bottom: 10px;
+}
+
 // Footer mixins
 @mixin footer_nav_components {
   display: flex;

@@ -27,7 +27,7 @@ const Carousel = () => {
         {featuredData.map((item) => {
           return (
             <div className="slider_item" key={item.id}>
-              <Card image={item.image} title={item.title} price={item.price} />
+              <Card image={item.image} title={item.title} price={item.price} id={item.id} />
             </div>
           );
         })}

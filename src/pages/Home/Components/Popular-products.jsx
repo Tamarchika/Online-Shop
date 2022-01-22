@@ -22,7 +22,7 @@ const PopularProducts = () => {
             return (
               <div className="col-md-4 col-sm-6" key={el.id}>
                 <div className="product_item">
-                  <Card image={el.image} title={el.title} price={el.price} />
+                  <Card image={el.image} title={el.title} price={el.price} id={el.id} />
                 </div>
               </div>
             );

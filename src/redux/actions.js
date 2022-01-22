@@ -34,7 +34,7 @@ export const getCategoryNames = () => {
     try {
       const { data } = await axios.get(
         "https://fakestoreapi.com/products/categories"
-      ); console.log(data)
+      );
       dispatch({ type: actions.GET_CATEGORY_NAME_SUCCESS, payload: data });
     } catch (err) {
       dispatch({
@@ -44,3 +44,18 @@ export const getCategoryNames = () => {
     }
   };
 };
+
+export const getProduct = (id) => {
+  return async function (dispatch) {
+    dispatch({ type: actions.GET_PRODUCT});
+    try {
+      const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`);
+      dispatch({ type: actions.GET_PRODUCT_SUCCES, payload: data });
+    } catch (err) {
+      dispatch({
+        type: actions.GET_PRODUCT_FAILURE,
+        payload: err.message
+      });
+    }
+  }
+}
