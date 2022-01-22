@@ -1,16 +1,13 @@
-
-@import '../abstracts/colors';
-@import '../abstracts/variables';
-
-
+@import "../abstracts/mixins";
+@import "../abstracts/colors";
+@import "../abstracts/variables";
 
 .account {
-  display: flex;
+  @include flex();
   flex: 1;
   justify-content: space-evenly;
   margin-left: $mailMargin;
   padding-right: 5px;
-  align-items: center;
 }
 
 .favorite,

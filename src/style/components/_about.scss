@@ -1,6 +1,7 @@
 @import "../abstracts/colors";
 @import "../base/typography";
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 .about_area {
   padding-bottom: 100px;
@@ -31,10 +32,7 @@
     margin-bottom: 50px;
     .icon_area {
       margin-bottom: 20px;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-
+      @include flex();
       svg {
         font-size: 24px;
         color: $checkIcon;

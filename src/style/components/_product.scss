@@ -157,6 +157,11 @@
       color: white;
     }
   }
+  &:hover {
+    svg {
+      color: $btn_primary;
+    }
+  }
 }
 .product_pricelist_selector_button_item {
   @include flex();

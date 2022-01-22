@@ -17,7 +17,6 @@ import Footer from "../components/footer/Footer";
 
 import "../style/main.scss";
 
-
 const history = createBrowserHistory();
 
 const App = () => {

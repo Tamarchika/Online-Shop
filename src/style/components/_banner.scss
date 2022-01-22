@@ -4,8 +4,7 @@
 @import "../base/typography";
 
 .home_page_banner_area {
-  display: flex;
-  align-items: center;
+  @include flex();
 }
 .home_page_banner_heading {
   display: flex;
