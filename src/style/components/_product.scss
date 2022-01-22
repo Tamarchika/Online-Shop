@@ -1,7 +1,7 @@
 @import "../abstracts/colors";
 @import "../abstracts/variables";
 @import "../base/typography";
-@import '../abstracts/mixins';
+@import "../abstracts/mixins";
 
 .product {
   padding: 100px 0;
@@ -13,11 +13,11 @@
   margin-left: -30px;
 }
 .product_pricelist_rating {
-    @include flex();
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    margin-top: 12px;
-    margin-bottom: 28px;
+  @include flex();
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 28px;
 }
 .price {
   span {
@@ -26,50 +26,50 @@
     line-height: $priceLineHeight;
   }
   del {
-      font-size: $productPriceFontSize;
-      color: $paragraphColor;
-      line-height: $priceLineHeight;
-      margin-left: 5px;
+    font-size: $productPriceFontSize;
+    color: $paragraphColor;
+    line-height: $priceLineHeight;
+    margin-left: 5px;
   }
 }
 .star {
-    ul {
-        @include flex();
-      li {
-        list-style-type: none;
-        padding: 3px;
-        color: $ratingStarClr;
-    }  
-    .point {
-        font-size: 12px;
-        line-height: 1.2;
-        color: $paragraphColor;
-    }
-    } 
-}
-.sizes {
+  ul {
     @include flex();
     li {
-        list-style-type: none;
+      list-style-type: none;
+      padding: 3px;
+      color: $ratingStarClr;
     }
+    .point {
+      font-size: 12px;
+      line-height: 1.2;
+      color: $paragraphColor;
+    }
+  }
+}
+.sizes {
+  @include flex();
+  li {
+    list-style-type: none;
+  }
 }
 .sizes-all {
-    @include flex();
-    width: 40px;
-    height: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 1px solid $cardBorder;
-    border-radius: 4px;
-    font-size: $btnPrimaryFontSize;
-    color: $featuredProducts;
-    cursor: pointer;
-    line-height: 1.3;
-    @include margins();
-    &:active {
-        color: #fff;
-        background-color: $featuredProducts;
-    }
+  @include flex();
+  width: 40px;
+  height: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid $cardBorder;
+  border-radius: 4px;
+  font-size: $btnPrimaryFontSize;
+  color: $featuredProducts;
+  cursor: pointer;
+  line-height: 1.3;
+  @include margins();
+  &:active {
+    color: #fff;
+    background-color: $featuredProducts;
+  }
 }
 .slider_img {
   width: 500px !important;
@@ -93,40 +93,96 @@
   }
 }
 .product_pricelist_selector_size {
-    h6 {
-       @include h6();
-    }
+  h6 {
+    @include h6();
+  }
 }
 .product_pricelist_selector {
-    @include flex();
-    flex-wrap: wrap;
-    margin-top: 24px;
-    margin-bottom: 20px;
+  @include flex();
+  flex-wrap: wrap;
+  margin-top: 24px;
+  margin-bottom: 20px;
 }
 .product_pricelist_selector_color {
-    h6 {
-        @include h6();
+  h6 {
+    @include h6();
+  }
+  .colors {
+    @include flex();
+    li {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      @include margins();
+      list-style-type: none;
     }
-    .colors {
-       @include flex();
-        li {
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            @include margins();
-            list-style-type: none;
-        }
-        .colorall {
-            &:active {
-                border: 3px solid $featuredProducts;
-                border-radius: 4px;
-            }
-        }
-        .color-1 {
-            background-color: #50BFB3;
-        }
-        .color-2 {
-            background-color: #2490EE;
-        }
+    .colorall {
+      &:active {
+        border: 3px solid $featuredProducts;
+        border-radius: 4px;
+      }
     }
+    .color-1 {
+      background-color: #50bfb3;
+    }
+    .color-2 {
+      background-color: #2490ee;
+    }
+  }
+}
+
+.product_pricelist_selector_quantity {
+  h6 {
+    @include h6();
+  }
+}
+.product_pricelist_selector_button {
+  .btn_primary {
+    vertical-align: middle;
+  }
+  .cart_bg {
+    margin-right: 28px;
+    svg {
+      margin-left: 5px;
+    }
+  }
+}
+
+.favorite {
+  padding: 18px 21px;
+  span {
+    svg {
+      color: white;
+    }
+  }
+}
+.product_pricelist_selector_button_item {
+  @include flex();
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.shipping {
+  @include productShippingBtns();
+  p {
+    @include productShippingParagraph();
+  }
+}
+.delivery {
+  @include productShippingBtns();
+  p {
+    @include productShippingParagraph();
+  }
+}
+.icon {
+  @include shippingIcons();
+  @include flex();
+  background-color: rgba(51, 90, 255, 0.1);
+  border-radius: 100%;
+  justify-content: center;
+}
+.cash {
+  @include flex();
+  p {
+    @include productShippingParagraph();
+  }
 }

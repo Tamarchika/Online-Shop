@@ -12,7 +12,7 @@ import AccountPage from "../pages/Account/AccountPage";
 import ForgetPasswordPage from "../pages/Account/ForgetPasswordPage";
 import UserPage from "../pages/Account/UserPage";
 import ErrorPage from "../pages/Error/ErrorPage";
-import Product from "./reusable_components/Product";
+import Product from "../pages/Product/Product";
 import Footer from "../components/footer/Footer";
 
 import "../style/main.scss";

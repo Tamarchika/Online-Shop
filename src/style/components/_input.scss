@@ -1,6 +1,7 @@
 @import "../abstracts/colors";
 @import "../base/fonts";
 @import "../base/typography";
+@import "../abstracts/mixins";
 
 form {
   display: flex;
@@ -11,12 +12,11 @@ form {
 }
 
 .search_input {
-  display: flex;
+  @include flex();
   flex: 3;
   border: 1px solid $paragraphColor;
   border-radius: 20px;
   height: 45px;
-  align-items: center;
   min-width: 406px;
   position: relative;
 }

@@ -34,6 +34,7 @@ const Category = () => {
                       image={category.image}
                       price={category.price}
                       title={category.title}
+                      id={category.id}
                     />
                   </div>
                 </div>
