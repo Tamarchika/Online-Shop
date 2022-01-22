@@ -67,11 +67,21 @@ const Product = () => {
                 </div>
                 <div className="star">
                   <ul>
-                    <li><FaStar /></li>
-                    <li><FaStar /></li>
-                    <li><FaStar /></li>
-                    <li><FaStar /></li>
-                    <li><FaStar /></li>
+                    <li>
+                      <FaStar />
+                    </li>
+                    <li>
+                      <FaStar />
+                    </li>
+                    <li>
+                      <FaStar />
+                    </li>
+                    <li>
+                      <FaStar />
+                    </li>
+                    <li>
+                      <FaStar />
+                    </li>
                     <li>{}</li>
                     <li className="point">({} rating)</li>
                   </ul>
@@ -86,7 +96,7 @@ const Product = () => {
                     <li className="sizes-all active">M</li>
                     <li className="sizes-all">L</li>
                     <li className="sizes-all">XL</li>
-                    <li className="sizes-all">XLL</li>
+                    <li className="sizes-all">XXL</li>
                   </div>
                 </div>
                 <div className="product_pricelist_selector_color">

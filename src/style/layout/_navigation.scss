@@ -13,6 +13,7 @@
   transition: all 0.3s ease;
   padding: 15px 0;
 }
+
 nav {
   &.navbar {
     display: flex;
@@ -37,6 +38,9 @@ a {
   &:hover {
     color: $black;
   }
+  &:active {
+    color: $black;
+  }
 }
 
 nav {
@@ -45,6 +49,11 @@ nav {
       padding-left: 50px;
       .navbar_ul_li {
         list-style-type: none;
+        .nav_link {
+          &:focus {
+            color: $black;
+          }
+        }
       }
     }
   }
@@ -70,4 +79,13 @@ h2 {
       font-family: $navBrandFontFamily;
     }
   }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px 3px rgb(0 0 0 / 5%);
 }
