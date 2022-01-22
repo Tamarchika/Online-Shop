@@ -1,13 +1,18 @@
+import { useSelector } from "react-redux";
+
 import CartItem from "./CartItem";
 import CartItemsHeader from "./CartItemsHeader";
 
 const Cart = () => {
+  const cartState = useSelector((store) => {
+    return store.userCart.cart;
+  });
   return (
     <div className="cart_items">
       <CartItemsHeader />
-      <CartItem />
-      <CartItem />
-      <CartItem />
+      {cartState.map((prod) => {
+        return <CartItem data={prod} />;
+      })}
     </div>
   );
 };

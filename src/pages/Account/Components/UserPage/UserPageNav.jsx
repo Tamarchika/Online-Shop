@@ -1,8 +1,11 @@
+import { useDispatch } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import ROUTERS from "../../../../constants/router_constants";
+import { updateLoginStatus } from "../../../../redux/actions";
 
 const UserPageNav = () => {
   const location = useLocation();
+  const dispatch = useDispatch();
 
   const isPathMatchRoute = (route) => route === location.pathname;
 
@@ -42,7 +45,12 @@ const UserPageNav = () => {
             <Link to={`${ROUTERS.USER}/${ROUTERS.ORDER}`}>Order</Link>
           </li>
           <li>
-            <Link to={ROUTERS.ACCOUNT}>Log-out</Link>
+            <Link
+              to={ROUTERS.ACCOUNT}
+              onClick={() => dispatch(updateLoginStatus(false))}
+            >
+              Log-out
+            </Link>
           </li>
         </nav>
       </div>

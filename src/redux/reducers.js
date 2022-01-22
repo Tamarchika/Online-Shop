@@ -3,7 +3,7 @@ import actions from "../constants/action_constants";
 
 // states
 
-const productsState = {
+const allProductsState = {
   products: [],
   loading: false,
   error: null,
@@ -11,6 +11,16 @@ const productsState = {
 
 const categoriesState = {
   categories: [],
+  loading: false,
+  error: null,
+};
+
+const userLogedIn = {
+  isLogedIn: false,
+};
+
+const userCartState = {
+  cart: [],
   loading: false,
   error: null,
 };
@@ -29,7 +39,7 @@ const productState = {
 
 //Reducers
 
-export const productsReducer = (state = productsState, action) => {
+export const productsReducer = (state = allProductsState, action) => {
   switch (action.type) {
     case actions.DATA_FETCHING:
       return {
@@ -87,7 +97,17 @@ export const categoryReducer = (state = categoriesState, action) => {
   }
 };
 
-const categoryNamesReducer = (state = categoryNamesState, action) => {
+export const loginStatusReducer = (state = userLogedIn, action) => {
+  switch (action.type) {
+    case actions.UPDATE_LOGIN_STATUS:
+      return { ...state, isLogedIn: action.payload };
+    default:
+      return state;
+  }
+};
+
+//Category Names Reducer
+export const categoryNamesReducer = (state = categoryNamesState, action) => {
   switch (action.type) {
     case actions.GET_CATEGORY_NAME:
       return {
@@ -114,6 +134,8 @@ const categoryNamesReducer = (state = categoryNamesState, action) => {
       };
   }
 };
+
+// Single Product Reducer
 
 const productReducer = (state = productState, action) => {
   switch (action.type) {
@@ -143,9 +165,42 @@ const productReducer = (state = productState, action) => {
   }
 };
 
+export const userCartReducer = (state = userCartState, action) => {
+  switch (action.type) {
+    case actions.GET_USER_CART:
+      return {
+        ...state,
+        loading: true,
+      };
+    case actions.GET_USER_CART_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        cart: action.payload,
+        error: null,
+      };
+    case actions.GET_USER_CART_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        cart: [],
+        error: action.payload,
+      };
+    case actions.ADD_PRODUCT_TO_CART:
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
+      };
+    default:
+      return state;
+  }
+};
+
 export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
   categories: categoryNamesReducer,
-  product: productReducer
+  product: productReducer,
+  userStatus: loginStatusReducer,
+  userCart: userCartReducer,
 });

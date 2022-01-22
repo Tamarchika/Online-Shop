@@ -17,7 +17,7 @@ const Account = () => {
         </Link>
       </div>
       <div className="user">
-        <Link to={ROUTERS.ACCOUNT}>
+        <Link to={`${ROUTERS.USER}/${ROUTERS.USERDASHBOARD}`}>
           <FaUser />
         </Link>
       </div>

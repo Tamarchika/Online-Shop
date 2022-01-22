@@ -1,17 +1,16 @@
+import { useState } from "react";
 import { FaGreaterThan, FaRegHeart, FaStar } from "react-icons/fa";
 
-const CartItem = () => {
+const CartItem = ({ data }) => {
+  const [qty, setQty] = useState(data.qty);
   return (
     <div className="body">
       <div className="item">
         <div className="image">
-          <img
-            src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/nike-shoe.jpg"
-            alt=""
-          />
+          <img src={data.product.image} alt={data.product.title} />
         </div>
         <div className="name">
-          <p> Skechers Men's Classic Fit-Delson-Camden Sneaker</p>
+          <p> {data.product.title}</p>
           <div className="buttons">
             <div className="add_product">
               <button>Checkout Now</button>
@@ -25,13 +24,13 @@ const CartItem = () => {
           </div>
         </div>
         <div className="price">
-          <span>$259.99</span>
-          <del>$499.99</del>
+          <span>{data.product.price}</span>
+          <del>{data.product.price + 25.01}</del>
         </div>
         <div className="rating">
           <p>
             <FaStar />
-            5.0
+            {data.product.rating.rate}
           </p>
         </div>
         <div className="info">
@@ -52,11 +51,11 @@ const CartItem = () => {
           <div className="quantity">
             <h6>Quantity</h6>
             <div className="counter">
-              <div className="decreaser">
+              <div className="decreaser" onClick={() => setQty(qty - 1)}>
                 <FaGreaterThan className="io" />
               </div>
-              <input type="text" value={1} min={1} />
-              <div className="increaser">
+              <input type="text" value={qty} min={1} />
+              <div className="increaser" onClick={() => setQty(qty + 1)}>
                 <FaGreaterThan />
               </div>
             </div>

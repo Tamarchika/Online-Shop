@@ -1,12 +1,19 @@
-import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 import { Link, useNavigate } from "react-router-dom";
 import ROUTERS from "../../../../constants/router_constants";
+
+import { useDispatch } from "react-redux";
+
+import axios from "axios";
+
 import "../../../../style/layout/_forms.scss";
+import { updateLoginStatus } from "../../../../redux/actions";
 
 const SigninForm = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [userExist, setUserExist] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
@@ -23,8 +30,10 @@ const SigninForm = () => {
         "https://fakestoreapi.com/auth/login",
         userData
       );
+      dispatch(updateLoginStatus(true));
       navigate("/user/user-dashboard");
     } catch (error) {
+      toast.error("User does not exist");
       setUserExist(false);
     }
   };
