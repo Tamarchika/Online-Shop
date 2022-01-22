@@ -14,7 +14,6 @@ import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import Quantity from "./Quantity";
 
-
 const Product = () => {
   const dispatch = useDispatch();
   const params = useParams();
@@ -123,7 +122,7 @@ const Product = () => {
                       <FiShoppingCart />
                     </span>
                   </a>
-                  <a href="/" className="btn_primary  favorite">
+                  <a href="/" className="btn_primary  favorite_product">
                     <span>
                       <FaHeart />
                     </span>

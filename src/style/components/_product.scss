@@ -93,6 +93,7 @@
   }
 }
 .product_pricelist_selector_size {
+  margin-right: 26px;
   h6 {
     @include h6();
   }
@@ -104,6 +105,7 @@
   margin-bottom: 20px;
 }
 .product_pricelist_selector_color {
+  margin-right: 28px;
   h6 {
     @include h6();
   }
@@ -148,7 +150,7 @@
   }
 }
 
-.favorite {
+.favorite_product {
   padding: 18px 21px;
   span {
     svg {
