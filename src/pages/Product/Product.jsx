@@ -42,7 +42,11 @@ const Product = () => {
                       {({ zoomIn, zoomOut, resetTransform }) => (
                         <>
                           <TransformComponent>
-                            <img src={product.image} alt="product" />
+                            <img
+                              src={product.image}
+                              alt="product"
+                              className="product_image"
+                            />
                           </TransformComponent>
                           <div className="tools">
                             <button
