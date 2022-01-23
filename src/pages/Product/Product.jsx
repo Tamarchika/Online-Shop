@@ -13,6 +13,7 @@ import { FaClock, FaDollarSign, FaHeart, FaStar } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import Quantity from "./Quantity";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -37,7 +38,35 @@ const Product = () => {
               <div className="product_slider">
                 <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
                   <div className="slider_img">
-                    <img src={product.image} alt="product" />
+                    <TransformWrapper initialScale={1}>
+                      {({ zoomIn, zoomOut, resetTransform }) => (
+                        <>
+                          <TransformComponent>
+                            <img src={product.image} alt="product" />
+                          </TransformComponent>
+                          <div className="tools">
+                            <button
+                              onClick={() => zoomIn()}
+                              className="btn_round"
+                            >
+                              Zoom In
+                            </button>
+                            <button
+                              onClick={() => zoomOut()}
+                              className="btn_round"
+                            >
+                              Zoom Out
+                            </button>
+                            <button
+                              onClick={() => resetTransform()}
+                              className="btn_round"
+                            >
+                              Reset
+                            </button>
+                          </div>
+                        </>
+                      )}
+                    </TransformWrapper>
                   </div>
                 </Slider>
                 <div className="slider_nav">
@@ -47,6 +76,7 @@ const Product = () => {
                     slidesToShow={3}
                     swipeToSlide={true}
                     focusOnSelect={true}
+                    arrows={false}
                   >
                     <span>
                       <img src={product.image} alt="product" />
@@ -56,6 +86,9 @@ const Product = () => {
                     </span>
                     <span>
                       <img src={product.image} alt="product" />
+                    </span>
+                    <span>
+                      <img src={product.image} alt="" />
                     </span>
                   </Slider>
                 </div>
