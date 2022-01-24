@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { FaGreaterThan, FaRegHeart, FaStar } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { deleteProductFromCart } from "../../../../redux/actions";
 
 const CartItem = ({ data }) => {
-  const dsipatch = useDispatch();
   const [qty, setQty] = useState(data.qty);
-  const deleteHandler = (id) => {
-    dsipatch(deleteProductFromCart(id));
-  };
   return (
     <div className="body">
       <div className="item">
@@ -25,10 +19,7 @@ const CartItem = ({ data }) => {
               <FaRegHeart />
             </div>
             <div className="remove_product">
-              <button onClick={() => deleteHandler(data.product.id)}>
-                {" "}
-                Delete{" "}
-              </button>
+              <button> Delete </button>
             </div>
           </div>
         </div>

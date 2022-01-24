@@ -6,6 +6,7 @@ import "../../style/layout/_grid.scss";
 import "../../style/components/_card.scss";
 
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   return (
@@ -20,9 +21,9 @@ const Card = (props) => {
           </div>
         </div>
         <div className="product_item_info">
-          <a href={`/category/product/${props.id}`} tabIndex="-1">
+          <Link to={`/category/product/${props.id}`} tabIndex="-1">
             {props.title}
-          </a>
+          </Link>
           <span>${props.price}</span>
           <del>${parseFloat(props.price + 39).toFixed(2)}</del>
         </div>

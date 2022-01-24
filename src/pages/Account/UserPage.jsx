@@ -17,32 +17,11 @@ import "../../style/pages/_account.scss";
 import "../../style/pages/_user.scss";
 import { useDispatch } from "react-redux";
 import { getUserCart } from "../../redux/actions";
-import axios from "axios";
-import { toast } from "react-toastify";
 
 const UserPage = () => {
   const [title, setTitle] = useState("");
   const { option } = useParams();
 
-  //Get WISHLIST
-  const [wishlist, setWishlist] = useState([]);
-
-  const getWishlistProducts = async () => {
-    try {
-      const { data } = await axios.get(
-        "https://fakestoreapi.com/products?limit=20"
-      );
-      setWishlist(data);
-    } catch (error) {
-      toast.error("Can't get wishlist");
-    }
-  };
-
-  useEffect(() => {
-    getWishlistProducts();
-  }, []);
-
-  // GET CART DATA
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUserCart());
@@ -74,7 +53,7 @@ const UserPage = () => {
         {option === ROUTERS.USERDASHBOARD ? (
           <UserDashboard />
         ) : option === ROUTERS.WISHLIST ? (
-          <Wishlist wishlist={wishlist} />
+          <Wishlist />
         ) : option === ROUTERS.CART ? (
           <Cart />
         ) : option === ROUTERS.BILLING ? (

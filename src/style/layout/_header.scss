@@ -31,18 +31,3 @@
   flex-wrap: wrap;
   width: 100%;
 }
-.shopping-cart {
-  position: relative;
-  .cart_qty {
-    @include flexCenter();
-    position: absolute;
-    font-size: 10px;
-    color: white;
-    top: -10px;
-    right: -13px;
-    width: 18px;
-    height: 18px;
-    background-color: $btn_primary;
-    border-radius: 100%;
-  }
-}
