@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { useParams } from "react-router";
-import { getProduct } from "../../redux/actions";
 import Slider from "react-slick";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
@@ -13,14 +10,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ProductSlider = () => {
-  const dispatch = useDispatch();
-  const params = useParams();
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-
-  useEffect(() => {
-    dispatch(getProduct(params.id));
-  }, [dispatch, params.id]);
 
   const product = useSelector((store) => {
     return store.product.product;

@@ -1,8 +1,5 @@
-import { useEffect } from "react";
+
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { useParams } from "react-router";
-import { getProduct } from "../../redux/actions";
 
 import "../../style/components/_product.scss";
 import "../../style/layout/_grid.scss";
@@ -13,13 +10,6 @@ import { MdOutlineLocalShipping } from "react-icons/md";
 import Quantity from "./Quantity";
 
 const ProductDetails = () => {
-  const dispatch = useDispatch();
-  const params = useParams();
-
-  useEffect(() => {
-    dispatch(getProduct(params.id));
-  }, [dispatch, params.id]);
-
   const product = useSelector((store) => {
     return store.product.product;
   });
