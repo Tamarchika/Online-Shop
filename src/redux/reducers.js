@@ -31,12 +31,6 @@ const categoryNamesState = {
   error: null,
 };
 
-const productState = {
-  product: [],
-  loading: false,
-  error: null,
-};
-
 //Reducers
 
 export const productsReducer = (state = allProductsState, action) => {
@@ -137,34 +131,6 @@ export const categoryNamesReducer = (state = categoryNamesState, action) => {
 
 // Single Product Reducer
 
-const productReducer = (state = productState, action) => {
-  switch (action.type) {
-    case actions.GET_PRODUCT:
-      return {
-        ...state,
-        loading: true,
-      };
-    case actions.GET_PRODUCT_SUCCES:
-      return {
-        ...state,
-        loading: false,
-        product: action.payload,
-        error: null,
-      };
-    case actions.GET_PRODUCT_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        product: [],
-        error: action.payload,
-      };
-    default:
-      return {
-        ...state,
-      };
-  }
-};
-
 export const userCartReducer = (state = userCartState, action) => {
   switch (action.type) {
     case actions.GET_USER_CART:
@@ -200,7 +166,6 @@ export const allReducers = combineReducers({
   data: productsReducer,
   category: categoryReducer,
   categories: categoryNamesReducer,
-  product: productReducer,
   userStatus: loginStatusReducer,
   userCart: userCartReducer,
 });

@@ -1,6 +1,3 @@
-
-import { useSelector } from "react-redux";
-
 import "../../style/components/_product.scss";
 import "../../style/layout/_grid.scss";
 import "../../style/pages/_home.scss";
@@ -9,18 +6,14 @@ import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import Quantity from "./Quantity";
 
-const ProductDetails = () => {
-  const product = useSelector((store) => {
-    return store.product.product;
-  });
-
+const ProductDetails = (props) => {
   return (
     <div className="product_pricelist">
-      <h2>{product.title}</h2>
+      <h2>{props.title}</h2>
       <div className="product_pricelist_rating">
         <div className="price">
-          <span>${product.price}</span>
-          <del>${parseFloat(product.price + 39).toFixed(2)}</del>
+          <span>${props.price}</span>
+          <del>${parseFloat(props.price + 39).toFixed(2)}</del>
         </div>
         <div className="star">
           <ul>
@@ -39,12 +32,12 @@ const ProductDetails = () => {
             <li>
               <FaStar />
             </li>
-            <li>{product.rating.rate}</li>
-            <li className="point">({product.rating.count} rating)</li>
+            <li>{props.rating}</li>
+            <li className="point">({props.count} rating)</li>
           </ul>
         </div>
       </div>
-      <p>{product.description}</p>
+      <p>{props.description}</p>
       <div className="product_pricelist_selector">
         <div className="product_pricelist_selector_size">
           <h6>Sizes</h6>
