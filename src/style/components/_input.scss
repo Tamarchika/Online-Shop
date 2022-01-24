@@ -1,20 +1,24 @@
 @import "../abstracts/colors";
 @import "../base/fonts";
 @import "../base/typography";
+@import "../abstracts/mixins";
 
 form {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .search_input {
-  display: flex;
+  @include flex();
   flex: 3;
-  border: 1px solid rgba(0, 0, 0, 0.555);
+  border: 1px solid $paragraphColor;
   border-radius: 20px;
   height: 45px;
-  align-items: center;
+  min-width: 406px;
+  position: relative;
 }
 
 .input_placeholder {
@@ -30,6 +34,7 @@ form {
 .search_icon {
   color: rgba(0, 0, 0, 0.753);
   cursor: pointer;
+  font-size: 20px;
 }
 input[type="search" i] {
   &::-webkit-search-cancel-button {

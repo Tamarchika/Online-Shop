@@ -1,0 +1,23 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.quantity {
+  @include flex();
+  margin-bottom: 10px;
+  border: 1px solid $cardBorder;
+  span {
+    padding: 0 15px;
+  }
+  .value {
+    border: 0;
+    height: 40px;
+    padding: 0px;
+    width: 53px !important;
+    @include flex();
+    justify-content: center;
+  }
+  .arrow {
+    color: #333333;
+    cursor: pointer;
+  }
+}

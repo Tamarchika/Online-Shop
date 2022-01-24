@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
-import '../../../style/components/_topCategories.scss';
+import "../../../style/components/_topCategories.scss";
 const ProductCategory = (props) => {
   return (
     <div className="product_category">
       <div className="product_category_img">
         <a href="/">
-          <div className="product_img" style={{backgroundImage: `url(${props.image})`}}>
-            </div>
+          <div
+            className="product_img"
+            style={{ backgroundImage: `url(${props.image})` }}
+          ></div>
         </a>
       </div>
       <div className="product_category_text">

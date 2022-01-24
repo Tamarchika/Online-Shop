@@ -2,6 +2,7 @@
 @import "../base/typography";
 @import "../base/fonts";
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 * {
   padding: 0;
@@ -13,11 +14,11 @@
   transition: all 0.3s ease;
   padding: 15px 0;
 }
+
 nav {
   &.navbar {
-    display: flex;
+    @include flex();
     justify-content: space-between;
-    align-items: center;
     padding-top: $paddingTopHeader;
   }
 }
@@ -26,15 +27,17 @@ ul {
   margin: 0px;
   padding: 0px;
   &.navbar_ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex();
+    justify-content: space-evenly;
     flex: 6;
   }
 }
 
 a {
   &:hover {
+    color: $black;
+  }
+  &:active {
     color: $black;
   }
 }
@@ -45,6 +48,11 @@ nav {
       padding-left: 50px;
       .navbar_ul_li {
         list-style-type: none;
+        .nav_link {
+          &:focus {
+            color: $black;
+          }
+        }
       }
     }
   }
@@ -70,4 +78,13 @@ h2 {
       font-family: $navBrandFontFamily;
     }
   }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px 3px rgb(0 0 0 / 5%);
 }

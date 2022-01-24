@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import ROUTERS from "../constants/router_constants";
@@ -17,14 +17,28 @@ const defaultOption = "Category";
 const Nav = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [stickyNav, setStickyNav] = useState("");
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 50 ? setStickyNav("fixed") : setStickyNav("");
+    }
+  };
+
   useEffect(() => {
     dispatch(getCategoryNames());
+    window.addEventListener("scroll", stickNavbar);
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
   }, [dispatch]);
+
   const categoriesState = useSelector((store) => {
     return store.categories.categoryNames;
   });
+
   return (
-    <div className="header_bottom">
+    <div className={`header_bottom ${stickyNav}`}>
       <div className="main_container">
         <div className="d-none d-lg-block">
           <nav className="navbar align-items-center d-flex">
@@ -35,21 +49,6 @@ const Nav = () => {
               <li className="navbar_ul_li">
                 <Link to={ROUTERS.HOME} className="nav_link">
                   Home
-                </Link>
-              </li>
-              <li className="navbar_ul_li">
-                <Link to={ROUTERS.MEN} className="nav_link">
-                  Men
-                </Link>
-              </li>
-              <li className="navbar_ul_li">
-                <Link to={ROUTERS.WOMEN} className="nav_link">
-                  Women
-                </Link>
-              </li>
-              <li className="navbar_ul_li">
-                <Link to={ROUTERS.SHOP} className="nav_link">
-                  Shop
                 </Link>
               </li>
               <li className="navbar_ul_li">

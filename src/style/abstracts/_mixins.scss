@@ -61,6 +61,44 @@
   text-align: center;
 }
 
+@mixin h6 {
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: $priceLineHeight;
+  color: $paragraphColor;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+@mixin flex {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+@mixin margins {
+  margin-right: 12px;
+  margin-bottom: 10px;
+}
+@mixin productShippingBtns {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+@mixin productShippingParagraph {
+  width: 105%;
+  font-size: $btnPrimaryFontSize;
+  line-height: 1.4;
+  color: $featuredProducts;
+  margin-left: 6px;
+}
+@mixin shippingIcons {
+  color: rgb(51, 90, 255);
+  width: 50px;
+  height: 38px;
+}
+
 // Footer mixins
 @mixin footer_nav_components {
   display: flex;

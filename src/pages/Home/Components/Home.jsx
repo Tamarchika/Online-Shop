@@ -13,9 +13,9 @@ import { fetchData } from "../../../redux/actions";
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchData())
-  }, [dispatch])
-  
+    dispatch(fetchData());
+  }, [dispatch]);
+
   return (
     <main className="home_page_content">
       <Banner />
