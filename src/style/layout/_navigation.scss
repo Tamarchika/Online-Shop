@@ -104,3 +104,18 @@ h2 {
   background-color: white;
   box-shadow: 0 0 10px 3px rgb(0 0 0 / 5%);
 }
+
+.header_bottom {
+  aside {
+    .sidenav {
+      width: 350px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 0.5s;
+      z-index: 12;
+    }
+  }
+}

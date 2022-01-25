@@ -29,7 +29,8 @@
   justify-content: center;
 }
 
-.col-md-4 {
+.col-md-4,
+.col-4 {
   -webkit-box-flex: 0;
   flex: 0 0 33.33333%;
   max-width: 33.33333%;
@@ -61,4 +62,8 @@
 }
 .d-lg-block {
   display: block !important;
+}
+
+.d-lg-none {
+  display: none;
 }
