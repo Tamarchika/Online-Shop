@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getProduct } from "../../redux/actions";
+import { getProduct } from "./Product-API";
 
 import "../../style/components/_product.scss";
 import "../../style/layout/_grid.scss";
@@ -10,14 +10,22 @@ import "../../style/pages/_home.scss";
 import ProductSlider from "./Product_slider";
 import ProductDetails from "./Product_details";
 import Features from "../Home/Components/Features";
+import { useDispatch } from "react-redux";
+import { fetchData } from "../../redux/actions";
 
 const Product = () => {
-  const dispatch = useDispatch();
   const params = useParams();
+  const [product, setProduct] = useState(null);
+  const dispatch = useDispatch();
+  async function fetchDataAsync() {
+    const productData = await getProduct(params.id);
+    setProduct(productData);
+  }
 
   useEffect(() => {
-    dispatch(getProduct(params.id));
-  }, [dispatch, params.id]);
+    dispatch(fetchData());
+    fetchDataAsync();
+  }, []);
 
   return (
     <>
@@ -25,10 +33,10 @@ const Product = () => {
         <div className="main_container">
           <div className="row">
             <div className="col-lg-6 col-md-5 col-12">
-              <ProductSlider />
+              <ProductSlider product={product} />
             </div>
             <div className="col-lg-6 col-md-5 col-12">
-              <ProductDetails />
+              <ProductDetails product={product} />
             </div>
           </div>
         </div>

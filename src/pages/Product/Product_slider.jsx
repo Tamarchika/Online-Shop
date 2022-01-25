@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
 import Slider from "react-slick";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
@@ -9,13 +8,10 @@ import "../../style/pages/_home.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ProductSlider = () => {
+const ProductSlider = (props) => {
+ 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-
-  const product = useSelector((store) => {
-    return store.product.product;
-  });
 
   return (
     <div className="product_slider">
@@ -26,7 +22,7 @@ const ProductSlider = () => {
               <>
                 <TransformComponent>
                   <img
-                    src={product.image}
+                    src={props.product?.image}
                     alt="product"
                     className="product_image"
                   />
@@ -59,18 +55,18 @@ const ProductSlider = () => {
           focusOnSelect={true}
           arrows={false}
         >
-          <span>
-            <img src={product.image} alt="product" />
-          </span>
-          <span>
-            <img src={product.image} alt="product" />
-          </span>
-          <span>
-            <img src={product.image} alt="product" />
-          </span>
-          <span>
-            <img src={product.image} alt="" />
-          </span>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
         </Slider>
       </div>
     </div>

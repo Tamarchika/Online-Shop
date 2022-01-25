@@ -81,8 +81,13 @@
     object-fit: cover;
   }
 }
+.center {
+  display: flex !important;
+  justify-content: center;
+}
+
 .slider_nav {
-  span {
+  div {
     img {
       max-width: 60px;
       max-height: 60px;
