@@ -9,11 +9,11 @@ import Quantity from "./Quantity";
 const ProductDetails = (props) => {
   return (
     <div className="product_pricelist">
-      <h2>{props.title}</h2>
+      <h2>{props.product?.title}</h2>
       <div className="product_pricelist_rating">
         <div className="price">
-          <span>${props.price}</span>
-          <del>${parseFloat(props.price + 39).toFixed(2)}</del>
+          <span>${props.product?.price}</span>
+          <del>${parseFloat(props.product?.price + 39).toFixed(2)}</del>
         </div>
         <div className="star">
           <ul>
@@ -32,12 +32,12 @@ const ProductDetails = (props) => {
             <li>
               <FaStar />
             </li>
-            <li>{props.rating}</li>
-            <li className="point">({props.count} rating)</li>
+            <li>{props.product?.rating.rate}</li>
+            <li className="point">({props.product?.rating.count} rating)</li>
           </ul>
         </div>
       </div>
-      <p>{props.description}</p>
+      <p>{props.product?.description}</p>
       <div className="product_pricelist_selector">
         <div className="product_pricelist_selector_size">
           <h6>Sizes</h6>

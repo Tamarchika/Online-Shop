@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ProductSlider = (props) => {
+ 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
 
@@ -21,7 +22,7 @@ const ProductSlider = (props) => {
               <>
                 <TransformComponent>
                   <img
-                    src={props.image}
+                    src={props.product?.image}
                     alt="product"
                     className="product_image"
                   />
@@ -54,18 +55,18 @@ const ProductSlider = (props) => {
           focusOnSelect={true}
           arrows={false}
         >
-          <span>
-            <img src={props.image} alt="product" />
-          </span>
-          <span>
-            <img src={props.image} alt="product" />
-          </span>
-          <span>
-            <img src={props.image} alt="product" />
-          </span>
-          <span>
-            <img src={props.image} alt="product" />
-          </span>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
+          <div className="center">
+            <img src={props.product?.image} alt="product" />
+          </div>
         </Slider>
       </div>
     </div>

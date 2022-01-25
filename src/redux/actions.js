@@ -52,7 +52,6 @@ export const getCategoryNames = () => {
   };
 };
 
-
 export const getUserCart = () => {
   return async (dispatch) => {
     dispatch({ type: actions.GET_USER_CART });

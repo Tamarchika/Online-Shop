@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getProduct } from "./Product-API";
@@ -9,17 +10,22 @@ import "../../style/pages/_home.scss";
 import ProductSlider from "./Product_slider";
 import ProductDetails from "./Product_details";
 import Features from "../Home/Components/Features";
+import { useDispatch } from "react-redux";
+import { fetchData } from "../../redux/actions";
 
 const Product = () => {
   const params = useParams();
   const [product, setProduct] = useState(null);
-  async function fetchData() {
-    const product = await getProduct(params.id);
-    setProduct(product);
+  const dispatch = useDispatch();
+  async function fetchDataAsync() {
+    const productData = await getProduct(params.id);
+    setProduct(productData);
   }
+
   useEffect(() => {
-    fetchData();
-  });
+    dispatch(fetchData());
+    fetchDataAsync();
+  }, []);
 
   return (
     <>
@@ -27,16 +33,10 @@ const Product = () => {
         <div className="main_container">
           <div className="row">
             <div className="col-lg-6 col-md-5 col-12">
-              <ProductSlider image={product?.image} />
+              <ProductSlider product={product} />
             </div>
             <div className="col-lg-6 col-md-5 col-12">
-              <ProductDetails
-                title={product?.title}
-                price={product?.price}
-                description={product?.description}
-                rating={product?.rating.rate}
-                count={product?.count}
-              />
+              <ProductDetails product={product} />
             </div>
           </div>
         </div>
