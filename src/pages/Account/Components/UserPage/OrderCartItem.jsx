@@ -1,17 +1,14 @@
 import { FaRegHeart, FaStar } from "react-icons/fa";
 
-const OrderCartItem = () => {
+const OrderCartItem = ({ product }) => {
   return (
     <div className="body">
       <div className="item">
         <div className="image">
-          <img
-            src="	https://demo.echotemplate.com/olog-ecommerce-responsive-html-template/dist/images/nike-shoe.jpg"
-            alt=""
-          />
+          <img src={product.image} alt={product.title} />
         </div>
         <div className="name">
-          <p> Skechers Men's Classic Fit-Delson-Camden Sneaker</p>
+          <p>{product.title}</p>
           <div className="buttons">
             <div className="add_product">
               <button>Checkout Now</button>
@@ -25,13 +22,13 @@ const OrderCartItem = () => {
           </div>
         </div>
         <div className="price">
-          <span>$259.99</span>
-          <del>$499.99</del>
+          <span>${product.price}</span>
+          <del>${(product.price + product.price * 0.2).toFixed(2)}</del>
         </div>
         <div className="rating">
           <p>
             <FaStar />
-            5.0
+            {product.rating.rate}
           </p>
         </div>
         <div className="info">

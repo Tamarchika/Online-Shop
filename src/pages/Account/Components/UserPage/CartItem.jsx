@@ -33,8 +33,10 @@ const CartItem = ({ data }) => {
           </div>
         </div>
         <div className="price">
-          <span>{data.product.price}</span>
-          <del>{data.product.price + 25.01}</del>
+          <span>${data.product.price}</span>
+          <del>
+            ${(data.product.price + data.product.price * 0.2).toFixed(2)}
+          </del>
         </div>
         <div className="rating">
           <p>
