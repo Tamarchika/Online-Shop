@@ -80,3 +80,10 @@ export const addProductToCart = (product) => {
     payload: product,
   };
 };
+
+export const deleteProductFromCart = (id) => {
+  return {
+    type: actions.DELETE_PRODUCT_FROM_CART,
+    payload: id,
+  };
+};

@@ -67,8 +67,8 @@ const WishlistCartItem = ({ product }) => {
           </div>
         </div>
         <div className="price">
-          <span>{product.price}</span>
-          <del>{product.price + product.price * 0.2}</del>
+          <span>${product.price}</span>
+          <del>${(product.price + product.price * 0.2).toFixed(2)}</del>
         </div>
         <div className="rating">
           <p>
