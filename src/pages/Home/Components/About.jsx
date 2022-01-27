@@ -6,7 +6,7 @@ const About = () => {
     <section className="about_area">
       <div className="main_container">
         <div className="about_area_content">
-          <div className="align_items_center">
+          <div className="align_items_center row">
             <div className="col-lg-6">
               <div className="about_area_content_img">
                 <img

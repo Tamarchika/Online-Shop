@@ -43,46 +43,48 @@ const Nav = () => {
   });
 
   return (
-    <div className={`header_bottom ${stickyNav}`}>
-      <div className="main_container">
-        <div className="d-none d-lg-block">
-          <nav className="navbar align-items-center d-flex">
-            <h2 className="navbar_brand">
-              <Link to={ROUTERS.HOME}>ONLINE-SHOP</Link>
-            </h2>
-            <ul className="navbar_ul align-items-center d-flex">
-              <li className="navbar_ul_li">
-                <Link to={ROUTERS.HOME} className="nav_link">
-                  Home
-                </Link>
-              </li>
-              <li className="navbar_ul_li">
-                <Dropdown
-                  options={
-                    categoriesState.length &&
-                    categoriesState.map((el) => {
-                      return el[0].toUpperCase() + el.substring(1);
-                    })
-                  }
-                  value={defaultOption}
-                  placeholder="Category"
-                  onChange={(e) => {
-                    navigate(`/category/${e.value.toLowerCase()}`, {
-                      replace: true,
-                    });
-                  }}
-                />
-              </li>
-            </ul>
-            <SearchInput />
-            <Account />
-          </nav>
+    <>
+      <div className={`header_bottom ${stickyNav}`}>
+        <div className="main_container">
+          <div className="d-none d-lg-block">
+            <nav className="navbar align-items-center d-flex">
+              <h2 className="navbar_brand">
+                <Link to={ROUTERS.HOME}>ONLINE-SHOP</Link>
+              </h2>
+              <ul className="navbar_ul align-items-center d-flex">
+                <li className="navbar_ul_li">
+                  <Link to={ROUTERS.HOME} className="nav_link">
+                    Home
+                  </Link>
+                </li>
+                <li className="navbar_ul_li">
+                  <Dropdown
+                    options={
+                      categoriesState.length &&
+                      categoriesState.map((el) => {
+                        return el[0].toUpperCase() + el.substring(1);
+                      })
+                    }
+                    value={defaultOption}
+                    placeholder="Category"
+                    onChange={(e) => {
+                      navigate(`/category/${e.value.toLowerCase()}`, {
+                        replace: true,
+                      });
+                    }}
+                  />
+                </li>
+              </ul>
+              <SearchInput />
+              <Account />
+            </nav>
+          </div>
         </div>
       </div>
       <aside className="d-lg-none">
         <ResponsiveNav categories={categoriesState} />
       </aside>
-    </div>
+    </>
   );
 };
 

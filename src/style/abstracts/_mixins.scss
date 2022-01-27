@@ -1,6 +1,6 @@
 @import "./colors";
 @import "./variables";
-@import "./breakpoints"; 
+@import "./breakpoints";
 
 @mixin all {
   padding: 0;
@@ -75,6 +75,18 @@
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+}
+@mixin desktop-grid {
+  -webkit-box-flex: 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+@mixin slider-settings {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
 }
 @mixin margins {
   margin-right: 12px;
@@ -320,8 +332,13 @@
 }
 
 //Responsive
-@mixin tablet {
+@mixin large-tablet {
   @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-laptop - 1px}) {
+    @content;
+  }
+}
+@mixin small-tablet {
+  @media (min-width: #{$breakpoint-mobile-M}) and (max-width: #{$breakpoint-tablet}) {
     @content;
   }
 }
@@ -331,9 +348,15 @@
     @content;
   }
 }
-@mixin mobile {
-  @media (max-width: #{$breakpoint-mobile-M}) {
+
+@mixin large-desktop {
+  @media (min-width: #{$breakpoint-laptop-L}) and (max-width: #{$breakpoint-4k}) {
     @content;
-   
+  }
+}
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-mobile-M}) {
+    @content;
   }
 }

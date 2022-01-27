@@ -107,15 +107,7 @@ h2 {
 
 .header_bottom {
   @include mobile() {
-    *::-moz-placeholder {
-      font-size: 12px;
-    }
-    *::-webkit-input-placeholder {
-      font-size: 10px;
-    }
-    *::placeholder {
-      font-size: 10px;
-    }
+   
     .section_title {
       margin-bottom: 35px;
     }
