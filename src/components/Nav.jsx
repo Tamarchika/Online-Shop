@@ -1,23 +1,28 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { getCategoryNames } from "../redux/actions";
 import ROUTERS from "../constants/router_constants";
 import Account from "./header/Account";
 import SearchInput from "./header/Search";
 import Dropdown from "react-dropdown";
+
 import "react-dropdown/style.css";
 import "../style/components/_dropdown.scss";
 import "../style/layout/_navigation.scss";
+import ResponsiveNav from "./header/ResponsiveNav";
 
-import { getCategoryNames } from "../redux/actions";
+import "../style/components/_burgerMenu.scss";
+import "../style/layout/_grid.scss";
 
 const defaultOption = "Category";
 
 const Nav = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const [stickyNav, setStickyNav] = useState("");
+
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
@@ -74,6 +79,9 @@ const Nav = () => {
           </nav>
         </div>
       </div>
+      <aside className="d-lg-none">
+        <ResponsiveNav categories={categoriesState} />
+      </aside>
     </div>
   );
 };
