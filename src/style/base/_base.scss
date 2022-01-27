@@ -1,25 +1,25 @@
+@import "../abstracts/mixins";
 
 * {
-    @include all();
-  }
-  
-  html,
-  body {
-    height: 100vh;
-  }
-  
-  body {
-    margin: 0;
-    font-family: $AppFontFamily;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 1rem;
-    text-align: left;
-    line-height: 1.5;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  }
-  
+  @include all();
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: $AppFontFamily;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

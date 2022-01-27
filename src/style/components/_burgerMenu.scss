@@ -60,30 +60,42 @@
   display: inline-block;
 }
 
-.sidenav {
-  li {
-    list-style-type: none;
-  }
-}
-.header_bottom {
   aside {
     .sidenav {
+      li {
+        list-style-type: none;
+        padding: 10px 0 10px 0;
+        a {
+          margin-left: 10px;
+        }
+      }
       .search_bar {
         min-width: 300px;
         display: block;
+        padding-bottom: 20px;
         .search_input {
           min-width: auto;
         }
       }
     }
   }
-}
 .mobile_nav {
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
+  .logo {
+    flex: 1;
+  }
   .menu_icons {
+    .account {
+      margin: 0;
+      padding: 0;
+    }
     div {
       padding-left: 20px;
     }
+    flex: 1;
+  }
+  .hamburger_menu {
+    flex: 1;
   }
 }

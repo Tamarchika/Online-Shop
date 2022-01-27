@@ -30,4 +30,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+  @include mobile() {
+    justify-content: center;
+  }
+  @include small-tablet() {
+    justify-content: center;
+  }
+  @include large-tablet() {
+    justify-content: center;
+    width: 50%;
+  }
 }
