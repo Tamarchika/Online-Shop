@@ -1,5 +1,6 @@
 @import "./colors";
-@import "./_variables.scss";
+@import "./variables";
+@import "./breakpoints"; 
 
 @mixin all {
   padding: 0;
@@ -316,4 +317,23 @@
   padding: 5px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+//Responsive
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-laptop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-laptop}) and (max-width: #{$breakpoint-laptop-L}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile-M}) {
+    @content;
+   
+  }
 }
