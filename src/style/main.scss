@@ -1,27 +1,32 @@
+@import "./abstracts/breakpoints";
 @import "./abstracts/mixins";
 @import "./base/fonts";
 @import "./base/typography";
-
-* {
-  @include all();
-}
-
-html,
-body {
-  height: 100vh;
-}
-
-body {
-  margin: 0;
-  font-family: $AppFontFamily;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
-  text-align: left;
-  line-height: 1.5;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+@import "./base/base";
+@import "./components/about";
+@import "./components/account";
+@import "./components/banner";
+@import "./components/brand";
+@import "./components/burgerMenu";
+@import "./components/buttons";
+@import "./components/card";
+@import "./components/carousel";
+@import "./components/categories";
+@import "./components/contact";
+@import "./components/customers_review";
+@import "./components/dropdown";
+@import "./components/features";
+@import "./components/input";
+@import "./components/popular-products";
+@import "./components/product";
+@import "./components/quantity";
+@import "./components/topCategories";
+@import "./layout/footer";
+@import "./layout/forms";
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./pages/account";
+@import "./pages/error";
+@import "./pages/home";
+@import "./pages/user";
