@@ -63,7 +63,11 @@
 .d-lg-block {
   display: block !important;
 }
-
 .d-lg-none {
   display: none;
+  @include mobile() {
+    .d-lg-none {
+      display: block;
+    }
+  }
 }

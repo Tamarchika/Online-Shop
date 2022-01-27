@@ -243,6 +243,9 @@
 
 //Responsive
 @mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-laptop - 1px}) {
+    @content;
+  }
 }
 
 @mixin desktop {
@@ -253,30 +256,6 @@
 @mixin mobile {
   @media (max-width: #{$breakpoint-mobile-M}) {
     @content;
-    *::-moz-placeholder {
-      font-size: 12px;
-    }
-    *::-webkit-input-placeholder {
-      font-size: 10px;
-    }
-    *::placeholder {
-      font-size: 10px;
-    }
-    .section_title {
-      margin-bottom: 35px;
-    }
-    .section_title {
-      h2 {
-        font-size: 28px;
-      }
-    }
-    .header_bottom {
-      padding: 15px 0;
-      aside {
-        .sidenav {
-          right: -15px;
-        }
-      }
-    }
+   
   }
 }
