@@ -26,7 +26,7 @@ const WishlistPage = () => {
     <div className="wishlist_cart_items">
       <CartItemsHeader />
       {wishlist.map((product) => {
-        return <WishlistCartItem product={product} />;
+        return <WishlistCartItem key={product.id} product={product} />;
       })}
     </div>
   );

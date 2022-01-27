@@ -156,3 +156,19 @@
   border: 1px solid rgba(152, 155, 167, 0.5) !important;
   border-radius: $borderRadius;
 }
+
+// Mobile size
+@media screen and (max-width: 480px) {
+  .signin,
+  .signup {
+    padding: 20px 0;
+  }
+}
+
+//Tablet size
+@media (min-width: 480px) and (max-width: 768) {
+  .signin,
+  .signup {
+    padding: 20px 0;
+  }
+}

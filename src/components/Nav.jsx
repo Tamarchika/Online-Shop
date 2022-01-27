@@ -13,6 +13,7 @@ import "../style/layout/_navigation.scss";
 import ResponsiveNav from "./header/ResponsiveNav";
 
 import "../style/components/_burgerMenu.scss";
+import "../style/layout/_grid.scss";
 
 const defaultOption = "Category";
 
