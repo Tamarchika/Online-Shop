@@ -12,16 +12,33 @@
   padding: 5px 0;
   background-color: $headerTopBg;
   transition: all 0.3s ease;
+  @include mobile() {
+    font-size: 12px;
+    justify-content: center;
+  }
   .language_currency {
     @include flex();
     justify-content: space-evenly;
     width: 25%;
+    @include mobile() {
+      -webkit-box-align: center;
+      align-items: center;
+    }
   }
   .contact {
     flex: 1;
     display: flex;
     justify-content: flex-start;
     gap: 20px;
+  }
+  .main_container {
+    .row {
+      .col-sm-12 {
+        @include mobile() {
+          flex: 0 0 50%;
+        }
+      }
+    }
   }
 }
 .header_top_wrapper {
