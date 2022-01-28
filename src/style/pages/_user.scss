@@ -347,6 +347,18 @@
 
 //Mobile
 @media (max-width: 480px) {
+  .dashboard_navbar {
+    nav {
+      flex-direction: column;
+      gap: 15px;
+      flex-wrap: wrap;
+      .active {
+        a {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
   .wishlist_cart_items,
   .cart_items,
   .order_carts {
@@ -381,6 +393,18 @@
 //Small Tablet
 
 @media (min-width: 480px) and (max-width: 768px) {
+  .dashboard_navbar {
+    nav {
+      flex-direction: column;
+      gap: 15px;
+      flex-wrap: wrap;
+      .active {
+        a {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
   .wishlist_cart_items,
   .cart_items,
   .order_carts {
@@ -415,6 +439,18 @@
 
 //Large Tablet
 @media (min-width: 768px) and (max-width: 1024px) {
+  .dashboard_navbar {
+    nav {
+      flex-direction: column;
+      gap: 15px;
+      flex-wrap: wrap;
+      .active {
+        a {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
   .wishlist_cart_items,
   .cart_items,
   .order_carts {
