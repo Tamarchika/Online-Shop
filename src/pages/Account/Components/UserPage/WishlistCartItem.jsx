@@ -42,7 +42,7 @@ const WishlistCartItem = ({ product }) => {
           <img src={product.image} alt={product.title} />
         </div>
         <div className="name">
-          <p> {product.title}</p>
+          <p> {product.title.split(" ").splice(0, 3).join(" ")}</p>
           <div className="buttons">
             <div className="add_product">
               <button

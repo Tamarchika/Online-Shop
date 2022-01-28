@@ -17,7 +17,7 @@ const CartItem = ({ data }) => {
           <img src={data.product.image} alt={data.product.title} />
         </div>
         <div className="name">
-          <p> {data.product.title}</p>
+          <p> {data.product.title.split(" ").splice(0, 3).join(" ")}</p>
           <div className="buttons">
             <div className="add_product">
               <button>Checkout Now</button>
