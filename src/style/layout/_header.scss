@@ -14,7 +14,11 @@
   transition: all 0.3s ease;
   @include mobile() {
     font-size: 12px;
-    justify-content: center;
+    justify-content: space-around;
+  }
+  @include small-tablet() {
+    font-size: 13px;
+    justify-content: space-around;
   }
   .language_currency {
     @include flex();
@@ -23,6 +27,18 @@
     @include mobile() {
       -webkit-box-align: center;
       align-items: center;
+      width: fit-content;
+      .stick {
+        margin-right: 15px;
+      }
+    }
+    @include small-tablet() {
+      -webkit-box-align: center;
+      align-items: center;
+      width: fit-content;
+      .stick {
+        margin-right: 15px;
+      }
     }
   }
   .contact {
@@ -30,12 +46,22 @@
     display: flex;
     justify-content: flex-start;
     gap: 20px;
+    @include mobile() {
+      align-items: center;
+      -webkit-box-align: center;
+      justify-content: space-between;
+    }
+    @include small-tablet() {
+      align-items: center;
+      -webkit-box-align: center;
+      justify-content: space-around;
+    }
   }
   .main_container {
     .row {
       .col-sm-12 {
         @include mobile() {
-          flex: 0 0 50%;
+          flex: 0 0 90%;
         }
       }
     }
@@ -49,12 +75,18 @@
   width: 100%;
   @include mobile() {
     justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
   }
   @include small-tablet() {
     justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
   }
   @include large-tablet() {
     justify-content: center;
     width: 50%;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
   }
 }

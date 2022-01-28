@@ -25,7 +25,10 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <Brands />
+        <div className="brands">
+          <Brands />
+        </div>
+        
       </div>
     </section>
   );
