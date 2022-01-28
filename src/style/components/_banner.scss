@@ -19,6 +19,13 @@
   padding: 107px 0 87px 0;
   img {
     border-radius: 60px 8px 8px 8px;
+    @include mobile() {
+      max-width: 100%;
+    }
+  }
+  @include mobile() {
+    padding: 0;
+    margin-bottom: 40px;
   }
 }
 .home_page_banner_heading {
@@ -28,11 +35,46 @@
     font-weight: $AppFontWeight;
     line-height: 66px;
     color: $headingColor;
+    @include mobile() {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 5px;
+    }
+    @include small-tablet() {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 10px;
+    }
+    @include large-tablet() {
+      font-size: 40px;
+    }
   }
   p {
     margin-bottom: $paragraphMargin;
     font-weight: normal;
     color: $paragraphColor;
     line-height: 1.2;
+    @include mobile() {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+    @include small-tablet() {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+.d-lg-block {
+  display: block;
+  @include mobile() {
+    display: none;
+  }
+}
+.d-lg-none {
+  display: none;
+  @include mobile() {
+    display: block;
   }
 }

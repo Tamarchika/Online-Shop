@@ -1,9 +1,14 @@
+@import '../abstracts/mixins';
+
 .brand_area_image {
   cursor: pointer;
   opacity: 0.2;
   filter: grayscale(100%);
   margin: auto;
   transition: 0.3s all linear;
+  @include mobile() {
+    transition: none;
+  }
 }
 .brand_area_image {
   &:hover {

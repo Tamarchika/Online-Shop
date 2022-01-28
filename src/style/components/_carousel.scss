@@ -1,11 +1,13 @@
 @import "../abstracts/colors";
+@import "../abstracts/mixins";
 
 .slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  user-select: none;
-  touch-action: pan-y;
+  @include desktop() {
+    @include slider-settings();
+  }
+ @include large-desktop() {
+   @include slider-settings();
+ }
 }
 
 button {
