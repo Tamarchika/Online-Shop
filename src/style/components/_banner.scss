@@ -5,6 +5,12 @@
 
 .home_page_banner_area {
   @include flex();
+  @include mobile() {
+    padding-top: 50px;
+  }
+  @include small-tablet() {
+    padding-top: 50px;
+  }
 }
 .home_page_banner_heading {
   display: flex;
@@ -22,8 +28,15 @@
     @include mobile() {
       max-width: 100%;
     }
+    @include small-tablet() {
+      max-width: 100%;
+    }
   }
   @include mobile() {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  @include small-tablet() {
     padding: 0;
     margin-bottom: 40px;
   }
@@ -61,7 +74,7 @@
     }
     @include small-tablet() {
       margin-bottom: 15px;
-      font-size: 14px;
+      font-size: $btnPrimaryFontSize;
       line-height: 22px;
     }
   }
@@ -71,10 +84,16 @@
   @include mobile() {
     display: none;
   }
+  @include small-tablet() {
+    display: none;
+  }
 }
 .d-lg-none {
   display: none;
   @include mobile() {
+    display: block;
+  }
+  @include small-tablet() {
     display: block;
   }
 }

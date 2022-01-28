@@ -13,6 +13,13 @@
       display: inline-block !important;
     }
   }
+  @include small-tablet() {
+    transition: none;
+    text-align: center;
+    img {
+      display: inline-block !important;
+    }
+  }
 }
 .brand_area_image {
   &:hover {
@@ -22,6 +29,12 @@
 .brands {
   @include mobile() {
     padding-top: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @include small-tablet() {
+    padding-top: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;

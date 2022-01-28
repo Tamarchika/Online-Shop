@@ -16,6 +16,9 @@
   @include mobile() {
     padding: 0 15px;
   }
+  @include small-tablet() {
+    padding: 0 15px;
+  }
 }
 
 .align_items_center {
@@ -41,6 +44,10 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+  @include small-tablet() {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 .col-lg-3,
 .col-md-4,
@@ -56,6 +63,10 @@
   flex: 0 0 25%;
   max-width: 25%;
   @include mobile() {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @include small-tablet() {
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -86,6 +97,9 @@
     }
   }
   @include mobile() {
+    @include grid();
+  }
+  @include small-tablet() {
     @include grid();
   }
 }

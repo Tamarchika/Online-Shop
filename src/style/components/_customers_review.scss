@@ -7,6 +7,9 @@
   @include mobile() {
     padding-top: 50px;
   }
+  @include small-tablet() {
+    padding-top: 40px;
+  }
 }
 .section_title {
   h2 {
@@ -20,6 +23,9 @@
   padding: 0 100px;
   @include mobile() {
     padding: 0 15px;
+  }
+  @include small-tablet() {
+    padding: 0;
   }
 }
 .customers_review_card {
@@ -54,6 +60,9 @@
       color: $paragraphColor;
     }
     @include mobile() {
+      padding-top: 10px;
+    }
+    @include small-tablet() {
       padding-top: 10px;
     }
   }

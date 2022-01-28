@@ -1,5 +1,7 @@
 /* Position and sizing of burger button */
 
+@import "../abstracts/mixins";
+
 .bm-burger-button {
   width: 36px;
   height: 30px;
@@ -92,6 +94,9 @@ aside {
   width: 100%;
   .logo {
     flex: 1;
+    @include small-tablet() {
+      flex: 3;
+    }
   }
   .menu_icons {
     .account {

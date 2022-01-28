@@ -17,7 +17,7 @@
     justify-content: space-around;
   }
   @include small-tablet() {
-    font-size: 13px;
+    font-size: 12px;
     justify-content: space-around;
   }
   .language_currency {
@@ -47,14 +47,10 @@
     justify-content: flex-start;
     gap: 20px;
     @include mobile() {
-      align-items: center;
-      -webkit-box-align: center;
-      justify-content: space-between;
+      @include space-around();
     }
     @include small-tablet() {
-      align-items: center;
-      -webkit-box-align: center;
-      justify-content: space-around;
+      @include space-around();
     }
   }
   .main_container {
@@ -62,6 +58,9 @@
       .col-sm-12 {
         @include mobile() {
           flex: 0 0 90%;
+        }
+        @include small-tablet() {
+          flex: 0 0 66%;
         }
       }
     }
@@ -74,19 +73,13 @@
   flex-wrap: wrap;
   width: 100%;
   @include mobile() {
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    @include center();
   }
   @include small-tablet() {
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    @include center();
   }
   @include large-tablet() {
-    justify-content: center;
     width: 50%;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    @include center();
   }
 }

@@ -34,4 +34,7 @@
   @include mobile() {
     margin-top: 40px;
   }
+  @include small-tablet() {
+    margin-top: 40px;
+  }
 }

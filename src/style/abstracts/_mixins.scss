@@ -44,6 +44,16 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
+@mixin space-around {
+  align-items: center;
+  -webkit-box-align: center;
+  justify-content: space-around;
+}
+@mixin center {
+  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
 
 // grid mixin
 
