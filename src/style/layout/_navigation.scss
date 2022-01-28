@@ -107,7 +107,6 @@ h2 {
 
 .header_bottom {
   @include mobile() {
-   
     .section_title {
       margin-bottom: 35px;
     }

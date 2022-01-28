@@ -9,7 +9,6 @@ const Contact = () => {
         <FaMailBulk />
         <span className="website_mail">Online-Shop@gmail.com</span>
       </div>
-      |
       <div className="phone_num">
         <FaPhone /> +883998127361
       </div>

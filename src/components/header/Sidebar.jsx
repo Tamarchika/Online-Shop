@@ -1,7 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 
-
-
 import SearchInput from "./Search";
 import Dropdown from "react-dropdown";
 import ROUTERS from "../../constants/router_constants";

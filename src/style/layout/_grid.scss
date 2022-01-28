@@ -62,10 +62,10 @@
 }
 .col-lg-6 {
   @include desktop() {
-   @include desktop-grid();
+    @include desktop-grid();
   }
   @include large-desktop() {
-   @include desktop-grid();
+    @include desktop-grid();
   }
   &.order-2 {
     order: 1;
