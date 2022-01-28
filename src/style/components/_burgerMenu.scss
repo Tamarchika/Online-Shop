@@ -3,8 +3,17 @@
 .bm-burger-button {
   width: 36px;
   height: 30px;
-  position: absolute;
-  top: 0;
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+  #react-burger-menu-btn {
+    display: block !important;
+    position: relative !important;
+  }
+  .bm-icon {
+    position: absolute;
+    top: 0;
+  }
 }
 
 /* Color/shape of burger icon bars */
@@ -60,28 +69,27 @@
   display: inline-block;
 }
 
-  aside {
-    .sidenav {
-      li {
-        list-style-type: none;
-        padding: 10px 0 10px 0;
-        a {
-          margin-left: 10px;
-        }
+aside {
+  .sidenav {
+    li {
+      list-style-type: none;
+      padding: 10px 0 10px 0;
+      a {
+        margin-left: 10px;
       }
-      .search_bar {
-        min-width: 300px;
-        display: block;
-        padding-bottom: 20px;
-        .search_input {
-          min-width: auto;
-        }
+    }
+    .search_bar {
+      min-width: 300px;
+      display: block;
+      padding-bottom: 20px;
+      .search_input {
+        min-width: auto;
       }
     }
   }
+}
 .mobile_nav {
-  justify-content: center;
-  position: relative;
+  width: 100%;
   .logo {
     flex: 1;
   }
@@ -93,9 +101,9 @@
     div {
       padding-left: 20px;
     }
-    flex: 1;
+    flex: 2;
   }
   .hamburger_menu {
-    flex: 1;
+    flex: 0;
   }
 }
