@@ -15,6 +15,9 @@
   @include card();
   align-items: baseline;
   padding-left: 15px;
+  @include mobile() {
+    font-size: 15px;
+  }
   del {
     color: $paragraphColor;
   }

@@ -56,7 +56,7 @@ const Carousel = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           cssEase: "linear",
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 3000,
           arrows: false
         }
@@ -70,7 +70,7 @@ const Carousel = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           cssEase: "linear",
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 3000,
           arrows: false
         }

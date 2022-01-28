@@ -14,6 +14,41 @@ const CustomersReview = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: false,
+    responsive: [
+      {
+       breakpoint: 1024,
+       settings: {
+         arrows: true,
+         slidesToShow: 2,
+         slidesToScroll: 1,
+         autoplay: false,
+       } 
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (

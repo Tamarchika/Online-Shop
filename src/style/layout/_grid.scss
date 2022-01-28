@@ -72,10 +72,16 @@
     @include mobile() {
       order: 2 !important;
     }
+    @include small-tablet() {
+      order: 2 !important;
+    }
   }
   &.order-1 {
     order: 2;
     @include mobile() {
+      order: 1 !important;
+    }
+    @include small-tablet() {
       order: 1 !important;
     }
   }
