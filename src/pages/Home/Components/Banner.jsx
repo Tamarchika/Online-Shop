@@ -11,7 +11,7 @@ const Banner = () => {
             <div className="home_page_banner_heading">
               <h1> Premium care for premium people</h1>
               <p>Not ready for a subscription? Shop all products</p>
-              <a className="btn_primary" href="/">
+              <a className="btn_primary" href="/" onClick={(e) => e.preventDefault()}>
                 Shop Now
               </a>
             </div>

@@ -57,17 +57,6 @@ nav {
         }
       }
     }
-    a {
-      color: $grey;
-      text-decoration: none;
-      font-weight: $AppFontWeight;
-      &:hover {
-        color: $black;
-      }
-      &:active {
-        color: $black;
-      }
-    }
     .account {
       flex: 2;
       a {
@@ -109,6 +98,17 @@ nav {
     @include large-tablet() {
       justify-content: space-around;
     }
+  }
+}
+a {
+  color: $grey;
+  text-decoration: none;
+  font-weight: $AppFontWeight;
+  &:hover {
+    color: $black;
+  }
+  &:active {
+    color: $black;
   }
 }
 

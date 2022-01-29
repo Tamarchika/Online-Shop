@@ -41,7 +41,7 @@ const About = () => {
                     <span>Mauris congue eros in iaculis.</span>
                   </div>
                 </div>
-                <a className="btn_primary" href="/">
+                <a className="btn_primary" href="/" onClick={(e) => e.preventDefault()}>
                   Get Started
                 </a>
               </div>
