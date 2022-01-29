@@ -11,6 +11,9 @@
   @include small-tablet() {
     padding-bottom: 50px;
   }
+  @include large-tablet() {
+    padding: 40px 0 40px 0;
+  }
 }
 .about_area_content_img {
   height: auto;
@@ -25,6 +28,9 @@
   }
   @include small-tablet() {
     margin-top: 35px;
+  }
+  @include large-tablet() {
+    margin-top: 40px;
   }
   h3 {
     margin-bottom: 18px;

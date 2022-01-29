@@ -10,88 +10,87 @@
   box-sizing: border-box;
 }
 
-.navbar {
-  transition: all 0.3s ease;
-  padding: 15px 0;
-}
-
 nav {
   &.navbar {
+    h2 {
+      &.navbar_brand {
+        a {
+          color: $navBrandColor;
+          font-weight: $navBrandFontWeight;
+          font-family: $navBrandFontFamily;
+        }
+      }
+    }
     @include flex();
     justify-content: space-between;
     padding-top: $paddingTopHeader;
-  }
-}
-
-ul {
-  margin: 0px;
-  padding: 0px;
-  &.navbar_ul {
-    @include flex();
-    justify-content: space-evenly;
-    flex: 6;
-  }
-}
-
-a {
-  &:hover {
-    color: $black;
-  }
-  &:active {
-    color: $black;
-  }
-}
-
-nav {
-  &.navbar {
-    .navbar_ul {
-      padding-left: 50px;
-      .navbar_ul_li {
-        list-style-type: none;
-        .nav_link {
-          &:focus {
-            color: $black;
+    transition: all 0.3s ease;
+    padding: 15px 0;
+    ul {
+      margin: 0px;
+      padding: 0px;
+      &.navbar_ul {
+        @include flex();
+        justify-content: space-evenly;
+        flex: 6;
+        padding-left: 50px;
+        @include large-tablet() {
+          padding-left: 0;
+        }
+        .navbar_ul_li {
+          list-style-type: none;
+          @include large-tablet() {
+            padding: 0 5px 0 5px;
+          }
+          .nav_link {
+            &:focus {
+              color: $black;
+            }
           }
         }
       }
     }
-  }
-}
-a {
-  color: $grey;
-  text-decoration: none;
-  font-weight: $AppFontWeight;
-}
-
-.account {
-  flex: 2;
-  a {
-    color: $darkTxtColor;
-  }
-  .shopping-cart {
-    position: relative;
-    @include flexCenter();
-    .cart_qty {
-      position: absolute;
-      top: -10px;
-      right: -14px;
-      @include flexCenter();
-      width: 19px;
-      height: 18px;
-      font-size: 10px;
-      border-radius: 100%;
-      background-color: $btn_primary;
-      color: $btnPrimaryText;
-    }
-  }
-}
-
-h2 {
-  &.navbar_brand {
     a {
-      color: $navBrandColor;
-      font-weight: $navBrandFontWeight;
-      font-family: $navBrandFontFamily;
+      color: $grey;
+      text-decoration: none;
+      font-weight: $AppFontWeight;
+      &:hover {
+        color: $black;
+      }
+      &:active {
+        color: $black;
+      }
+    }
+    .account {
+      flex: 2;
+      a {
+        color: $darkTxtColor;
+      }
+      .shopping-cart {
+        position: relative;
+        @include flexCenter();
+        .cart_qty {
+          position: absolute;
+          top: -10px;
+          right: -14px;
+          @include flexCenter();
+          width: 19px;
+          height: 18px;
+          font-size: 10px;
+          border-radius: 100%;
+          background-color: $btn_primary;
+          color: $btnPrimaryText;
+        }
+      }
+      @include large-tablet() {
+        margin: 0;
+        div {
+          padding: 0 5px 0 5px;
+        }
+      }
+    }
+    @include large-tablet() {
+      justify-content: space-around;
     }
   }
 }

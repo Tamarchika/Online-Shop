@@ -31,6 +31,9 @@
     @include small-tablet() {
       max-width: 100%;
     }
+    @include large-tablet() {
+      max-width: 100%;
+    }
   }
   @include mobile() {
     padding: 0;
@@ -39,6 +42,10 @@
   @include small-tablet() {
     padding: 0;
     margin-bottom: 40px;
+  }
+  @include large-tablet() {
+    padding: 0;
+    margin-bottom: 45px;
   }
 }
 .home_page_banner_heading {
@@ -76,6 +83,9 @@
       margin-bottom: 15px;
       font-size: $btnPrimaryFontSize;
       line-height: 22px;
+    }
+    @include large-tablet() {
+      font-size: $btnPrimaryFontSize;
     }
   }
 }

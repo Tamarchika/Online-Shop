@@ -55,6 +55,26 @@
   -webkit-box-align: center;
 }
 
+@mixin currency-language {
+  -webkit-box-align: center;
+      align-items: center;
+      width: fit-content;
+      .stick {
+        margin-right: 15px;
+      }
+}
+@mixin brands {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin brandImgPos {
+  transition: none;
+  text-align: center;
+  img {
+    display: inline-block !important;
+  }
+}
 // grid mixin
 
 @mixin grid {

@@ -20,25 +20,24 @@
     font-size: 12px;
     justify-content: space-around;
   }
+  @include large-tablet() {
+    font-size: 14px;
+    justify-content: space-between;
+  }
   .language_currency {
     @include flex();
     justify-content: space-evenly;
     width: 25%;
     @include mobile() {
-      -webkit-box-align: center;
-      align-items: center;
-      width: fit-content;
-      .stick {
-        margin-right: 15px;
-      }
+      @include currency-language();
     }
     @include small-tablet() {
-      -webkit-box-align: center;
-      align-items: center;
-      width: fit-content;
-      .stick {
-        margin-right: 15px;
-      }
+      @include currency-language();
+    }
+    @include large-tablet() {
+      @include currency-language();
+      flex: 0;
+      width: 30%;
     }
   }
   .contact {
@@ -52,6 +51,9 @@
     @include small-tablet() {
       @include space-around();
     }
+    @include large-tablet() {
+      justify-content: center;
+    }
   }
   .main_container {
     .row {
@@ -60,7 +62,10 @@
           flex: 0 0 90%;
         }
         @include small-tablet() {
-          flex: 0 0 66%;
+          flex: 0 0 58%;
+        }
+        @include large-tablet() {
+          flex: 0 0 100%;
         }
       }
     }
@@ -79,7 +84,7 @@
     @include center();
   }
   @include large-tablet() {
-    width: 50%;
+    width: 100%;
     @include center();
   }
 }

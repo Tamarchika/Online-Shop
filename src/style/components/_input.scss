@@ -19,6 +19,11 @@ form {
   height: 45px;
   min-width: 406px;
   position: relative;
+  @include large-tablet() {
+    min-width: 300px;
+    flex: 1;
+    right: 10px;
+  }
 }
 
 .input_placeholder {
