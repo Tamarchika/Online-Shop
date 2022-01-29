@@ -10,6 +10,9 @@
   @include large-tablet() {
     padding: 30px 0;
   }
+  @include desktop() {
+    padding: 40px 0;
+  }
 }
 .features_wrapper {
   position: relative;
@@ -41,6 +44,9 @@
     margin-top: 40px;
   }
   @include large-tablet() {
+    margin-top: 60px;
+  }
+  @include desktop() {
     margin-top: 60px;
   }
 }

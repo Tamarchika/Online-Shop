@@ -33,6 +33,9 @@
   @include large-tablet() {
     padding: 0;
   }
+  @include desktop() {
+    padding: 0;
+  }
 }
 .customers_review_card {
   padding: 25px 20px;
@@ -52,6 +55,7 @@
     }
   }
   .name {
+    padding-top: 10px;
     margin-bottom: 10px;
     h6 {
       color: $headingColor;
@@ -64,15 +68,6 @@
       font-size: 14px;
       line-height: 1.2;
       color: $paragraphColor;
-    }
-    @include mobile() {
-      padding-top: 10px;
-    }
-    @include small-tablet() {
-      padding-top: 10px;
-    }
-    @include large-tablet() {
-      padding-top: 10px;
     }
   }
   @include mobile() {

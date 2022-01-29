@@ -24,6 +24,10 @@ form {
     flex: 1;
     right: 10px;
   }
+  @include desktop() {
+    min-width: 350px;
+    right: 10px;
+  }
 }
 
 .input_placeholder {

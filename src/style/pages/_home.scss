@@ -1,9 +1,13 @@
 @import "../abstracts/colors";
 @import "../abstracts/variables";
 @import "../base/typography";
+@import "../abstracts/mixins";
 
 .home_page_content {
   padding-top: $headingMargin;
+  @include desktop() {
+    padding: 0;
+  }
 }
 
 .row {

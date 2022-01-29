@@ -14,6 +14,9 @@ nav {
   &.navbar {
     h2 {
       &.navbar_brand {
+        @include desktop() {
+          flex: 2;
+        }
         a {
           color: $navBrandColor;
           font-weight: $navBrandFontWeight;
@@ -36,6 +39,10 @@ nav {
         padding-left: 50px;
         @include large-tablet() {
           padding-left: 0;
+        }
+        @include desktop() {
+          padding: 0;
+          flex: 3;
         }
         .navbar_ul_li {
           list-style-type: none;
@@ -80,6 +87,9 @@ nav {
           border-radius: 100%;
           background-color: $btn_primary;
           color: $btnPrimaryText;
+          @include desktop() {
+            right: -5px;
+          }
         }
       }
       @include large-tablet() {
@@ -87,6 +97,13 @@ nav {
         div {
           padding: 0 5px 0 5px;
         }
+      }
+      @include desktop() {
+        margin: 0;
+        div {
+          padding: 0 10px 0 10px;
+        }
+        padding: 0;
       }
     }
     @include large-tablet() {
@@ -109,7 +126,7 @@ nav {
     display: none;
   }
   @include large-tablet() {
-    display: none;
+    display: block;
   }
 }
 
@@ -119,5 +136,8 @@ nav {
   }
   @include small-tablet() {
     padding-top: 15px;
+  }
+  @include large-tablet() {
+    padding: 0;
   }
 }

@@ -16,8 +16,17 @@
   @include mobile() {
     padding: 0 15px;
   }
+
   @include small-tablet() {
     padding: 0 15px;
+  }
+
+  @include large-tablet() {
+    padding: 0 5%;
+  }
+
+  @include desktop() {
+    padding: 0 5%;
   }
 }
 

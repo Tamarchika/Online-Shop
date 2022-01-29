@@ -57,11 +57,11 @@
 
 @mixin currency-language {
   -webkit-box-align: center;
-      align-items: center;
-      width: fit-content;
-      .stick {
-        margin-right: 15px;
-      }
+  align-items: center;
+  width: fit-content;
+  .stick {
+    margin-right: 15px;
+  }
 }
 @mixin brands {
   display: flex;
@@ -362,13 +362,20 @@
 }
 
 //Responsive
-@mixin large-tablet {
-  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-laptop - 1px}) {
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-mobile-M}) {
     @content;
   }
 }
 @mixin small-tablet {
   @media (min-width: #{$breakpoint-mobile-M}) and (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin large-tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-laptop - 1px}) {
     @content;
   }
 }
@@ -381,12 +388,6 @@
 
 @mixin large-desktop {
   @media (min-width: #{$breakpoint-laptop-L}) and (max-width: #{$breakpoint-4k}) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-mobile-M}) {
     @content;
   }
 }

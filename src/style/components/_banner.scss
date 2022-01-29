@@ -32,6 +32,9 @@
       max-width: 100%;
     }
     @include large-tablet() {
+      width: 100%;
+    }
+    @include desktop() {
       max-width: 100%;
     }
   }
@@ -52,7 +55,7 @@
   h1 {
     margin-bottom: $headingMargin;
     font-size: $bannerHeadingFontSize;
-    font-weight: $AppFontWeight;
+    font-weight: 900;
     line-height: 66px;
     color: $headingColor;
     @include mobile() {
@@ -67,6 +70,10 @@
     }
     @include large-tablet() {
       font-size: 40px;
+    }
+    @include desktop() {
+      font-size: 50px;
+      line-height: 58px;
     }
   }
   p {
@@ -85,6 +92,9 @@
       line-height: 22px;
     }
     @include large-tablet() {
+      font-size: $btnPrimaryFontSize;
+    }
+    @include desktop() {
       font-size: $btnPrimaryFontSize;
     }
   }

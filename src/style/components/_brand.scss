@@ -6,15 +6,7 @@
   filter: grayscale(100%);
   margin: auto;
   transition: 0.3s all linear;
-  @include mobile() {
-    @include brandImgPos();
-  }
-  @include small-tablet() {
-    @include brandImgPos();
-  }
-  @include large-tablet() {
-    @include brandImgPos();
-  }
+  @include brandImgPos();
 }
 .brand_area_image {
   &:hover {
@@ -32,6 +24,9 @@
   }
   @include large-tablet() {
     padding-top: 10%;
+    @include brands();
+  }
+  @include desktop() {
     @include brands();
   }
 }
