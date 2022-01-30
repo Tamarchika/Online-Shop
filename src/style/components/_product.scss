@@ -17,6 +17,13 @@
   @include desktop() {
     padding: 60px 0;
   }
+  .main_container {
+    .row {
+      .col-lg-6 {
+        @include desktop-grid();
+      }
+    }
+  }
 }
 .product_slider {
   margin-right: 55px;
@@ -59,6 +66,9 @@
     @include desktop() {
       font-size: 20px;
     }
+    @include max-resolution() {
+      font-size: 30px;
+    }
   }
   p {
     @include mobile() {
@@ -69,6 +79,9 @@
     }
     @include desktop() {
       font-size: 16px;
+    }
+    @include max-resolution() {
+      font-size: 18px;
     }
   }
 }
@@ -84,12 +97,18 @@
     font-size: $productPriceFontSize;
     color: $featuredProducts;
     line-height: $priceLineHeight;
+    @include max-resolution() {
+      font-size: 22px;
+    }
   }
   del {
     font-size: $productPriceFontSize;
     color: $paragraphColor;
     line-height: $priceLineHeight;
     margin-left: 5px;
+    @include max-resolution() {
+      font-size: 22px;
+    }
   }
 }
 .star {
@@ -282,6 +301,10 @@
   }
   @include large-desktop() {
     width: 480px;
+    margin-top: 50px;
+  }
+  @include max-resolution() {
+    width: 500px;
     margin-top: 50px;
   }
 }
