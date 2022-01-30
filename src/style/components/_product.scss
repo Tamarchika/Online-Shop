@@ -5,12 +5,45 @@
 
 .product {
   padding: 100px 0;
+  @include mobile() {
+    padding: 50px 0;
+  }
 }
 .product_slider {
   margin-right: 55px;
+  @include mobile() {
+    margin: 0;
+    text-align: center;
+  }
+  @include small-tablet() {
+    margin: 0;
+    text-align: center;
+  }
 }
 .product_pricelist {
   margin-left: -30px;
+  @include mobile() {
+    margin: 40px 0 0 0;
+  }
+  @include small-tablet() {
+    margin: 40px 0 0 0;
+  }
+  h2 {
+    @include mobile() {
+      font-size: 20px;
+    }
+    @include small-tablet() {
+      font-size: 24px;
+    }
+  }
+  p {
+    @include mobile() {
+      font-size: 14px;
+    }
+    @include small-tablet() {
+      font-size: 16px;
+    }
+  }
 }
 .product_pricelist_rating {
   @include flex();
@@ -80,10 +113,20 @@
     border-radius: 5px;
     object-fit: cover;
   }
+  @include mobile() {
+    width: 300px !important;
+    height: 300px !important;
+  }
 }
 .center {
   display: flex !important;
   justify-content: center;
+  @include large-desktop() {
+    justify-content: flex-start;
+  }
+  @include max-resolution() {
+    justify-content: flex-start;
+  }
 }
 
 .slider_nav {
@@ -159,6 +202,9 @@
 .product_pricelist_selector_button {
   .btn_primary {
     vertical-align: middle;
+    @include mobile() {
+      padding: 15px 30px;
+    }
   }
   .cart_bg {
     margin-right: 28px;
@@ -184,7 +230,12 @@
 .product_pricelist_selector_button_item {
   @include flex();
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin-top: 35px;
+  div {
+    @include mobile() {
+      margin-bottom: 8px;
+    }
+  }
 }
 .shipping {
   @include productShippingBtns();
@@ -207,6 +258,7 @@
 }
 .cash {
   @include flex();
+  @include productShippingBtns();
   p {
     @include productShippingParagraph();
   }
