@@ -28,6 +28,9 @@ form {
     min-width: 350px;
     right: 10px;
   }
+  @include max-resolution() {
+    min-width: 460px;
+  }
 }
 
 .input_placeholder {

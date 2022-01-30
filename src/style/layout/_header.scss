@@ -1,6 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/colors";
 @import "../abstracts/variables";
+@import "../base/typography";
 
 * {
   @include all();
@@ -23,6 +24,9 @@
   @include large-tablet() {
     font-size: 14px;
     justify-content: space-between;
+  }
+  @include max-resolution() {
+    font-size: 20px;
   }
   .language_currency {
     .stick {
@@ -53,9 +57,6 @@
     }
     @include small-tablet() {
       @include space-around();
-    }
-    @include large-tablet() {
-      justify-content: flex-start;
     }
   }
   .main_container {

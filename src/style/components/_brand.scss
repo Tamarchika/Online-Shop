@@ -14,19 +14,17 @@
   }
 }
 .brands {
+  @include brands();
   @include mobile() {
     padding-top: 12%;
-    @include brands();
   }
   @include small-tablet() {
     padding-top: 15%;
-    @include brands();
   }
   @include large-tablet() {
     padding-top: 10%;
-    @include brands();
   }
-  @include desktop() {
-    @include brands();
+  @include max-resolution() {
+    padding-top: 5%;
   }
 }

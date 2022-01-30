@@ -22,6 +22,9 @@
   @include desktop() {
     padding: 15px 40px;
   }
+  @include max-resolution() {
+    font-size: 20px;
+  }
 }
 a {
   text-decoration: none;
@@ -39,5 +42,8 @@ a {
   &:hover {
     background-color: $features_moreBtn;
     color: $btnPrimaryText;
+  }
+  @include max-resolution() {
+    font-size: 20px;
   }
 }

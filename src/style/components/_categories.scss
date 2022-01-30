@@ -1,6 +1,7 @@
 @import "../abstracts/colors";
 @import "../abstracts/variables";
 @import "../base/typography";
+@import "../abstracts/mixins";
 
 .section_title {
   h2 {
@@ -8,4 +9,28 @@
     padding: 50px 0 50px 0;
     background-color: $cartHover;
   }
+}
+.product_category_text {
+  h6 {
+    color: $headingColor;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 0;
+    font-weight: $AppFontWeight;
+    @include max-resolution() {
+      font-size: 26px;
+    }
+  }
+  span {
+    color: $paragraphColor;
+    font-size: 14px;
+    line-height: 1.3;
+    @include max-resolution() {
+      font-size: 20px;
+    }
+  }
+}
+.product_category {
+  margin-bottom: 40px;
+  text-align: center !important;
 }

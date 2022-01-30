@@ -22,6 +22,9 @@ nav {
           font-weight: $navBrandFontWeight;
           font-family: $navBrandFontFamily;
         }
+        @include max-resolution() {
+          font-size: 30px;
+        }
       }
     }
     @include flex();
@@ -53,6 +56,9 @@ nav {
             &:focus {
               color: $black;
             }
+          }
+          @include max-resolution () {
+            font-size: 20px;
           }
         }
       }

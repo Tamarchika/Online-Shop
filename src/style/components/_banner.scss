@@ -37,6 +37,9 @@
     @include desktop() {
       max-width: 100%;
     }
+    @include max-resolution() {
+      width: 100%;
+    }
   }
   @include mobile() {
     padding: 0;
@@ -75,6 +78,10 @@
       font-size: 50px;
       line-height: 58px;
     }
+    @include max-resolution() {
+      font-size: 70px;
+      line-height: 80px;
+    }
   }
   p {
     margin-bottom: $paragraphMargin;
@@ -96,6 +103,9 @@
     }
     @include desktop() {
       font-size: $btnPrimaryFontSize;
+    }
+    @include max-resolution() {
+      font-size: 20px;
     }
   }
 }

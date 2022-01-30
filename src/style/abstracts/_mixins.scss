@@ -391,3 +391,9 @@
     @content;
   }
 }
+
+@mixin max-resolution {
+  @media (min-width: #{$breakpoint-4k}) {
+    @content;
+  }
+}
