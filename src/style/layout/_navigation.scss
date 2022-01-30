@@ -57,7 +57,7 @@ nav {
               color: $black;
             }
           }
-          @include max-resolution () {
+          @include max-resolution() {
             font-size: 20px;
           }
         }
@@ -82,6 +82,9 @@ nav {
           border-radius: 100%;
           background-color: $btn_primary;
           color: $btnPrimaryText;
+          @include large-tablet() {
+            right: -6px;
+          }
           @include desktop() {
             right: -5px;
           }
