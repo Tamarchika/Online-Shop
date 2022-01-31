@@ -83,12 +83,6 @@
 }
 .col-lg-6 {
   @include grid();
-  @include desktop() {
-    @include desktop-grid();
-  }
-  @include large-desktop() {
-    @include desktop-grid();
-  }
   &.order-2 {
     order: 1;
     @include mobile() {
@@ -118,6 +112,15 @@
   }
   @include small-tablet() {
     @include grid();
+  }
+  @include desktop() {
+    @include desktop-grid();
+  }
+  @include large-desktop() {
+    @include desktop-grid();
+  }
+  @include max-resolution() {
+    @include desktop-grid();
   }
 }
 .d-flex {

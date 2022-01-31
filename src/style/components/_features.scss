@@ -31,6 +31,9 @@
       font-size: 28px !important;
       padding: 20px 0 !important;
     }
+    @include max-resolution() {
+      font-size: 50px !important;
+    }
   }
 }
 .features_more_btn {

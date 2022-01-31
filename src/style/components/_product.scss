@@ -284,7 +284,10 @@
       padding: 15px 30px;
     }
     @include small-tablet() {
-      padding: 16px 30px;
+      padding: 16px 25px;
+    }
+    @include large-tablet(){
+      padding: 16px 20px;
     }
   }
   .cart_bg {
