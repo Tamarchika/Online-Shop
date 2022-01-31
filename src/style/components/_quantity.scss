@@ -7,6 +7,9 @@
   border: 1px solid $cardBorder;
   span {
     padding: 0 15px;
+    @include mobile() {
+      padding: 0 8px;
+    }
   }
   .value {
     border: 0;
@@ -15,6 +18,10 @@
     width: 53px !important;
     @include flex();
     justify-content: center;
+    @include mobile() {
+      width: 25px !important;
+      height: 25px;
+    }
   }
   .arrow {
     color: #333333;

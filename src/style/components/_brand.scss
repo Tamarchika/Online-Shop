@@ -1,4 +1,4 @@
-@import '../abstracts/mixins';
+@import "../abstracts/mixins";
 
 .brand_area_image {
   cursor: pointer;
@@ -6,12 +6,25 @@
   filter: grayscale(100%);
   margin: auto;
   transition: 0.3s all linear;
-  @include mobile() {
-    transition: none;
-  }
+  @include brandImgPos();
 }
 .brand_area_image {
   &:hover {
     opacity: 1;
+  }
+}
+.brands {
+  @include brands();
+  @include mobile() {
+    padding-top: 12%;
+  }
+  @include small-tablet() {
+    padding-top: 15%;
+  }
+  @include large-tablet() {
+    padding-top: 10%;
+  }
+  @include max-resolution() {
+    padding-top: 5%;
   }
 }

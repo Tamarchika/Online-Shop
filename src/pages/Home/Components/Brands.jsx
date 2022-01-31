@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import url from "../../../constants/url_constants";
 
-
 const Brands = () => {
   const settings = {
     arrows: false,
@@ -27,9 +26,9 @@ const Brands = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 3,
         },
       },
       {
@@ -50,33 +49,33 @@ const Brands = () => {
   };
 
   return (
-      <Slider {...settings}>
-        <div>
-          <div className="brand_area_image">
-            <img src={url.brand1} alt="Brand"></img>
-          </div>
+    <Slider {...settings}>
+      <div>
+        <div className="brand_area_image">
+          <img src={url.brand1} alt="Brand"></img>
         </div>
-        <div>
-          <div className="brand_area_image">
-            <img src={url.brand2} alt="Brand"></img>
-          </div>
+      </div>
+      <div>
+        <div className="brand_area_image">
+          <img src={url.brand2} alt="Brand"></img>
         </div>
-        <div>
-          <div className="brand_area_image">
-            <img src={url.brand3} alt="Brand"></img>
-          </div>
+      </div>
+      <div>
+        <div className="brand_area_image">
+          <img src={url.brand3} alt="Brand"></img>
         </div>
-        <div>
-          <div className="brand_area_image">
-            <img src={url.brand4} alt="Brand"></img>
-          </div>
+      </div>
+      <div>
+        <div className="brand_area_image">
+          <img src={url.brand4} alt="Brand"></img>
         </div>
-        <div>
-          <div className="brand_area_image">
-            <img src={url.brand5} alt="Brand" />
-          </div>
+      </div>
+      <div>
+        <div className="brand_area_image">
+          <img src={url.brand5} alt="Brand" />
         </div>
-      </Slider>
+      </div>
+    </Slider>
   );
 };
 

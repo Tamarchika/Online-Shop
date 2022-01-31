@@ -16,5 +16,8 @@
   svg {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.76);
+    @include max-resolution() {
+      font-size: 20px;
+    }
   }
 }

@@ -14,7 +14,8 @@ const HeaderTop = () => {
                 <Contact />
               </div>
               <div className="language_currency">
-                <Language />|
+                <Language />
+                <span className="stick">|</span>
                 <Currency />
               </div>
             </div>

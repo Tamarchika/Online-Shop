@@ -11,7 +11,7 @@ const Carousel = () => {
     return store.data.products;
   });
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
@@ -19,6 +19,7 @@ const Carousel = () => {
     cssEase: "linear",
     autoplay: true,
     autoplaySpeed: 3000,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -44,7 +45,6 @@ const Carousel = () => {
           cssEase: "linear",
           autoplay: true,
           autoplaySpeed: 3000,
-          arrows: false
         }
       },
       {
@@ -58,7 +58,6 @@ const Carousel = () => {
           cssEase: "linear",
           autoplay: true,
           autoplaySpeed: 3000,
-          arrows: false
         }
       },
       {
@@ -72,7 +71,6 @@ const Carousel = () => {
           cssEase: "linear",
           autoplay: true,
           autoplaySpeed: 3000,
-          arrows: false
         }
       }
     ],

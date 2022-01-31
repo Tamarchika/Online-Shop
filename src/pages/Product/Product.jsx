@@ -25,7 +25,7 @@ const Product = () => {
   useEffect(() => {
     dispatch(fetchData());
     fetchDataAsync();
-  }, []);
+  }, [params.id]);
 
   return (
     <>
