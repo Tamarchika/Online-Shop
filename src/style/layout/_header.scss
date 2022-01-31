@@ -1,6 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/colors";
 @import "../abstracts/variables";
+@import "../base/typography";
 
 * {
   @include all();
@@ -17,28 +18,33 @@
     justify-content: space-around;
   }
   @include small-tablet() {
-    font-size: 13px;
+    font-size: 12px;
     justify-content: space-around;
   }
+  @include large-tablet() {
+    font-size: 14px;
+    justify-content: space-between;
+  }
+  @include max-resolution() {
+    font-size: 20px;
+  }
   .language_currency {
+    .stick {
+      margin-right: 10px;
+    }
     @include flex();
     justify-content: space-evenly;
     width: 25%;
     @include mobile() {
-      -webkit-box-align: center;
-      align-items: center;
-      width: fit-content;
-      .stick {
-        margin-right: 15px;
-      }
+      @include currency-language();
     }
     @include small-tablet() {
-      -webkit-box-align: center;
-      align-items: center;
-      width: fit-content;
-      .stick {
-        margin-right: 15px;
-      }
+      @include currency-language();
+    }
+    @include large-tablet() {
+      @include currency-language();
+      flex: 0;
+      width: 30%;
     }
   }
   .contact {
@@ -47,14 +53,10 @@
     justify-content: flex-start;
     gap: 20px;
     @include mobile() {
-      align-items: center;
-      -webkit-box-align: center;
-      justify-content: space-between;
+      @include space-around();
     }
     @include small-tablet() {
-      align-items: center;
-      -webkit-box-align: center;
-      justify-content: space-around;
+      @include space-around();
     }
   }
   .main_container {
@@ -62,6 +64,12 @@
       .col-sm-12 {
         @include mobile() {
           flex: 0 0 90%;
+        }
+        @include small-tablet() {
+          flex: 0 0 58%;
+        }
+        @include large-tablet() {
+          flex: 0 0 100%;
         }
       }
     }
@@ -74,19 +82,13 @@
   flex-wrap: wrap;
   width: 100%;
   @include mobile() {
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    @include center();
   }
   @include small-tablet() {
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    @include center();
   }
   @include large-tablet() {
-    justify-content: center;
-    width: 50%;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    width: 100%;
+    @include center();
   }
 }

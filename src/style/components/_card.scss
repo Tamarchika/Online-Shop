@@ -18,6 +18,9 @@
   @include mobile() {
     font-size: 15px;
   }
+  @include max-resolution() {
+    font-size: 20px;
+  }
   del {
     color: $paragraphColor;
   }
@@ -47,6 +50,9 @@
   svg {
     font-size: 1.3rem;
     color: $headingColor;
+    @include max-resolution() {
+      font-size: 1.5rem;
+    }
   }
 }
 

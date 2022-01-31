@@ -5,6 +5,12 @@
 
 .home_page_banner_area {
   @include flex();
+  @include mobile() {
+    padding-top: 50px;
+  }
+  @include small-tablet() {
+    padding-top: 50px;
+  }
 }
 .home_page_banner_heading {
   display: flex;
@@ -22,17 +28,37 @@
     @include mobile() {
       max-width: 100%;
     }
+    @include small-tablet() {
+      max-width: 100%;
+    }
+    @include large-tablet() {
+      width: 100%;
+    }
+    @include desktop() {
+      max-width: 100%;
+    }
+    @include max-resolution() {
+      width: 100%;
+    }
   }
   @include mobile() {
     padding: 0;
     margin-bottom: 40px;
+  }
+  @include small-tablet() {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  @include large-tablet() {
+    padding: 0;
+    margin-bottom: 45px;
   }
 }
 .home_page_banner_heading {
   h1 {
     margin-bottom: $headingMargin;
     font-size: $bannerHeadingFontSize;
-    font-weight: $AppFontWeight;
+    font-weight: 900;
     line-height: 66px;
     color: $headingColor;
     @include mobile() {
@@ -48,6 +74,14 @@
     @include large-tablet() {
       font-size: 40px;
     }
+    @include desktop() {
+      font-size: 50px;
+      line-height: 58px;
+    }
+    @include max-resolution() {
+      font-size: 70px;
+      line-height: 80px;
+    }
   }
   p {
     margin-bottom: $paragraphMargin;
@@ -61,8 +95,17 @@
     }
     @include small-tablet() {
       margin-bottom: 15px;
-      font-size: 14px;
+      font-size: $btnPrimaryFontSize;
       line-height: 22px;
+    }
+    @include large-tablet() {
+      font-size: $btnPrimaryFontSize;
+    }
+    @include desktop() {
+      font-size: $btnPrimaryFontSize;
+    }
+    @include max-resolution() {
+      font-size: 20px;
     }
   }
 }
@@ -71,10 +114,16 @@
   @include mobile() {
     display: none;
   }
+  @include small-tablet() {
+    display: none;
+  }
 }
 .d-lg-none {
   display: none;
   @include mobile() {
+    display: block;
+  }
+  @include small-tablet() {
     display: block;
   }
 }

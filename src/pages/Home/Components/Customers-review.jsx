@@ -7,7 +7,7 @@ import "../../../style/components/_customers_review.scss";
 
 const CustomersReview = () => {
   const settings = {
-    arrows: true,
+    arrows: false,
     dots: false,
     infinite: true,
     speed: 1000,
@@ -16,39 +16,39 @@ const CustomersReview = () => {
     autoplay: false,
     responsive: [
       {
-       breakpoint: 1024,
-       settings: {
-         arrows: true,
-         slidesToShow: 2,
-         slidesToScroll: 1,
-         autoplay: false,
-       } 
+        breakpoint: 1024,
+        settings: {
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: false,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           arrows: false,
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           arrows: false,
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 360,
         settings: {
           arrows: false,
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (

@@ -6,13 +6,7 @@
   filter: grayscale(100%);
   margin: auto;
   transition: 0.3s all linear;
-  @include mobile() {
-    transition: none;
-    text-align: center;
-    img {
-      display: inline-block !important;
-    }
-  }
+  @include brandImgPos();
 }
 .brand_area_image {
   &:hover {
@@ -20,10 +14,17 @@
   }
 }
 .brands {
+  @include brands();
   @include mobile() {
     padding-top: 12%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  }
+  @include small-tablet() {
+    padding-top: 15%;
+  }
+  @include large-tablet() {
+    padding-top: 10%;
+  }
+  @include max-resolution() {
+    padding-top: 5%;
   }
 }

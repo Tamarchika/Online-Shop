@@ -5,9 +5,9 @@
   @include desktop() {
     @include slider-settings();
   }
- @include large-desktop() {
-   @include slider-settings();
- }
+  @include large-desktop() {
+    @include slider-settings();
+  }
 }
 
 button {
@@ -18,23 +18,4 @@ button {
 
 .carousel {
   text-align: center;
-}
-
-button {
-  &.slick-arrow {
-    &.slick-prev {
-      left: -5%;
-      &::before {
-        content: "<";
-        font-size: 30px;
-      }
-    }
-    &.slick-next {
-      right: -5%;
-      &::before {
-        content: ">";
-        font-size: 30px;
-      }
-    }
-  }
 }
