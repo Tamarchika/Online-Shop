@@ -6,7 +6,7 @@ import ROUTERS from "../../constants/router_constants";
 
 const defaultOption = "Category";
 
-const Sidebar = ({ categories }) => {
+const Sidebar = ({ categories, closeMenu }) => {
   const navigate = useNavigate();
 
   return (
@@ -16,7 +16,7 @@ const Sidebar = ({ categories }) => {
           <SearchInput />
         </div>
         <li className="navbar_ul_li">
-          <Link to={ROUTERS.HOME} className="nav_link">
+          <Link to={ROUTERS.HOME} className="nav_link" onClick={closeMenu}>
             Home
           </Link>
         </li>
@@ -34,6 +34,7 @@ const Sidebar = ({ categories }) => {
               navigate(`/category/${e.value.toLowerCase()}`, {
                 replace: true,
               });
+              closeMenu();
             }}
           />
         </li>
