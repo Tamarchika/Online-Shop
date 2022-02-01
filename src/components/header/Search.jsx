@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "../../style/components/_input.scss";
 
-const SearchInput = () => {
+const SearchInput = ({ closeMenu }) => {
   const [searchId, setSearchId] = useState(null);
   const searchProduct = (e) => {
     setSearchId(e.target.value);
@@ -17,6 +17,7 @@ const SearchInput = () => {
           e.preventDefault();
           if (searchId) {
             navigate(`/category/product/${searchId}`);
+            closeMenu();
           }
         }}
       >
