@@ -21,7 +21,6 @@
     "react-hook-form": "^7.24.1",
     "react-hook-geolocation": "^1.0.11",
     "react-icons": "^4.3.1",
-    "react-pinch-zoom-pan": "^1.4.5",
     "react-redux": "^7.2.6",
     "react-responsive": "^9.0.0-beta.6",
     "react-router": "^6.2.1",

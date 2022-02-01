@@ -37,6 +37,9 @@
     @include desktop() {
       max-width: 100%;
     }
+    @include large-desktop() {
+      min-width: 100%;
+    }
     @include max-resolution() {
       width: 100%;
     }
@@ -59,7 +62,7 @@
     margin-bottom: $headingMargin;
     font-size: $bannerHeadingFontSize;
     font-weight: 900;
-    line-height: 66px;
+    line-height: 75px;
     color: $headingColor;
     @include mobile() {
       font-size: 22px;
@@ -79,7 +82,7 @@
       line-height: 58px;
     }
     @include max-resolution() {
-      font-size: 70px;
+      font-size: 75px;
       line-height: 80px;
     }
   }
@@ -104,8 +107,11 @@
     @include desktop() {
       font-size: $btnPrimaryFontSize;
     }
+    @include large-desktop() {
+      font-size: 18px;
+    }
     @include max-resolution() {
-      font-size: 20px;
+      font-size: 22px;
     }
   }
 }

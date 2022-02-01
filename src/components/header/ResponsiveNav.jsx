@@ -7,8 +7,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import "../../style/layout/_grid.scss";
 import "../../style/components/_burgerMenu.scss";
+import { useState } from "react";
 
 const ResponsiveNav = ({ categories }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleStateChange = (state) => {
+    setMenuOpen(state.isOpen);
+  };
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
   return (
     <>
       <div className="main_container">
@@ -29,8 +37,10 @@ const ResponsiveNav = ({ categories }) => {
               customCrossIcon={<VscChromeClose />}
               noOverlay
               disableOverlayClick
+              onStateChange={(state) => handleStateChange(state)}
+              isOpen={menuOpen}
             >
-              <Sidebar categories={categories} />
+              <Sidebar categories={categories} closeMenu={closeMenu} />
             </Menu>
           </div>
         </div>
