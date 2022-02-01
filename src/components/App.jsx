@@ -50,9 +50,9 @@ const App = () => {
             <Route path={ROUTERS.ERROR} exact element={<ErrorPage />} />
           </Routes>
         </main>
+        <ToastContainer />
+        <Footer />
       </Router>
-      <ToastContainer />
-      <Footer />
     </>
   );
 };
