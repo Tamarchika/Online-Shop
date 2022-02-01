@@ -5,11 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../../style/layout/_grid.scss";
 import Card from "../../../components/reusable_components/Card";
 import { useSelector } from "react-redux";
+import Loader from "react-spinners/ClipLoader";
 
 const Carousel = () => {
   const featuredData = useSelector((store) => {
     return store.data.products;
   });
+  const loadingData = useSelector((store) => store.data);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -45,7 +48,7 @@ const Carousel = () => {
           cssEase: "linear",
           autoplay: true,
           autoplaySpeed: 3000,
-        }
+        },
       },
       {
         breakpoint: 480,
@@ -58,7 +61,7 @@ const Carousel = () => {
           cssEase: "linear",
           autoplay: true,
           autoplaySpeed: 3000,
-        }
+        },
       },
       {
         breakpoint: 360,
@@ -71,11 +74,20 @@ const Carousel = () => {
           cssEase: "linear",
           autoplay: true,
           autoplaySpeed: 3000,
-        }
-      }
+        },
+      },
     ],
   };
-
+  if (loadingData.loading) {
+    return (
+      <div className="center">
+        <Loader />
+      </div>
+    );
+  }
+  if (loadingData.error) {
+    return <div>{loadingData.error}</div>;
+  }
   return (
     <div className="carousel">
       <Slider {...settings}>

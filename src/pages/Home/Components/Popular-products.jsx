@@ -2,11 +2,24 @@ import Card from "../../../components/reusable_components/Card";
 import "../../../style/components/_popular-products.scss";
 import "../../../style/components/_features.scss";
 import { useSelector } from "react-redux";
+import Loader from "react-spinners/ClipLoader";
 
 const PopularProducts = () => {
   const products = useSelector((store) => {
     return store.data.products;
   });
+  const productsLoader = useSelector((store) => store.data);
+
+  if (productsLoader.loading) {
+    return (
+      <div className="center">
+        <Loader />
+      </div>
+    );
+  }
+  if (productsLoader.error) {
+    return <div>{productsLoader.error}</div>;
+  }
   return (
     <section className="popular_products">
       <div className="main_container">
