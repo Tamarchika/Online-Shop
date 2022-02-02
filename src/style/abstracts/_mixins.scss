@@ -369,7 +369,7 @@
   }
 }
 @mixin small-tablet {
-  @media (min-width: #{$breakpoint-mobile-M}) and (max-width: #{$breakpoint-tablet}) {
+  @media (min-width: #{$breakpoint-mobile-M}) and (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
   }
 }

@@ -1,4 +1,3 @@
-import "../../../style/components/_features.scss";
 import Carousel from "./Carousel";
 
 const Features = () => {
@@ -18,7 +17,11 @@ const Features = () => {
         <div className="row">
           <div className="col-sm-12">
             <div className="features_more_btn">
-              <a className="btn_glass" href="/" onClick={(e) => e.preventDefault()}>
+              <a
+                className="btn_glass"
+                href="/"
+                onClick={(e) => e.preventDefault()}
+              >
                 View All Products
               </a>
             </div>

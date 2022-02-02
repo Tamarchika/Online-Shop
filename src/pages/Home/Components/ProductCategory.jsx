@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../../../style/components/_topCategories.scss";
+
 const ProductCategory = (props) => {
   return (
     <div className="product_category">

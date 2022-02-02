@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
+import Loader from "react-spinners/ClipLoader";
 import Card from "../../../components/reusable_components/Card";
 import { getCategories } from "../../../redux/actions";
 
@@ -14,6 +15,14 @@ const Category = () => {
   const categoryState = useSelector((store) => {
     return store.category.categories;
   });
+
+  if (!categoryState.length) {
+    return (
+      <div className="loader center">
+        <Loader />
+      </div>
+    );
+  }
   return (
     <section className="category">
       <div className="main_container">

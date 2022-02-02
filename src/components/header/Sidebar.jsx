@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-
+import PropTypes from "prop-types";
 import SearchInput from "./Search";
 import Dropdown from "react-dropdown";
 import ROUTERS from "../../constants/router_constants";
@@ -13,7 +13,7 @@ const Sidebar = ({ categories, closeMenu }) => {
     <>
       <div className="sidenav">
         <div className="search_bar">
-          <SearchInput closeMenu={closeMenu}/>
+          <SearchInput closeMenu={closeMenu} />
         </div>
         <li className="navbar_ul_li">
           <Link to={ROUTERS.HOME} className="nav_link" onClick={closeMenu}>
@@ -41,6 +41,11 @@ const Sidebar = ({ categories, closeMenu }) => {
       </div>
     </>
   );
+};
+
+Sidebar.propTypes = {
+  categories: PropTypes.array,
+  closeMenu: PropTypes.func,
 };
 
 export default Sidebar;

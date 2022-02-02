@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import "../../style/components/_quantity.scss";
 
 const Quantity = () => {
   const [value, setValue] = useState(0);

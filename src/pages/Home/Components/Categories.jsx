@@ -1,4 +1,3 @@
-import "../../../style/components/_categories.scss";
 import ProductCategory from "./ProductCategory";
 
 const Categories = () => {
@@ -73,7 +72,11 @@ const Categories = () => {
         <div className="row">
           <div className="col-sm-12">
             <div className="features_more_btn">
-              <a href="/" className="btn_glass" onClick={(e) => e.preventDefault()}>
+              <a
+                href="/"
+                className="btn_glass"
+                onClick={(e) => e.preventDefault()}
+              >
                 View All Categories
               </a>
             </div>

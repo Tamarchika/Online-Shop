@@ -1,13 +1,13 @@
-import Account from "./Account";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import ROUTERS from "../../constants/router_constants";
+import PropTypes from "prop-types";
+
 import { slide as Menu } from "react-burger-menu";
-import Sidebar from "./Sidebar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
-import "../../style/layout/_grid.scss";
-import "../../style/components/_burgerMenu.scss";
-import { useState } from "react";
+import Account from "./Account";
+import ROUTERS from "../../constants/router_constants";
+import Sidebar from "./Sidebar";
 
 const ResponsiveNav = ({ categories }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,6 +47,10 @@ const ResponsiveNav = ({ categories }) => {
       </div>
     </>
   );
+};
+
+ResponsiveNav.propTypes = {
+  categories: PropTypes.array,
 };
 
 export default ResponsiveNav;

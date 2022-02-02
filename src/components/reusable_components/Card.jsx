@@ -13,14 +13,16 @@ import { addProductToCart } from "../../redux/actions";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 
-const Card = (props) => {
+
+const Card = ({ image, id, title, price }) => {
+  
   const [productExist, setProductExist] = useState(false);
 
   const cartState = useSelector((store) => store.userCart.cart);
 
   useEffect(() => {
     const productIds = cartState.map((prod) => prod.product?.id);
-    setProductExist(productIds.includes(props.id));
+    setProductExist(productIds.includes(id));
   }, [props, cartState]);
 
   const dispatch = useDispatch();
@@ -44,21 +46,21 @@ const Card = (props) => {
       <div className="card">
         <div
           className="product_item_image"
-          style={{ backgroundImage: `url(${props.image})` }}
+          style={{ backgroundImage: `url(${image})` }}
         >
           <div
             className="shopping_cart"
             style={productExist ? { pointerEvents: "none" } : null}
           >
-            <FaShoppingCart onClick={() => addToCartHandler(props.id)} />
+            <FaShoppingCart onClick={() => addToCartHandler(id)} />
           </div>
         </div>
         <div className="product_item_info">
-          <Link to={`/category/product/${props.id}`} tabIndex="-1">
-            {props.title}
+          <Link to={`/category/product/${id}`} tabIndex="-1">
+            {title}
           </Link>
-          <span>${props.price}</span>
-          <del>${parseFloat(props.price + 39).toFixed(2)}</del>
+          <span>${price}</span>
+          <del>${parseFloat(price + 39).toFixed(2)}</del>
         </div>
       </div>
     </>
@@ -66,7 +68,10 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-  props: PropTypes.string,
+  image: PropTypes.string,
+  id: PropTypes.number,
+  title: PropTypes.string,
+  price: PropTypes.number,
 };
 
 export default Card;

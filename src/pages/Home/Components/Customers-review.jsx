@@ -1,9 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../../style/layout/_grid.scss";
 import CustomersReviewCard from "./Customers_review_Card";
-import "../../../style/components/_customers_review.scss";
 
 const CustomersReview = () => {
   const settings = {
