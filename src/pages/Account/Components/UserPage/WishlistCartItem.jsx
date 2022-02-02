@@ -5,10 +5,12 @@ import { FaGreaterThan, FaShoppingCart, FaStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addProductToCart } from "../../../../redux/actions";
 import { toast } from "react-toastify";
+
 const WishlistCartItem = ({ product }) => {
   const [productExist, setProductExist] = useState(false);
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
+
   const cartState = useSelector((store) => {
     return store.userCart.cart;
   });
