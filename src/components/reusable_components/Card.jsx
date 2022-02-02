@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
-import "../../style/components/_carousel.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../style/layout/_grid.scss";
-import "../../style/components/_card.scss";
 
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -13,9 +10,7 @@ import { addProductToCart } from "../../redux/actions";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 
-
 const Card = ({ image, id, title, price }) => {
-  
   const [productExist, setProductExist] = useState(false);
 
   const cartState = useSelector((store) => store.userCart.cart);
@@ -23,7 +18,7 @@ const Card = ({ image, id, title, price }) => {
   useEffect(() => {
     const productIds = cartState.map((prod) => prod.product?.id);
     setProductExist(productIds.includes(id));
-  }, [props, cartState]);
+  }, [id, cartState]);
 
   const dispatch = useDispatch();
   const addToCartHandler = async (id) => {
