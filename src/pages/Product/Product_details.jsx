@@ -1,10 +1,8 @@
-import "../../style/components/_product.scss";
-import "../../style/layout/_grid.scss";
-import "../../style/pages/_home.scss";
 import { FaClock, FaDollarSign, FaHeart, FaStar } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import Quantity from "./Quantity";
+import PropTypes from "prop-types";
 
 const ProductDetails = (props) => {
   return (
@@ -96,6 +94,10 @@ const ProductDetails = (props) => {
       </div>
     </div>
   );
+};
+
+ProductDetails.propTypes = {
+  props: PropTypes.object,
 };
 
 export default ProductDetails;

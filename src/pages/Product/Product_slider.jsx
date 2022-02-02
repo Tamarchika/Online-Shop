@@ -2,9 +2,6 @@ import { useState } from "react";
 import Slider from "react-slick";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
-import "../../style/components/_product.scss";
-import "../../style/layout/_grid.scss";
-import "../../style/pages/_home.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

@@ -1,8 +1,8 @@
-import Card from "../../../components/reusable_components/Card";
-import "../../../style/components/_popular-products.scss";
-import "../../../style/components/_features.scss";
 import { useSelector } from "react-redux";
+import Card from "../../../components/reusable_components/Card";
 import Loader from "react-spinners/ClipLoader";
+
+
 
 const PopularProducts = () => {
   const products = useSelector((store) => {

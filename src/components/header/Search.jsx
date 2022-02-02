@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import "../../style/components/_input.scss";
+import PropTypes from "prop-types";
 
 const SearchInput = ({ closeMenu }) => {
   const [searchId, setSearchId] = useState(null);
@@ -34,6 +34,10 @@ const SearchInput = ({ closeMenu }) => {
       </form>
     </div>
   );
+};
+
+SearchInput.propTypes = {
+  closeMenu: PropTypes.func,
 };
 
 export default SearchInput;
