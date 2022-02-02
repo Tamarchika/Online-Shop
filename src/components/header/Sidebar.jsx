@@ -13,7 +13,7 @@ const Sidebar = ({ categories, closeMenu }) => {
     <>
       <div className="sidenav">
         <div className="search_bar">
-          <SearchInput />
+          <SearchInput closeMenu={closeMenu}/>
         </div>
         <li className="navbar_ul_li">
           <Link to={ROUTERS.HOME} className="nav_link" onClick={closeMenu}>

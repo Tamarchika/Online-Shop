@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ProductSlider = (props) => {
- 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
 

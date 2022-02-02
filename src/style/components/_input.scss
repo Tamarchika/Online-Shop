@@ -47,10 +47,17 @@ form {
     font-size: 20px;
   }
 }
-.search_icon {
-  color: rgba(0, 0, 0, 0.753);
-  cursor: pointer;
-  font-size: 20px;
+button {
+  &.search_icon {
+    background-color: white;
+    border: none;
+    color: rgba(0, 0, 0, 0.753);
+    cursor: pointer;
+    font-size: 20px;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 input[type="search" i] {
   &::-webkit-search-cancel-button {

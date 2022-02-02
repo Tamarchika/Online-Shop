@@ -1,18 +1,26 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "../../style/components/_input.scss";
 
-const SearchInput = () => {
+const SearchInput = ({ closeMenu }) => {
   const [searchId, setSearchId] = useState(null);
   const searchProduct = (e) => {
     setSearchId(e.target.value);
   };
-
+  const navigate = useNavigate();
   return (
     <div className="search_input">
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (searchId) {
+            navigate(`/category/product/${searchId}`);
+            closeMenu();
+          }
+        }}
+      >
         <input
           type="search"
           className="input_placeholder"
@@ -20,11 +28,9 @@ const SearchInput = () => {
           value={searchId}
           onChange={searchProduct}
         />
-        <span className="search_icon">
-          <Link to={`/category/product/${searchId}`} tabIndex="-1">
-            {<FontAwesomeIcon icon={faSearch} />}
-          </Link>
-        </span>
+        <button className="search_icon" type="submit">
+          {<FontAwesomeIcon icon={faSearch} />}
+        </button>
       </form>
     </div>
   );
