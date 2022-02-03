@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -18,6 +17,7 @@ const ProductDetails = (props) => {
   const [productExist, setProductExist] = useState(false);
 
   const cartState = useSelector((store) => store.userCart.cart);
+  const isLogedIn = useSelector((store) => store.userStatus.isLogedIn);
 
   useEffect(() => {
     const productIds = cartState.map((prod) => prod.product?.id);
@@ -98,7 +98,7 @@ const ProductDetails = (props) => {
       <div className="product_pricelist_selector_button">
         <button
           style={
-            productExist
+            productExist && isLogedIn
               ? {
                   pointerEvents: "none",
                 }
@@ -108,7 +108,7 @@ const ProductDetails = (props) => {
           className="btn_primary cart_bg"
           onClick={() => addToCartHandler(props.product?.id)}
         >
-          add to cart
+          {productExist && isLogedIn ? "added" : "add to cart"}
           <span className="cart">
             <FiShoppingCart />
           </span>
