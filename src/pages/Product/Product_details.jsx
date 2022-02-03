@@ -101,6 +101,7 @@ const ProductDetails = (props) => {
             productExist && isLogedIn
               ? {
                   pointerEvents: "none",
+                  opacity: "0.7",
                 }
               : null
           }
