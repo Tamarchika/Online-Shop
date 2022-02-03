@@ -67,7 +67,18 @@ export const getUserCart = () => {
           qty: data[0].products[i].quantity,
         };
       });
-      dispatch({ type: actions.GET_USER_CART_SUCCESS, payload: cart });
+      const cartItemsFromStorage = localStorage.getItem("cartItems")
+        ? JSON.parse(localStorage.getItem("cartItems"))
+        : [];
+
+      localStorage.setItem(
+        "cartItems",
+        JSON.stringify([...cartItemsFromStorage])
+      );
+      dispatch({
+        type: actions.GET_USER_CART_SUCCESS,
+        payload: [...cartItemsFromStorage],
+      });
     } catch (error) {
       dispatch({ type: actions.GET_USER_CART_FAILURE, payload: error.message });
     }
@@ -75,6 +86,11 @@ export const getUserCart = () => {
 };
 
 export const addProductToCart = (product) => {
+  const cartItemsFromStorage = localStorage.getItem("cartItems")
+    ? JSON.parse(localStorage.getItem("cartItems"))
+    : [];
+  cartItemsFromStorage.push(product);
+  localStorage.setItem("cartItems", JSON.stringify(cartItemsFromStorage));
   return {
     type: actions.ADD_PRODUCT_TO_CART,
     payload: product,
