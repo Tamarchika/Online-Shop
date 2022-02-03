@@ -15,8 +15,11 @@ const categoriesState = {
   error: null,
 };
 
+const userInfoFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : { isLogedIn: false, data: {} };
 const userLogedIn = {
-  isLogedIn: false,
+  isLogedIn: userInfoFromStorage.isLogedIn,
 };
 
 const cartItemsFromStorage = localStorage.getItem("cartItems")
