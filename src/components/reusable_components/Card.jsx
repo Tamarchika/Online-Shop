@@ -45,7 +45,9 @@ const Card = ({ image, id, title, price }) => {
         >
           <div
             className="shopping_cart"
-            style={productExist ? { pointerEvents: "none" } : null}
+            style={
+              productExist ? { pointerEvents: "none", opacity: "0.7" } : null
+            }
           >
             <FaShoppingCart onClick={() => addToCartHandler(id)} />
           </div>

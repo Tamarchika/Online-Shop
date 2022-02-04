@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
+import Loader from "react-spinners/ClipLoader";
 
 import CartItem from "./CartItem";
 import CartItemsHeader from "./CartItemsHeader";
 
 const Cart = () => {
   const cartState = useSelector((store) => store.userCart.cart);
-
   return (
     <div className="cart_items">
       <CartItemsHeader />

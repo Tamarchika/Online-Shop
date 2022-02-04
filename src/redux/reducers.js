@@ -15,12 +15,19 @@ const categoriesState = {
   error: null,
 };
 
+const userInfoFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : { isLogedIn: false, data: {} };
 const userLogedIn = {
-  isLogedIn: false,
+  isLogedIn: userInfoFromStorage.isLogedIn,
 };
 
+const cartItemsFromStorage = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
+
 const userCartState = {
-  cart: [],
+  cart: cartItemsFromStorage,
   loading: false,
   error: null,
 };
@@ -158,6 +165,10 @@ export const userCartReducer = (state = userCartState, action) => {
         cart: [...state.cart, action.payload],
       };
     case actions.DELETE_PRODUCT_FROM_CART:
+      const filtered = state.cart.filter(
+        (x) => x.product.id !== action.payload
+      );
+      localStorage.setItem("cartItems", JSON.stringify(filtered));
       return {
         ...state,
         cart: state.cart.filter((x) => x.product.id !== action.payload),

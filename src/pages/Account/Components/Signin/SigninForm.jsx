@@ -28,10 +28,19 @@ const SigninForm = () => {
     try {
       const response = await axios.post(
         "https://fakestoreapi.com/auth/login",
-        userData
+        localStorage.getItem("userInfo").data.username
+          ? localStorage.getItem("userInfo").data
+          : userData
       );
       dispatch(updateLoginStatus(true));
       navigate("/user/user-dashboard");
+      localStorage.setItem(
+        "userInfo",
+        JSON.stringify({
+          isLogedIn: true,
+          data: userData,
+        })
+      );
     } catch (error) {
       toast.error("User does not exist");
       setUserExist(false);
